@@ -68,7 +68,7 @@ function SubsectionBlock({ sub, titleColor }: { sub: Subsection; titleColor: 'co
 export default function AboutSection({ dict }: { dict: AboutDict }) {
   return (
     <section id="about" className="bg-white">
-      <div className="max-w-6xl mx-auto px-8 mt-42">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 mt-8 lg:mt-42">
         {aboutSectionMeta.map((meta, index) => {
           const section = dict.sections[index]
           if (!section) return null
@@ -76,16 +76,16 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
           return (
             <div
               key={meta.id}
-              className="grid grid-cols-2 gap-12 items-start py-16 border-b border-gray-100 last:border-0"
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start py-10 md:py-16 border-b border-gray-100 last:border-0"
             >
-              <div className="relative h-72 rounded-lg overflow-hidden">
+              <div className="relative h-60 md:h-72 rounded-lg overflow-hidden">
                 <Image src={meta.image} alt={meta.imageAlt} fill className="object-cover" />
               </div>
 
               <div>
                 {meta.type === 'paragraphs' && section.title && (
                   <>
-                    <h2 className={`text-2xl font-bold mb-5 ${meta.titleColor === 'coral' ? 'text-coral' : 'text-teal'}`}>
+                    <h2 className={`text-xl md:text-2xl font-bold mb-5 ${meta.titleColor === 'coral' ? 'text-coral' : 'text-teal'}`}>
                       {section.title}
                     </h2>
                     {section.content?.map((para, i) => (
@@ -98,7 +98,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
 
                 {meta.type === 'bullets' && section.title && (
                   <>
-                    <h2 className={`text-2xl font-bold mb-5 ${meta.titleColor === 'coral' ? 'text-coral' : 'text-teal'}`}>
+                    <h2 className={`text-xl md:text-2xl font-bold mb-5 ${meta.titleColor === 'coral' ? 'text-coral' : 'text-teal'}`}>
                       {section.title}
                     </h2>
                     <BulletContent

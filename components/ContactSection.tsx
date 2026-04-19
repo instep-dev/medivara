@@ -23,15 +23,15 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
   return (
     <section id="contact" className="bg-white">
       {/* Contact Form */}
-      <div className="py-20 px-8">
-        <div className="max-w-2xl mx-auto border border-coral rounded-2xl p-10">
+      <div className="py-16 md:py-20 px-4 md:px-8">
+        <div className="max-w-2xl mx-auto border border-coral rounded-2xl p-6 md:p-10">
           <div className="text-center mb-8">
             <p className="text-gray-400 text-sm mb-2">— {f.label}</p>
-            <h2 className="text-2xl text-gray-700 italic">{f.subtitle}</h2>
+            <h2 className="text-xl md:text-2xl text-gray-700 italic">{f.subtitle}</h2>
           </div>
 
           <form className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 type="text"
                 placeholder={f.namePlaceholder}
@@ -82,7 +82,7 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
       </div>
 
       {/* Contact Info */}
-      <div className="bg-gradient-to-br from-coral via-[#c46060] h-[90vh] relative to-navy py-16 px-8 flex flex-col justify-center">
+      <div className="bg-gradient-to-br from-coral via-[#c46060] min-h-[60vh] md:h-[90vh] relative to-navy py-16 px-4 md:px-8 flex flex-col justify-center">
         <Image
           src="/IMAGE HOME.png"
           alt="Healthcare professionals"
@@ -91,13 +91,15 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
           priority
         />
         <div className="absolute inset-0 z-10 bg-black/50" />
-        <div className="w-[1152px] mx-auto relative z-20">
-          <h2 className="text-white font-light text-5xl mb-8 tracking-wide">
+        <div className="w-full max-w-5xl mx-auto relative z-20">
+          <h2 className="text-white font-light text-3xl md:text-5xl mb-8 tracking-wide">
             {dict.info.heading}
           </h2>
           <div className="space-y-4">
             <div className="flex items-start gap-3">
-              <p className="text-white text-xl w-96 leading-relaxed font-semibold">{contactInfo.address}</p>
+              <p className="text-white text-base md:text-xl w-full md:w-96 leading-relaxed font-semibold">
+                {contactInfo.address}
+              </p>
             </div>
             <div className="flex items-center gap-3">
               <svg className="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

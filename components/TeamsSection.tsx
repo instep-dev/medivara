@@ -16,11 +16,12 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
 
   return (
     <section id="teams" className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="flex justify-center gap-12">
-          {row1.map((member) => (
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        {/* Mobile & tablet: single responsive grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:hidden gap-6">
+          {members.map((member) => (
             <div key={member.name} className="flex flex-col items-center">
-              <div className="relative w-64 h-50 shadow-xl rounded-md overflow-hidden mb-3 ring-2 ring-gray-100">
+              <div className="relative w-full h-44 shadow-xl rounded-md overflow-hidden mb-3 ring-2 ring-gray-100">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -28,34 +29,58 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
                   className="object-cover object-top"
                 />
               </div>
-              <h3 className="text-teal font-semibold text-xl mt-3 text-center leading-tight">
+              <h3 className="text-teal font-semibold text-base mt-2 text-center leading-tight">
                 {member.name}
               </h3>
-              <p className="text-gray-500 text-center w-52 text-xs mt-1 leading-tight">
+              <p className="text-gray-500 text-center w-full text-xs mt-1 leading-tight">
                 {member.role}
               </p>
             </div>
           ))}
         </div>
-        <div className="flex justify-center gap-12 mt-12">
-          {row2.map((member) => (
-            <div key={member.name} className="flex flex-col items-center">
-              <div className="relative w-64 h-50 shadow-xl rounded-md overflow-hidden mb-3 ring-2 ring-gray-100">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover object-top"
-                />
+
+        {/* Desktop: original two-row flex layout */}
+        <div className="hidden lg:block">
+          <div className="flex justify-center gap-12">
+            {row1.map((member) => (
+              <div key={member.name} className="flex flex-col items-center">
+                <div className="relative w-64 h-50 shadow-xl rounded-md overflow-hidden mb-3 ring-2 ring-gray-100">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <h3 className="text-teal font-semibold text-xl mt-3 text-center leading-tight">
+                  {member.name}
+                </h3>
+                <p className="text-gray-500 text-center w-52 text-xs mt-1 leading-tight">
+                  {member.role}
+                </p>
               </div>
-              <h3 className="text-teal font-semibold text-xl mt-3 text-center leading-tight">
-                {member.name}
-              </h3>
-              <p className="text-gray-500 text-center w-46 text-xs mt-1 leading-tight">
-                {member.role}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="flex justify-center gap-12 mt-12">
+            {row2.map((member) => (
+              <div key={member.name} className="flex flex-col items-center">
+                <div className="relative w-64 h-50 shadow-xl rounded-md overflow-hidden mb-3 ring-2 ring-gray-100">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <h3 className="text-teal font-semibold text-xl mt-3 text-center leading-tight">
+                  {member.name}
+                </h3>
+                <p className="text-gray-500 text-center w-46 text-xs mt-1 leading-tight">
+                  {member.role}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -12,10 +12,10 @@ type NavbarProps = {
 
 export default function Navbar({ lang, navLabels }: NavbarProps) {
   const [activeSection, setActiveSection] = useState(navLabels[0])
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const sectionIds = ['home', 'about', 'solution', 'teams', 'contact']
-
     const observers: IntersectionObserver[] = []
 
     sectionIds.forEach((id, index) => {
@@ -38,19 +38,20 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-coral to-teal">
-      <div className="max-w-7xl mx-auto px-8 py-3 flex items-center justify-between">
-        <a href={`#home`}>
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between">
+        <a href="#home" onClick={() => setMenuOpen(false)}>
           <Image
             src="/LOGO MEDIVARA PUTIH WEBSITE.png"
             alt="Medivara"
-            width={160}
-            height={56}
+            width={130}
+            height={46}
             className="object-contain"
             priority
           />
         </a>
 
-        <div className="flex items-center gap-8">
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navLabels.map((label, index) => {
             const isActive = activeSection === label
             return (
@@ -91,7 +92,51 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
             </div>
           </div>
         </div>
+
+        {/* Mobile right side */}
+        <div className="flex md:hidden items-center gap-4">
+          <Link href={`/${otherLang}`} className="text-white text-sm font-medium">
+            {otherLang.toUpperCase()}
+          </Link>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="flex flex-col justify-center gap-1.5 p-1"
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${
+                menuOpen ? 'rotate-45 translate-y-2' : ''
+              }`}
+            />
+            <span
+              className={`block w-5 h-0.5 bg-white transition-all duration-300 ${
+                menuOpen ? 'opacity-0' : ''
+              }`}
+            />
+            <span
+              className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${
+                menuOpen ? '-rotate-45 -translate-y-2' : ''
+              }`}
+            />
+          </button>
+        </div>
       </div>
+
+      {/* Mobile menu dropdown */}
+      {menuOpen && (
+        <div className="md:hidden bg-gradient-to-b from-coral to-teal px-4 pb-4">
+          {navLabels.map((label, index) => (
+            <a
+              key={label}
+              href={navHrefs[index]}
+              onClick={() => setMenuOpen(false)}
+              className="block text-white text-sm font-medium py-3 border-b border-white/20 last:border-0"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
   )
 }
