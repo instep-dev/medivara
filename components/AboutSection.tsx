@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { aboutSectionMeta } from '@/data/data'
 
 type Subsection = {
@@ -18,7 +21,7 @@ type Section = {
   subsections?: Subsection[]
 }
 
-type AboutDict = { sections: Section[] }
+type AboutDict = { title: string; sections: Section[] }
 
 function BulletContent({
   intro,
@@ -65,24 +68,56 @@ function SubsectionBlock({ sub, titleColor }: { sub: Subsection; titleColor: 'co
   )
 }
 
+const fadeLeft = {
+  hidden: { opacity: 0, x: -60 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.75, ease: 'easeOut' as const } },
+}
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 60 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.75, ease: 'easeOut' as const } },
+}
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' as const } },
+}
+
 export default function AboutSection({ dict }: { dict: AboutDict }) {
   return (
     <section id="about" className="bg-white">
       <div className="max-w-6xl mx-auto px-4 md:px-8 mt-8 lg:mt-42">
+        <motion.h2
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '-60px' }}
+          className="text-4xl md:text-5xl font-semibold text-coral text-center mb-12"
+        >
+          {dict.title}
+        </motion.h2>
         {aboutSectionMeta.map((meta, index) => {
           const section = dict.sections[index]
           if (!section) return null
 
+          const isEven = index % 2 === 0
+
           return (
-            <div
+            <motion.div
               key={meta.id}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-80px' }}
               className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start py-10 md:py-16 border-b border-gray-100 last:border-0"
             >
-              <div className="relative h-60 md:h-72 rounded-lg overflow-hidden">
+              <motion.div
+                variants={isEven ? fadeLeft : fadeRight}
+                className="relative h-60 md:h-72 rounded-lg overflow-hidden"
+              >
                 <Image src={meta.image} alt={meta.imageAlt} fill className="object-cover" />
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div variants={isEven ? fadeRight : fadeLeft}>
                 {meta.type === 'paragraphs' && section.title && (
                   <>
                     <h2 className={`text-xl md:text-2xl font-bold mb-5 ${meta.titleColor === 'coral' ? 'text-coral' : 'text-teal'}`}>
@@ -120,8 +155,8 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
                     ))}
                   </>
                 )}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           )
         })}
       </div>

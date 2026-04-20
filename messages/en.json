@@ -1,19 +1,23 @@
 {
   "nav": {
-    "links": ["HOME", "ABOUT US", "SOLUTION", "TEAMS", "CONTACT"]
+    "links": ["HOME", "ABOUT US", "SERVICES", "TEAM", "CLIENTS", "CONTACT"]
   },
   "hero": {
     "heading": "Shaping the Future of Healthcare Institutions",
     "description": "Medivara is a healthcare consulting, management, and development firm helping hospitals and healthcare organizations from strategy and system design to actual operations.",
     "serviceCards": [
-      { "label": "Develop a New Hospital", "desc": "The Indonesian government estimate around half a million new hospital beds" },
-      { "label": "Expand a Hospital", "desc": "Our business tools and experienced consultants can also support initiatives.." },
-      { "label": "Make a Business Plan", "desc": "A watertight business plan may sound like a really obvious place to start strategy..." },
-      { "label": "Implement a Business Plan", "desc": "Not only does HCM excellence provide a precise and exacting business strategy..." },
-      { "label": "Hospital Turn-Around", "desc": "Hospital beds are at a premium and more and more are needed but what if the ones..." }
+      { "label": "Develop a New Hospital", "desc": "Build new hospitals from the ground up." },
+      { "label": "Hospital Expansion", "desc": "Structured and sustainable expansion strategies." },
+      { "label": "Hospital Turnaround", "desc": "Focused, data-driven performance restoration." },
+      { "label": "Strategic & Business Development", "desc": "Clear strategy, feasibility and financial planning." },
+      { "label": "Operational & Management Service", "desc": "Professional daily hospital operations management." },
+      { "label": "Infrastructure & Technology Service", "desc": "Equipment, HIS and IoT integration." },
+      { "label": "Quality & Accreditation Service", "desc": "KARS & JCI accreditation advisory and quality programs." },
+      { "label": "Business Plan Implementation", "desc": "Turning strategy into operational reality." }
     ]
   },
   "about": {
+    "title": "About Us",
     "sections": [
       {
         "title": "The Beginning of MEDIVARA",
@@ -68,18 +72,41 @@
       }
     ]
   },
-  "solutions": [
+  "solutions": {
+    "title": "Our Services",
+    "items": [
     {
       "title": "Development\na New Hospital",
-      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "description": "We partner with healthcare leaders to build new hospitals from the ground up — from strategy to operational readiness.",
+      "bulletPoints": [
+        "Feasibility & market validation",
+        "Service & clinical concept design",
+        "Operational systems & infrastructure planning",
+        "Pre-opening & go-live execution"
+      ],
+      "goal": "Outcome: A hospital built on strong foundations, clear positioning, and long-term sustainability."
     },
     {
       "title": "Hospital\nExpansion",
-      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "description": "We support hospitals in scaling their operations through structured and sustainable expansion strategies.",
+      "bulletPoints": [
+        "Expansion strategy & market opportunity",
+        "Service and capacity growth planning",
+        "Multi-site and branch development",
+        "Operational scaling & system integration"
+      ],
+      "goal": "Outcome: Growth that is strategic, scalable, and aligned with institutional strength."
     },
     {
-      "title": "Hospital\nTurn-Around",
-      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "title": "Hospital\nTurnaround",
+      "description": "We help hospitals restore performance through focused, data-driven transformation.",
+      "bulletPoints": [
+        "Operational & financial diagnostics",
+        "Performance improvement strategy",
+        "System and workflow optimization",
+        "Revenue enhancement & cost control"
+      ],
+      "goal": "Outcome: A hospital that is stabilized, more efficient, and positioned for recovery and growth."
     },
     {
       "title": "Strategic & Business\nDevelopment",
@@ -134,16 +161,15 @@
       ],
       "goal": "Goal: Your hospital is built on clear numbers and realistic expectations."
     }
-  ],
+    ]
+  },
+  "clients": { "title": "Our Clients" },
   "teams": {
+    "title": "Our Team",
     "members": [
-      { "name": "Annisa Ganso", "role": "Senior Strategic Advisor, Healthcare Transformation" },
-      { "name": "Misyal Rahmat", "role": "Senior Strategic Advisor, Corporate Strategy & Investment" },
-      { "name": "Rima Fatmawati", "role": "Lead Advisor, Clinical Operations & Governance Excellence" },
+      { "name": "Rima Fatmasari", "role": "Lead Advisor, Clinical Operations & Governance Excellence" },
       { "name": "M. Firas", "role": "Director of Medical Strategy & Business Development" },
-      { "name": "Dian Susandi", "role": "Director of Growth, Brand & Market Expansion" },
-      { "name": "Wahyu Hamim", "role": "Director of Digital Health & Systems Innovation" },
-      { "name": "Renald Darmasyah", "role": "Director of Hospital Operations & Performance Excellence" }
+      { "name": "Dian Sunardi", "role": "Director of Growth, Brand & Market Expansion" }
     ]
   },
   "contact": {

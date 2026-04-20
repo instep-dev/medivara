@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection'
 import AboutSection from '@/components/AboutSection'
 import SolutionSection from '@/components/SolutionSection'
 import TeamsSection from '@/components/TeamsSection'
+import ClientsSection from '@/components/ClientsSection'
 import ContactSection from '@/components/ContactSection'
 
 export default async function Page({
@@ -25,6 +26,7 @@ export default async function Page({
         <AboutSection dict={dict.about} />
         <SolutionSection dict={dict.solutions} />
         <TeamsSection dict={dict.teams} />
+        <ClientsSection title={dict.clients.title} />
         <ContactSection dict={dict.contact} />
       </main>
     </>

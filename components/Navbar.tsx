@@ -15,7 +15,7 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const sectionIds = ['home', 'about', 'solution', 'teams', 'contact']
+    const sectionIds = ['home', 'about', 'solution', 'teams', 'clients', 'contact']
     const observers: IntersectionObserver[] = []
 
     sectionIds.forEach((id, index) => {
@@ -25,7 +25,7 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
         ([entry]) => {
           if (entry.isIntersecting) setActiveSection(navLabels[index])
         },
-        { threshold: 0.4 }
+        { rootMargin: '-30% 0px -60% 0px', threshold: 0 }
       )
       observer.observe(el)
       observers.push(observer)
@@ -37,11 +37,11 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
   const otherLang = lang === 'en' ? 'id' : 'en'
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-coral to-teal">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-white via-coral to-teal">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between">
         <a href="#home" onClick={() => setMenuOpen(false)}>
           <Image
-            src="/LOGO MEDIVARA PUTIH WEBSITE.png"
+            src="/LOGO MEDIVARA WEBSITE.png"
             alt="Medivara"
             width={130}
             height={46}

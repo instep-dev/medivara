@@ -1,5 +1,6 @@
 import { hasLocale } from '@/lib/getDictionary'
 import { notFound } from 'next/navigation'
+import SmoothScroll from '@/components/SmoothScroll'
 
 export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'id' }]
@@ -15,5 +16,5 @@ export default async function LocaleLayout({
   const { lang } = await params
   if (!hasLocale(lang)) notFound()
 
-  return <>{children}</>
+  return <SmoothScroll>{children}</SmoothScroll>
 }

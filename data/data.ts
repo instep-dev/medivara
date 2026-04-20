@@ -2,18 +2,21 @@ export const navLinks = [
   { label: 'HOME', href: '#home' },
   { label: 'ABOUT US', href: '#about' },
   { label: 'SOLUTION', href: '#solution' },
-  { label: 'TEAMS', href: '#teams' },
+  { label: 'TEAM', href: '#team' },
   { label: 'CONTACT', href: '#contact' },
 ]
 
-export const navHrefs = ['#home', '#about', '#solution', '#teams', '#contact']
+export const navHrefs = ['#home', '#about', '#solution', '#teams', '#clients', '#contact']
 
 export const heroServiceCardImages = [
   '/DEVELOP HOSPITAL.png',
   '/EXPAND THE HOSPITAL.png',
-  '/MAKE A BUSINESS PLAN.png',
-  '/IMPLEMENT BUSSINESS.png',
   '/HOSPITAL TURN ARROUND.png',
+  '/strategic.png',
+  '/oprational.png',
+  '/infra.png',
+  '/Quali.png',
+  '/IMPLEMENT BUSSINESS.png',
 ]
 
 export const heroData = {
@@ -144,9 +147,9 @@ export const aboutSectionMeta = [
 ]
 
 export const solutionMeta = [
-  { id: 1, cardColor: 'teal' as const, image: '/DEVELOP HOSPITAL.png', type: 'lorem' as const },
-  { id: 2, cardColor: 'coral' as const, image: '/EXPAND THE HOSPITAL.png', type: 'lorem' as const },
-  { id: 3, cardColor: 'teal' as const, image: '/HOSPITAL TURN ARROUND.png', type: 'lorem' as const },
+  { id: 1, cardColor: 'teal' as const, image: '/DEVELOP HOSPITAL.png', type: 'bullets' as const },
+  { id: 2, cardColor: 'coral' as const, image: '/EXPAND THE HOSPITAL.png', type: 'bullets' as const },
+  { id: 3, cardColor: 'teal' as const, image: '/HOSPITAL TURN ARROUND.png', type: 'bullets' as const },
   { id: 4, cardColor: 'coral' as const, image: '/strategic.png', type: 'bullets' as const },
   { id: 5, cardColor: 'teal' as const, image: '/oprational.png', type: 'bullets' as const },
   { id: 6, cardColor: 'coral' as const, image: '/infra.png', type: 'bullets' as const },
@@ -155,7 +158,7 @@ export const solutionMeta = [
 ]
 
 export const teamImages = [
-  '/Mira.png', '/Misyal.png', '/Rima.png', '/Firas.png', '/Dian.png', '/Wahyu.png', '/Renold.png',
+  '/Rima.png', '/Firas.png', '/Dian.png',
 ]
 
 export type Solution = {
@@ -311,9 +314,7 @@ export const teamMembers = [
 ]
 
 export const contactInfo = {
-  address:
-    'Forme Building 4£ floor Jl. Kemang Raya no 37 Jakarta Selatan 12730 INDONESIA',
-  web: "www.medivara.co.id",
-  phones: ['+62 21 7179 xxxxxx', '+62 21 7179 xxxxxx'],
-  email: ' info@medivara.co.id',
+  web: 'www.medivara.co.id',
+  email: 'info@medivara.co.id',
+  linkedin: 'linkedin.com/company/medivara',
 }
