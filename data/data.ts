@@ -6,7 +6,7 @@ export const navLinks = [
   { label: 'CONTACT', href: '#contact' },
 ]
 
-export const navHrefs = ['#home', '#about', '#solution', '#teams', '#clients', '#contact']
+export const navHrefs = ['#home', '#about', '#solution', '#teams', '#clients', '#contact', 'news']
 
 export const heroServiceCardImages = [
   '/DEVELOP HOSPITAL.png',
@@ -141,7 +141,7 @@ export const aboutSections: AboutSection[] = [
 
 export const aboutSectionMeta = [
   { id: 'beginning', image: '/about1.png', imageAlt: 'Healthcare institution building blocks', type: 'paragraphs' as const, titleColor: 'coral' as const, subsectionColors: [] },
-  { id: 'challenges', image: '/about3.jpeg', imageAlt: 'Hospital technology challenges', type: 'bullets' as const, titleColor: 'teal' as const, subsectionColors: [] },
+  { id: 'challenges', image: '/about3.jpeg', imageAlt: 'Hospital technology challenges', type: 'bullets' as const, titleColor: 'coral' as const, subsectionColors: [] },
   { id: 'gap-philosophy', image: '/about4.jpeg', imageAlt: 'Healthcare gap and philosophy', type: 'subsections' as const, titleColor: 'coral' as const, subsectionColors: ['coral', 'coral'] },
   { id: 'partner', image: '/about.png', imageAlt: 'Medivara trusted business partner team', type: 'bullets' as const, titleColor: 'coral' as const, subsectionColors: [] },
 ]
@@ -158,7 +158,13 @@ export const solutionMeta = [
 ]
 
 export const teamImages = [
-  '/Rima.png', '/Firas.png', '/Dian.png',
+  '/Firas.png',
+  '/Rima.png',
+  '/Dian.png',
+  '/Wahyu.png',
+  '/foto_bu dili 2.png',
+  '/foto_jojo 2.png',
+  '/foto_dr mega 2.png',
 ]
 
 export type Solution = {
@@ -313,8 +319,24 @@ export const teamMembers = [
   },
 ]
 
+export const newsArticleImages: Record<string, string> = {
+  'transformasi-besar-dharma-nugraha-hospital':
+    'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1200&q=80',
+  'akses-layanan-kesehatan-humanis-terjangkau':
+    'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1200&q=80',
+  'wajah-baru-dharma-nugraha-hospital-modern-nyaman':
+    'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=1200&q=80',
+  'industri-rs-makin-kompetitif-transformasi-sistem':
+    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
+}
+
 export const contactInfo = {
   web: 'www.medivara.co.id',
   email: 'info@medivara.co.id',
-  linkedin: 'linkedin.com/company/medivara',
+  phone: '+62 21 7179-XXXX',
+  address: [
+    'Forest Building 4th Floor',
+    'Jl. Kemang Raya no.17 Jakarta Selatan 12730',
+    'INDONESIA',
+  ],
 }

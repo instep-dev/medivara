@@ -9,7 +9,7 @@ import { useState } from 'react'
 import 'swiper/css'
 
 type ServiceCard = { label: string; desc: string }
-type HeroDict = { heading: string; description: string; serviceCards: ServiceCard[] }
+type HeroDict = { heading: string; description: string; learnMore: string; serviceCards: ServiceCard[] }
 
 function ArrowLeft() {
   return (
@@ -40,30 +40,17 @@ function NavButton({ onClick, children }: { onClick: () => void; children: React
 
 function ServiceCardItem({
   card,
-  index,
 }: {
   card: { image: string; label: string; desc: string }
   index: number
 }) {
   return (
-    <div
-      className={`flex flex-col items-center justify-center gap-3 py-6 px-4 rounded-xl h-full ${
-        index % 2 === 0 ? 'bg-[#3ec5be]' : 'bg-[#ffa49c]'
-      }`}
-    >
+    <div className="flex flex-col items-center gap-3 pt-6 pb-5 px-4 rounded-xl h-full bg-[#808185]">
       <div className="relative w-12 h-12 flex-shrink-0">
         <Image src={card.image} alt={card.label} fill className="object-contain" />
       </div>
-      <h3 className="text-white text-sm font-semibold text-center leading-tight">{card.label}</h3>
-      <a
-        href={`#service-${index + 1}`}
-        className="mt-1 inline-flex items-center gap-1 text-xs font-semibold bg-white/20 hover:bg-white text-white hover:text-gray-700 border border-white/60 rounded-full px-3 py-1.5 transition-all duration-200 backdrop-blur-sm"
-      >
-        Learn More
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M9 18l6-6-6-6" />
-        </svg>
-      </a>
+      <h3 className="text-white text-sm font-bold text-center leading-tight">{card.label}</h3>
+      <p className="text-white/65 text-[11px] text-center leading-relaxed line-clamp-3">{card.desc}</p>
     </div>
   )
 }
@@ -109,6 +96,19 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
           >
             {dict.description}
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: 'easeOut' as const, delay: 0.45 }}
+            className="mt-6"
+          >
+            <a
+              href="#about"
+              className="inline-block px-7 py-2.5 border-2 border-white text-white text-sm font-semibold rounded hover:bg-white hover:text-gray-800 transition-all duration-200"
+            >
+              {dict.learnMore}
+            </a>
+          </motion.div>
         </div>
       </div>
 

@@ -69,11 +69,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: {
-    icon: '/LOGO MEDIVARA WEBSITE.png',
-    apple: '/LOGO MEDIVARA WEBSITE.png',
-    shortcut: '/LOGO MEDIVARA WEBSITE.png',
-  },
 }
 
 export default function RootLayout({

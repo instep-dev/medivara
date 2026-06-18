@@ -86,16 +86,7 @@ const fadeUp = {
 export default function AboutSection({ dict }: { dict: AboutDict }) {
   return (
     <section id="about" className="bg-white">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 mt-8 lg:mt-42">
-        <motion.h2
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: '-60px' }}
-          className="text-4xl md:text-5xl font-semibold text-coral text-center mb-12"
-        >
-          {dict.title}
-        </motion.h2>
+      <div className="max-w-7xl mx-auto px-4 md:px-8 mt-8 lg:mt-42">
         {aboutSectionMeta.map((meta, index) => {
           const section = dict.sections[index]
           if (!section) return null
@@ -112,7 +103,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             >
               <motion.div
                 variants={isEven ? fadeLeft : fadeRight}
-                className="relative h-60 md:h-72 rounded-lg overflow-hidden"
+                className={`relative h-60 md:h-72 rounded-lg overflow-hidden ${!isEven ? 'md:order-last' : ''}`}
               >
                 <Image src={meta.image} alt={meta.imageAlt} fill className="object-cover" />
               </motion.div>

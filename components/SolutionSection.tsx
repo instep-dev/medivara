@@ -34,16 +34,7 @@ const fadeUp = {
 export default function SolutionSection({ dict }: { dict: SolutionDict }) {
   return (
     <section id="solution" className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <motion.h2
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: '-60px' }}
-          className="text-4xl md:text-5xl font-semibold text-coral text-center mb-12"
-        >
-          {dict.title}
-        </motion.h2>
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
         {solutionMeta.map((meta, index) => {
           const text = dict.items[index]
           if (!text) return null
@@ -80,7 +71,7 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
                 </h3>
               </motion.div>
 
-              <div className="flex-1 pt-0 md:pt-4">
+              <div className="flex-1 w-full pt-0 md:pt-4">
                 {(
                   <>
                     {text.description && (

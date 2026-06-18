@@ -1,19 +1,52 @@
 {
   "nav": {
-    "links": ["HOME", "ABOUT US", "SERVICES", "TEAM", "CLIENTS", "CONTACT"]
+    "links": [
+      "HOME",
+      "ABOUT US",
+      "SERVICES",
+      "TEAM",
+      "CLIENTS",
+      "CONTACT",
+      "NEWS"
+    ]
   },
   "hero": {
     "heading": "Shaping the Future of Healthcare Institutions",
-    "description": "Medivara is a healthcare consulting, management, and development firm helping hospitals and healthcare organizations from strategy and system design to actual operations.",
+    "description": "MEDIVARA partners with healthcare leaders, investors, and institutions to build stronger, sustainable, and trusted systems—from strategy to sustainable operational excellence.",
+    "learnMore": "Learn More",
     "serviceCards": [
-      { "label": "Develop a New Hospital", "desc": "Build new hospitals from the ground up." },
-      { "label": "Hospital Expansion", "desc": "Structured and sustainable expansion strategies." },
-      { "label": "Hospital Turnaround", "desc": "Focused, data-driven performance restoration." },
-      { "label": "Strategic & Business Development", "desc": "Clear strategy, feasibility and financial planning." },
-      { "label": "Operational & Management Service", "desc": "Professional daily hospital operations management." },
-      { "label": "Infrastructure & Technology Service", "desc": "Equipment, HIS and IoT integration." },
-      { "label": "Quality & Accreditation Service", "desc": "KARS & JCI accreditation advisory and quality programs." },
-      { "label": "Business Plan Implementation", "desc": "Turning strategy into operational reality." }
+      {
+        "label": "Develop a New Hospital",
+        "desc": "Build new hospitals from the ground up."
+      },
+      {
+        "label": "Hospital Expansion",
+        "desc": "Structured and sustainable expansion strategies."
+      },
+      {
+        "label": "Hospital Turnaround",
+        "desc": "Focused, data-driven performance restoration."
+      },
+      {
+        "label": "Strategic & Business Development",
+        "desc": "Clear strategy, feasibility and financial planning."
+      },
+      {
+        "label": "Operational & Management Service",
+        "desc": "Professional daily hospital operations management."
+      },
+      {
+        "label": "Infrastructure & Technology Service",
+        "desc": "Equipment, HIS and IoT integration."
+      },
+      {
+        "label": "Quality & Accreditation Service",
+        "desc": "KARS & JCI accreditation advisory and quality programs."
+      },
+      {
+        "label": "Business Plan Implementation",
+        "desc": "Turning strategy into operational reality."
+      }
     ]
   },
   "about": {
@@ -75,101 +108,128 @@
   "solutions": {
     "title": "Our Services",
     "items": [
-    {
-      "title": "Development\na New Hospital",
-      "description": "We partner with healthcare leaders to build new hospitals from the ground up — from strategy to operational readiness.",
-      "bulletPoints": [
-        "Feasibility & market validation",
-        "Service & clinical concept design",
-        "Operational systems & infrastructure planning",
-        "Pre-opening & go-live execution"
-      ],
-      "goal": "Outcome: A hospital built on strong foundations, clear positioning, and long-term sustainability."
-    },
-    {
-      "title": "Hospital\nExpansion",
-      "description": "We support hospitals in scaling their operations through structured and sustainable expansion strategies.",
-      "bulletPoints": [
-        "Expansion strategy & market opportunity",
-        "Service and capacity growth planning",
-        "Multi-site and branch development",
-        "Operational scaling & system integration"
-      ],
-      "goal": "Outcome: Growth that is strategic, scalable, and aligned with institutional strength."
-    },
-    {
-      "title": "Hospital\nTurnaround",
-      "description": "We help hospitals restore performance through focused, data-driven transformation.",
-      "bulletPoints": [
-        "Operational & financial diagnostics",
-        "Performance improvement strategy",
-        "System and workflow optimization",
-        "Revenue enhancement & cost control"
-      ],
-      "goal": "Outcome: A hospital that is stabilized, more efficient, and positioned for recovery and growth."
-    },
-    {
-      "title": "Strategic & Business\nDevelopment",
-      "bulletPoints": [
-        "Feasibility study",
-        "Land banking & hospital planning",
-        "Business plan & financial modelling",
-        "Strategic marketing planning",
-        "Investment structuring & capital funding"
-      ],
-      "goal": "Goal: Your hospital is built on clear numbers and realistic expectations."
-    },
-    {
-      "title": "Operational &\nManagement Service",
-      "bulletPoints": [
-        "Daily Operational Management",
-        "HR system & workforce planning",
-        "KPI & productivity management",
-        "Growth & development",
-        "Operational performance monitoring",
-        "Clinical service optimization"
-      ],
-      "goal": "Goal: Although patient feels empathy, but Your hospital need operates professionally — not emotionally."
-    },
-    {
-      "title": "Infrastructure &\nTechnology Service",
-      "bulletPoints": [
-        "Medical equipment planning",
-        "Equipment maintenance & compliance",
-        "Hospital Information System (HIS)",
-        "IoT & Medical Equipment Integration"
-      ],
-      "goal": "Goal: Operational efficiency and long-term infrastructure sustainability."
-    },
-    {
-      "title": "Quality &\nAccreditation Service",
-      "bulletPoints": [
-        "KARS & JCI Accreditation Advisory",
-        "Patient Safety & Quality Programs",
-        "Workforce Development & Clinical Training"
-      ],
-      "goal": "Goal: hospitals achieve higher standards of healthcare quality, governance and compliance"
-    },
-    {
-      "title": "Strategic &\nbusiness development",
-      "bulletPoints": [
-        "Feasibility study",
-        "Land banking & hospital planning",
-        "Business plan & financial modelling",
-        "Strategic marketing planning",
-        "Investment structuring & capital funding"
-      ],
-      "goal": "Goal: Your hospital is built on clear numbers and realistic expectations."
-    }
+      {
+        "title": "Development\na New Hospital",
+        "description": "We partner with healthcare leaders to build new hospitals from the ground up — from strategy to operational readiness.",
+        "bulletPoints": [
+          "Feasibility & market validation",
+          "Service & clinical concept design",
+          "Operational systems & infrastructure planning",
+          "Pre-opening & go-live execution"
+        ],
+        "goal": "Outcome: A hospital built on strong foundations, clear positioning, and long-term sustainability."
+      },
+      {
+        "title": "Hospital\nExpansion",
+        "description": "We support hospitals in scaling their operations through structured and sustainable expansion strategies.",
+        "bulletPoints": [
+          "Expansion strategy & market opportunity",
+          "Service and capacity growth planning",
+          "Multi-site and branch development",
+          "Operational scaling & system integration"
+        ],
+        "goal": "Outcome: Growth that is strategic, scalable, and aligned with institutional strength."
+      },
+      {
+        "title": "Hospital\nTurnaround",
+        "description": "We help hospitals restore performance through focused, data-driven transformation.",
+        "bulletPoints": [
+          "Operational & financial diagnostics",
+          "Performance improvement strategy",
+          "System and workflow optimization",
+          "Revenue enhancement & cost control"
+        ],
+        "goal": "Outcome: A hospital that is stabilized, more efficient, and positioned for recovery and growth."
+      },
+      {
+        "title": "Strategic & Business\nDevelopment",
+        "bulletPoints": [
+          "Feasibility study",
+          "Land banking & hospital planning",
+          "Business plan & financial modelling",
+          "Strategic marketing planning",
+          "Investment structuring & capital funding"
+        ],
+        "goal": "Goal: Your hospital is built on clear numbers and realistic expectations."
+      },
+      {
+        "title": "Operational &\nManagement Service",
+        "bulletPoints": [
+          "Daily Operational Management",
+          "HR system & workforce planning",
+          "KPI & productivity management",
+          "Growth & development",
+          "Operational performance monitoring",
+          "Clinical service optimization"
+        ],
+        "goal": "Goal: Although patient feels empathy, but Your hospital need operates professionally — not emotionally."
+      },
+      {
+        "title": "Infrastructure &\nTechnology Service",
+        "bulletPoints": [
+          "Medical equipment planning",
+          "Equipment maintenance & compliance",
+          "Hospital Information System (HIS)",
+          "IoT & Medical Equipment Integration"
+        ],
+        "goal": "Goal: Operational efficiency and long-term infrastructure sustainability."
+      },
+      {
+        "title": "Quality &\nAccreditation Service",
+        "bulletPoints": [
+          "KARS & JCI Accreditation Advisory",
+          "Patient Safety & Quality Programs",
+          "Workforce Development & Clinical Training"
+        ],
+        "goal": "Goal: hospitals achieve higher standards of healthcare quality, governance and compliance"
+      },
+      {
+        "title": "Strategic &\nbusiness development",
+        "bulletPoints": [
+          "Feasibility study",
+          "Land banking & hospital planning",
+          "Business plan & financial modelling",
+          "Strategic marketing planning",
+          "Investment structuring & capital funding"
+        ],
+        "goal": "Goal: Your hospital is built on clear numbers and realistic expectations."
+      }
     ]
   },
-  "clients": { "title": "Our Clients" },
+  "clients": {
+    "title": "Our Clients"
+  },
   "teams": {
     "title": "Our Team",
     "members": [
-      { "name": "Rima Fatmasari", "role": "Lead Advisor, Clinical Operations & Governance Excellence" },
-      { "name": "M. Firas", "role": "Director of Medical Strategy & Business Development" },
-      { "name": "Dian Sunardi", "role": "Director of Growth, Brand & Market Expansion" }
+      {
+        "name": "M. Firas",
+        "role": "Director of Medical Strategy & Business Development"
+      },
+      {
+        "name": "Rima Fatmasari",
+        "role": "Lead Advisor, Clinical Operations & Governance Excellence"
+      },
+      {
+        "name": "Dian Sunardi",
+        "role": "Director of Growth, Brand & Market Expansion"
+      },
+      {
+        "name": "Wahyu Hanito",
+        "role": "Director of Digital Health & Systems Innovation"
+      },
+      {
+        "name": "Dian Lilasari",
+        "role": "Strategic Finance"
+      },
+      {
+        "name": "Jojo S. Nugroho, M.Sos, CCM, CPR",
+        "role": "PR & Comms Strategist"
+      },
+      {
+        "name": "dr. Mega Amalia Hidayati",
+        "role": "Medical Consultant"
+      }
     ]
   },
   "contact": {
@@ -188,5 +248,58 @@
     "info": {
       "heading": "CONTACT US"
     }
+  },
+  "news": {
+    "pageTitle": "News & Insights",
+    "items": [
+      {
+        "id": 1,
+        "slug": "transformasi-besar-dharma-nugraha-hospital",
+        "title": "Major Transformation at Dharma Nugraha Hospital: More Modern, Comfortable, and Patient-Centered Services",
+        "excerpt": "Dharma Nugraha Hospital has officially launched its new face through a comprehensive transformation focusing on patient comfort, facility modernization, and quality of care improvement.",
+        "content": "ARCOM-MEDIA, Jakarta. The capital's healthcare landscape has received a breath of fresh air. Dharma Nugraha Hospital has officially launched its new face through a comprehensive transformation focusing on patient comfort, facility modernization, and quality of care improvement.\n\nThis move is not merely a physical update, but a holistic change encompassing the entire patient experience from start to finish.\n\nEstablished in 1996, Dharma Nugraha Hospital continuously strives to remain relevant amid the increasingly complex demands of healthcare, without abandoning core values such as empathy, sincerity, and trust.\n\nOne of the most immediately noticeable changes is the hospital's interior, which is now warmer and more modern. The previously formal and stiff atmosphere has been transformed into something more welcoming and soothing, providing psychological comfort for both patients and their families.\n\nBeyond aesthetics, improvements have also been made to medical services. Dharma Nugraha Hospital now offers a more comprehensive range of specialist services, including internal medicine, maternal and child health, general surgery and oncology, neurology, cardiology, medical rehabilitation, and ENT. Complete dental health services are also available for the entire family.\n\nSupporting facilities such as a 24-hour emergency unit, laboratory, radiology, and physiotherapy have been strengthened to ensure that diagnosis and treatment processes run quickly and accurately. This forms an important part of improving service quality based on speed and precision.\n\nAddressing the needs of today's dynamic society, the hospital now offers home service and flexible medical check-up programs. Patients can access health services not only at the hospital, but also at home or even in the workplace.\n\nIn its transformation process, Dharma Nugraha Hospital partnered with Medivara – Healthcare Consulting as a strategic partner. This collaboration covers improvements to operational systems, hospital information system development, and enhancement of governance and service quality to ensure a more structured and sustainable transformation.\n\nDirector PT and Owner of Dharma Nugraha Hospital, Sekar Dewi Dinawati Tjindarbumi, Sp.THT-KL., emphasized that this transformation focuses on the human aspect of healthcare. \"This is not just about new facilities, but about how we bring back the essence of more humane service. We want patients to feel safe, comfortable, and confident that they are in the right place,\" said Sekar Dewi at the Introduction of the New Face of Dharma Nugraha Hospital, Tuesday (21/4/2026), at the lobby of Dharma Nugraha Hospital, Jalan Balai Pustaka Baru No.19, Rawamangun, East Jakarta.\n\nLocated in the strategic Rawamangun area of East Jakarta, Dharma Nugraha Hospital has also partnered with various insurance providers, making healthcare services more accessible to the wider community.\n\nWith nearly three decades of experience and excellence in oncology treatment, this transformation further strengthens Dharma Nugraha Hospital's position as a hospital ready to compete in the era of modern healthcare—combining technology, professionalism, and a humanistic touch in one integrated service.",
+        "date": "2026-04-21",
+        "author": "RED",
+        "source": "ARCOM Media",
+        "sourceUrl": "https://arcom-media.com/transformasi-besar-dharma-nugraha-hospital-layanan-lebih-modern-nyaman-dan-berbasis-pasien/",
+        "category": "Health"
+      },
+      {
+        "id": 2,
+        "slug": "akses-layanan-kesehatan-humanis-terjangkau",
+        "title": "Access to Quality Healthcare in Focus: Hospitals Called to Be More Humane and Affordable",
+        "excerpt": "Society needs access to quality, fast, and affordable healthcare, particularly in metropolitan areas like Jakarta.",
+        "content": "Society needs access to quality, fast, and affordable healthcare, particularly in metropolitan areas like Jakarta. With rising healthcare costs, the presence of medical facilities with comprehensive services and structured systems has become critical for equitable health access.\n\nIn East Jakarta, Dharma Nugraha Hospital—established in 1996—has undergone a comprehensive transformation covering not only infrastructure but also service systems and patient approach. The hospital provides inpatient and outpatient services with specializations in internal medicine, cardiology, neurology, and obstetrics-gynecology.\n\nSupporting facilities have been strengthened with a 24-hour emergency service, laboratory, radiology, and physiotherapy to accelerate diagnosis and treatment. Innovations also include preventive health screenings and home visit services for patients with limited mobility.\n\nThe operational transformation involved MEDIVARA Healthcare Consulting to improve the hospital information system and service standards. This approach reflects the modern healthcare industry trend of integrating digitalization and operational efficiency to reduce costs while improving quality.\n\nHowever, service improvement is not solely dependent on physical facilities. Director and owner Sekar Dewi Dinawati Tjindarbumi emphasized that \"this transformation is not just about facilities, but about how patients feel comfortable, cared for\" and confident in receiving the right treatment—the human dimension is the primary focus in modern healthcare delivery.",
+        "date": "2026-04-22",
+        "author": "Rian Alfianto",
+        "source": "JawaPos",
+        "sourceUrl": "https://www.jawapos.com/kesehatan/2604220005/akses-layanan-kesehatan-layak-jadi-sorotan-rumah-sakit-dituntut-lebih-humanis-dan-terjangkau",
+        "category": "Health"
+      },
+      {
+        "id": 3,
+        "slug": "wajah-baru-dharma-nugraha-hospital-modern-nyaman",
+        "title": "Glimpsing the New Face of Dharma Nugraha Hospital: More Modern and Comfortable",
+        "excerpt": "Dharma Nugraha Hospital has introduced its latest transformation, featuring modern facilities with a more humanistic approach.",
+        "content": "Dharma Nugraha Hospital has introduced its latest transformation, featuring modern facilities with a more humanistic approach. This healthcare institution, founded in 1996, continues to evolve while maintaining its core values: sincerity, empathy, and trust.\n\nThe changes include a more modern and calming interior design, creating a comfortable atmosphere for patients and families. The hospital provides a range of medical specializations: internal medicine, maternal and child health, general surgery, oncology, neurology, cardiology, medical rehabilitation, ENT, and comprehensive dental services.\n\nSupporting facilities include a 24-hour emergency unit, laboratory, radiology, and physiotherapy. Flexible service innovations include home service and medical check-ups that can be performed at the patient's home or workplace.\n\nThe hospital partnered with MEDIVARA Healthcare Consulting to strengthen the operational system, develop the hospital information system, and improve governance and service quality in a professional manner.\n\nDirector and owner Sekar Dewi Dinawati Tjindarbumi emphasized that this transformation is not merely a facility update, but an effort to restore the essence of more humane service—ensuring every patient feels cared for and confident in receiving the best treatment.\n\nWith experienced doctors, professional medical personnel, and partnerships with various insurance providers, the hospital facilitates community access to quality services. Special expertise in oncology treatment has been the foundation of community trust for nearly three decades.",
+        "date": "2026-04-22",
+        "author": "Ida Umy Rasyidah",
+        "source": "HerStory",
+        "sourceUrl": "https://herstory.co.id/read158937/melihat-wajah-baru-dharma-nugraha-hospital-lebih-modern-dan-nyaman-beauty",
+        "category": "Health"
+      },
+      {
+        "id": 4,
+        "slug": "industri-rs-makin-kompetitif-transformasi-sistem",
+        "title": "Hospital Industry Grows More Competitive: System Transformation Is the Key to Survival",
+        "excerpt": "Amid the ever-evolving healthcare industry, hospitals in Indonesia face increasingly complex challenges. They are not only required to deliver quality medical services, but also to maintain operational sustainability amid cost pressures, competition, and regulatory changes.",
+        "content": "Amid the ever-evolving healthcare industry, hospitals in Indonesia face increasingly complex challenges. They are not only required to deliver quality medical services, but also to maintain operational sustainability amid cost pressures, competition, and regulatory changes.\n\nBehind impressive buildings and services that appear to run smoothly, many healthcare institutions face structural challenges that are not always visible on the surface.\n\nOver-reliance on a handful of key doctors, non-standardized operational systems, and ever-increasing funding needs are recurring problems. Many hospitals have grown \"naturally\" — evolving over time without a truly solid systemic foundation.\n\nAs a result, operations continue to run, but they are difficult to measure and control. Performance may appear stable, yet it is vulnerable when pressure arrives. In many cases, organizations rely more on individuals than on robust systems.\n\nFrom Surviving to Transforming\n\nThis is the point at which many healthcare institutions begin to realize that mere survival is not enough. Transformation has become an unavoidable necessity. Yet the greatest challenge lies not in designing a strategy, but in executing it. This is where MEDIVARA Healthcare Consulting becomes relevant — not merely as a consultant, but as an execution partner directly involved in the transformation process, ensuring that change does not stop on paper.\n\n\"Strategy is easy to create. The hard part is making sure that strategy actually happens on the ground — and that is where we work,\" said Rima Fatmasari, Lead Advisor for Clinical Operations & Governance Excellence at MEDIVARA. The approach MEDIVARA brings emphasizes one fundamental principle: transformation will only succeed if supported by strong systems and disciplined execution.\n\nBuilding a Sustainable System\n\nBuilding on this principle, MEDIVARA integrates various critical aspects of hospital organization into a single structured framework — spanning governance, clinical operations, and human resource development.\n\nThe focus is not merely on fixing what appears to be broken, but on building a foundation capable of maintaining quality consistently over the long term. This is achieved through the development of a clear and accountable organizational structure, the establishment of standardized operational processes that reduce dependence on specific individuals, and simultaneous efforts to optimize both service performance and financial outcomes. At the same time, MEDIVARA drives the formation of a collaborative, patient-centered work culture, so that change occurs not only in systems but also in how teams work within the organization.\n\n\"Many hospitals want to change, but they stop at the planning stage. The real challenge is execution. That is where we come in — ensuring that transformation actually takes place and delivers impact,\" Rima added.\n\nCase Study: Measurable Transformation\n\nThis approach is reflected in the transformation of Dharma Nugraha Hospital, an institution with a long history in oncology. Prior to the transformation, the hospital faced challenges in operational consistency and inter-unit coordination. Non-standardized systems made performance difficult to manage comprehensively, while dependence on key individuals was considerable.\n\nThe transformation was focused on a comprehensive overhaul of systems. \"Transformation is not about fixing what is broken — it is about building a system that makes the organization no longer easily broken\" became the guiding principle of the process.\n\nWithin less than a year of MEDIVARA's involvement, changes began to show. Operational systems became more structured, management stronger, and service quality improved. The impact extended beyond internal efficiency to patient experience and public perception.\n\n\"MEDIVARA did not just provide guidance — they truly walked alongside us throughout this transformation. The changes that occurred were not just on paper; we felt them in our systems, our team, and in patient trust,\" said Sekar Dewi Dinawati Tjindarbumi, Director and Owner of Dharma Nugraha Hospital.\n\nAddressing the Healthcare Industry Challenge\n\nThis transformation demonstrates that the core challenge for many healthcare institutions lies not in a lack of potential, but in the absence of strong systems and consistent execution. Amid increasingly complex industry dynamics — from accreditation requirements and cost efficiency to ever-rising patient expectations — hospitals are required to adapt comprehensively, not partially.\n\nGoing forward, the institutions that will survive and thrive will not simply be those with the best facilities, but those with a solid organizational foundation, systems that operate consistently, and the ability to execute strategies with discipline across every level of operations.\n\nReal Transformation\n\nUltimately, transformation in the healthcare sector is not merely about changing appearances or adding facilities. More than that, it is about building an organization that is resilient under pressure and capable of delivering consistent care. In this context, MEDIVARA's role as an implementation partner becomes increasingly important — not only in charting the direction of change, but in ensuring that change truly happens.\n\nBecause amid the complexity of today's healthcare industry, transformation is no longer a choice — it is a necessity. Not merely to survive, but to remain relevant and sustainable.",
+        "date": "2026-04-22",
+        "author": "Ihfa Firdausya",
+        "source": "Media Indonesia",
+        "sourceUrl": "https://mediaindonesia.com/humaniora/882404/industri-rs-makin-kompetitif-transformasi-sistem-jadi-kunci-bertahan",
+        "category": "Health"
+      }
+    ]
   }
 }
