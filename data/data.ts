@@ -321,7 +321,7 @@ export const teamMembers = [
 
 export const newsArticleImages: Record<string, string> = {
   'transformasi-besar-dharma-nugraha-hospital':
-    'https://img.herstory.co.id/articles/archive_20260422/rumah-sakit-20260422-070341.webp',
+    '/crop.jpeg',
   'akses-layanan-kesehatan-humanis-terjangkau':
     'https://img.herstory.co.id/articles/archive_20260422/rumah-sakit-20260422-070341.webp',
   'wajah-baru-dharma-nugraha-hospital-modern-nyaman':
@@ -331,7 +331,7 @@ export const newsArticleImages: Record<string, string> = {
 }
 
 export const contactInfo = {
-  web: 'www.medivara.co.id',
+  web: 'www.medivara.id',
   email: 'info@medivara.co.id',
   phone: '+62 21 7179-XXXX',
   address: [
