@@ -321,13 +321,13 @@ export const teamMembers = [
 
 export const newsArticleImages: Record<string, string> = {
   'transformasi-besar-dharma-nugraha-hospital':
-    'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1200&q=80',
+    'https://img.herstory.co.id/articles/archive_20260422/rumah-sakit-20260422-070341.webp',
   'akses-layanan-kesehatan-humanis-terjangkau':
-    'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1200&q=80',
+    'https://img.herstory.co.id/articles/archive_20260422/rumah-sakit-20260422-070341.webp',
   'wajah-baru-dharma-nugraha-hospital-modern-nyaman':
-    'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=1200&q=80',
+    'https://img.herstory.co.id/articles/archive_20260422/rumah-sakit-20260422-070341.webp',
   'industri-rs-makin-kompetitif-transformasi-sistem':
-    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
+    'https://mediaindonesia.gumlet.io/news/2026/04/22/1776867641_d62efdcced373220724a.jpeg?w=700&dpr=1.3',
 }
 
 export const contactInfo = {

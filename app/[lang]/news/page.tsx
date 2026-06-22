@@ -79,25 +79,7 @@ export default async function NewsPage({
     <>
       <NewsNavbar lang={lang} homeLabel={links[0]} newsLabel={links[6]} />
 
-      <main className="min-h-screen bg-white">
-        {/* Page header */}
-        <div className="relative bg-gray-900 px-4 md:px-8 overflow-hidden flex flex-col justify-end pb-8 md:pb-12 h-56 sm:h-72 md:h-[500px]">
-          <Image
-            src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=1800&q=80"
-            alt="News header"
-            fill
-            className="object-cover object-top"
-            priority
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/30" />
-          <div className="relative z-10 max-w-7xl mx-auto w-full">
-            <p className="text-white/60 text-sm mb-2 font-medium">{links[6]}</p>
-            <h1 className="text-white text-3xl md:text-5xl font-bold leading-tight">
-              {news.pageTitle}
-            </h1>
-          </div>
-        </div>
+      <main className="min-h-screen bg-white pt-28">
 
         {/* News grid */}
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-6 md:py-8">

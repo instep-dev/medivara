@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'mediaindonesia.gumlet.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.herstory.co.id',
+      },
     ],
   },
 };
