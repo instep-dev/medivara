@@ -323,7 +323,7 @@ export const newsArticleImages: Record<string, string> = {
   'transformasi-besar-dharma-nugraha-hospital':
     '/crop.jpeg',
   'akses-layanan-kesehatan-humanis-terjangkau':
-    'https://img.herstory.co.id/articles/archive_20260422/rumah-sakit-20260422-070341.webp',
+    '/test.jpeg',
   'wajah-baru-dharma-nugraha-hospital-modern-nyaman':
     'https://img.herstory.co.id/articles/archive_20260422/rumah-sakit-20260422-070341.webp',
   'industri-rs-makin-kompetitif-transformasi-sistem':
