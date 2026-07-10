@@ -9,14 +9,14 @@ export const navLinks = [
 export const navHrefs = ['#home', '#about', '#solution', '#teams', '#clients', '#contact', 'news']
 
 export const heroServiceCardImages = [
-  '/DEVELOP HOSPITAL.png',
-  '/EXPAND THE HOSPITAL.png',
-  '/HOSPITAL TURN ARROUND.png',
-  '/strategic.png',
-  '/oprational.png',
-  '/infra.png',
-  '/Quali.png',
-  '/IMPLEMENT BUSSINESS.png',
+  '/DEVELOP HOSPITAL.svg',
+  '/EXPAND THE HOSPITAL.svg',
+  '/HOSPITAL TURN ARROUND.svg',
+  '/strategic.svg',
+  '/oprational.svg',
+  '/infra.svg',
+  '/Quali.svg',
+  '/IMPLEMENT BUSSINESS.svg',
 ]
 
 export const heroData = {
@@ -24,11 +24,11 @@ export const heroData = {
   description:
     'Medivara is a healthcare consulting, management, and development firm helping hospitals and healthcare organizations from strategy and system design to actual operations.',
   serviceCards: [
-    { label: 'Develop a New Hospital', desc:"The Indonesian government estimate around half a million new hospital beds", image: '/DEVELOP HOSPITAL.png' },
-    { label: 'Expand a Hospital', desc:"Our business tools and experienced consultants can also support initiatives..", image: '/EXPAND THE HOSPITAL.png' },
+    { label: 'Develop a New Hospital', desc:"The Indonesian government estimate around half a million new hospital beds", image: '/DEVELOP HOSPITAL.svg' },
+    { label: 'Expand a Hospital', desc:"Our business tools and experienced consultants can also support initiatives..", image: '/EXPAND THE HOSPITAL.svg' },
     { label: 'Make a Business Plan', desc:"A watertight business plan may sound like a really obvious place to startstrategy...", image: '/MAKE A BUSINESS PLAN.png' },
-    { label: 'Implement a Business Plan', desc:"Not only does HCM excellence providea precise and exacting business strategy...", image: '/IMPLEMENT BUSSINESS.png' },
-    { label: 'Hospital Turn-Around', desc:"Hospital beds are at a premium and more and more are needed but what if the ones...", image: '/HOSPITAL TURN ARROUND.png' },
+    { label: 'Implement a Business Plan', desc:"Not only does HCM excellence providea precise and exacting business strategy...", image: '/IMPLEMENT BUSSINESS.svg' },
+    { label: 'Hospital Turn-Around', desc:"Hospital beds are at a premium and more and more are needed but what if the ones...", image: '/HOSPITAL TURN ARROUND.svg' },
   ],
 }
 
@@ -147,14 +147,14 @@ export const aboutSectionMeta = [
 ]
 
 export const solutionMeta = [
-  { id: 1, cardColor: 'teal' as const, image: '/DEVELOP HOSPITAL.png', type: 'bullets' as const },
-  { id: 2, cardColor: 'coral' as const, image: '/EXPAND THE HOSPITAL.png', type: 'bullets' as const },
-  { id: 3, cardColor: 'teal' as const, image: '/HOSPITAL TURN ARROUND.png', type: 'bullets' as const },
-  { id: 4, cardColor: 'coral' as const, image: '/strategic.png', type: 'bullets' as const },
-  { id: 5, cardColor: 'teal' as const, image: '/oprational.png', type: 'bullets' as const },
-  { id: 6, cardColor: 'coral' as const, image: '/infra.png', type: 'bullets' as const },
-  { id: 7, cardColor: 'teal' as const, image: '/Quali.png', type: 'bullets' as const },
-  { id: 8, cardColor: 'coral' as const, image: '/IMPLEMENT BUSSINESS.png', type: 'bullets' as const },
+  { id: 1, cardColor: 'teal' as const, image: '/DEVELOP HOSPITAL.svg', type: 'bullets' as const },
+  { id: 2, cardColor: 'coral' as const, image: '/EXPAND THE HOSPITAL.svg', type: 'bullets' as const },
+  { id: 3, cardColor: 'teal' as const, image: '/HOSPITAL TURN ARROUND.svg', type: 'bullets' as const },
+  { id: 4, cardColor: 'coral' as const, image: '/strategic.svg', type: 'bullets' as const },
+  { id: 5, cardColor: 'teal' as const, image: '/oprational.svg', type: 'bullets' as const },
+  { id: 6, cardColor: 'coral' as const, image: '/infra.svg', type: 'bullets' as const },
+  { id: 7, cardColor: 'teal' as const, image: '/Quali.svg', type: 'bullets' as const },
+  { id: 8, cardColor: 'coral' as const, image: '/IMPLEMENT BUSSINESS.svg', type: 'bullets' as const },
 ]
 
 export const teamImages = [
@@ -186,7 +186,7 @@ export const solutions: Solution[] = [
     id: 1,
     title: 'Development\na New Hospital',
     cardColor: 'teal',
-    image: '/DEVELOP HOSPITAL.png',
+    image: '/DEVELOP HOSPITAL.svg',
     type: 'lorem',
     content: loremText,
   },
@@ -194,7 +194,7 @@ export const solutions: Solution[] = [
     id: 2,
     title: 'Hospital\nExpansion',
     cardColor: 'coral',
-    image: '/EXPAND THE HOSPITAL.png',
+    image: '/EXPAND THE HOSPITAL.svg',
     type: 'lorem',
     content: loremText,
   },
@@ -202,7 +202,7 @@ export const solutions: Solution[] = [
     id: 3,
     title: 'Hospital\nTurn-Around',
     cardColor: 'teal',
-    image: '/HOSPITAL TURN ARROUND.png',
+    image: '/HOSPITAL TURN ARROUND.svg',
     type: 'lorem',
     content: loremText,
   },
@@ -210,7 +210,7 @@ export const solutions: Solution[] = [
     id: 4,
     title: 'Strategic & Business\nDevelopment',
     cardColor: 'coral',
-    image: '/strategic.png',
+    image: '/strategic.svg',
     type: 'bullets',
     bulletPoints: [
       'Feasibility study',
@@ -225,7 +225,7 @@ export const solutions: Solution[] = [
     id: 5,
     title: 'Operational &\nManagement Service',
     cardColor: 'teal',
-    image: '/oprational.png',
+    image: '/oprational.svg',
     type: 'bullets',
     bulletPoints: [
       'Daily Operational Management',
@@ -241,7 +241,7 @@ export const solutions: Solution[] = [
     id: 6,
     title: 'Infrastructure &\nTechnology Service',
     cardColor: 'coral',
-    image: '/infra.png',
+    image: '/infra.svg',
     type: 'bullets',
     bulletPoints: [
       'Medical equipment planning',
@@ -255,7 +255,7 @@ export const solutions: Solution[] = [
     id: 7,
     title: 'Quality &\nAccreditation Service',
     cardColor: 'teal',
-    image: '/Quali.png',
+    image: '/Quali.svg',
     type: 'bullets',
     bulletPoints: [
       'KARS & JCI Accreditation Advisory',
@@ -268,7 +268,7 @@ export const solutions: Solution[] = [
     id: 8,
     title: 'Strategic &\nbusiness development',
     cardColor: 'coral',
-    image: '/IMPLEMENT BUSSINESS.png',
+    image: '/IMPLEMENT BUSSINESS.svg',
     type: 'bullets',
     bulletPoints: [
       'Feasibility study',
