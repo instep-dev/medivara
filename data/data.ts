@@ -338,7 +338,7 @@ export const contactInfo = {
   web: 'www.medivara.id',
   email: 'info@medivara.co.id',
   phone: '+62 21 7179-XXXX',
-  linkedin: '#', // TODO: replace with the real Medivara LinkedIn URL once provided
+  linkedin: 'https://www.linkedin.com/company/medivarahealthcareconsulting/',
   address: [
     'Forest Building 4th Floor',
     'Jl. Kemang Raya no.17 Jakarta Selatan 12730',

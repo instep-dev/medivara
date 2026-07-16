@@ -106,9 +106,11 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
             </div>
           </form>
         </motion.div>
+      </div>
 
-        <div className="max-w-2xl mx-auto flex items-center justify-between mt-6 px-1">
-          <p className="text-sm text-gray-500">
+      <div className="bg-gradient-to-r from-coral to-teal">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+          <p className="text-sm text-white">
             &copy; {new Date().getFullYear()} Medivara
           </p>
           <a
@@ -116,7 +118,7 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-gray-500 hover:text-coral transition-colors"
+            className="text-white hover:text-navy transition-colors"
           >
             <LinkedinLogo size={22} weight="fill" />
           </a>

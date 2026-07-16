@@ -40,8 +40,8 @@ function NavButton({ onClick, children }: { onClick: () => void; children: React
 function ServiceCardItem({ card }: { card: ServiceCard }) {
   return (
     <div className="flex flex-col items-center justify-center gap-2 py-5 px-5 rounded-xl h-full bg-[#808185] text-center">
-      <h3 className="text-white text-lg font-black uppercase tracking-wide leading-tight">{card.label}</h3>
-      <p className="text-white/70 text-sm leading-relaxed line-clamp-3">{card.desc}</p>
+      <h3 className="text-white text-lg font-black uppercase tracking-wide leading-tight text-balance">{card.label}</h3>
+      <p className="text-white/70 text-sm leading-relaxed line-clamp-3 text-pretty">{card.desc}</p>
     </div>
   )
 }
