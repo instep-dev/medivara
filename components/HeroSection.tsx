@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { heroServiceCardImages } from '@/data/data'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import type { Swiper as SwiperType } from 'swiper'
 import { useState } from 'react'
@@ -38,19 +37,11 @@ function NavButton({ onClick, children }: { onClick: () => void; children: React
   )
 }
 
-function ServiceCardItem({
-  card,
-}: {
-  card: { image: string; label: string; desc: string }
-  index: number
-}) {
+function ServiceCardItem({ card }: { card: ServiceCard }) {
   return (
-    <div className="flex flex-col items-center gap-3 pt-6 pb-5 px-4 rounded-xl h-full bg-[#808185]">
-      <div className="relative w-12 h-12 flex-shrink-0">
-        <Image src={card.image} alt={card.label} fill className="object-contain" />
-      </div>
-      <h3 className="text-white text-sm font-bold text-center leading-tight">{card.label}</h3>
-      <p className="text-white/65 text-[11px] text-center leading-relaxed line-clamp-3">{card.desc}</p>
+    <div className="flex flex-col items-center justify-center gap-2 py-6 px-5 rounded-xl h-full bg-[#808185] text-center">
+      <h3 className="text-white text-lg font-bold leading-tight">{card.label}</h3>
+      <p className="text-white/70 text-sm leading-relaxed line-clamp-3">{card.desc}</p>
     </div>
   )
 }
@@ -59,11 +50,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
   const [mobileSwiper, setMobileSwiper] = useState<SwiperType | null>(null)
   const [desktopSwiper, setDesktopSwiper] = useState<SwiperType | null>(null)
 
-  const cards = heroServiceCardImages.map((image, i) => ({
-    image,
-    label: dict.serviceCards[i]?.label ?? '',
-    desc: dict.serviceCards[i]?.desc ?? '',
-  }))
+  const cards = dict.serviceCards
 
   return (
     <section id="home" className="relative min-h-screen flex flex-col">
@@ -124,18 +111,17 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
           slidesPerView={2}
           spaceBetween={12}
           breakpoints={{
-            480: { slidesPerView: 3, spaceBetween: 12 },
-            640: { slidesPerView: 4, spaceBetween: 14 },
+            480: { slidesPerView: 2, spaceBetween: 12 },
+            640: { slidesPerView: 3, spaceBetween: 14 },
           }}
         >
           {cards.map((card, index) => (
             <SwiperSlide key={index} style={{ height: 'auto' }}>
-              <ServiceCardItem card={card} index={index} />
+              <ServiceCardItem card={card} />
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Mobile nav buttons */}
         <div className="flex items-center justify-center gap-4 mt-4">
           <NavButton onClick={() => mobileSwiper?.slidePrev()}>
             <ArrowLeft />
@@ -161,15 +147,15 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
           <div className="flex-1 min-w-0">
             <Swiper
               onSwiper={setDesktopSwiper}
-              slidesPerView={5}
+              slidesPerView={4}
               spaceBetween={24}
               breakpoints={{
-                1280: { slidesPerView: 5, spaceBetween: 28 },
+                1280: { slidesPerView: 4, spaceBetween: 28 },
               }}
             >
               {cards.map((card, index) => (
                 <SwiperSlide key={index} style={{ height: 'auto' }}>
-                  <ServiceCardItem card={card} index={index} />
+                  <ServiceCardItem card={card} />
                 </SwiperSlide>
               ))}
             </Swiper>

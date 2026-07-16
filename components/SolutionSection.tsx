@@ -28,7 +28,11 @@ const itemVariants = {
 
 export default function SolutionSection({ dict }: { dict: SolutionDict }) {
   return (
-    <section id="solution" className="bg-white py-20">
+    <section
+      id="services"
+      className="bg-white py-20 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/BACKGROUND LOGO panjang.png')" }}
+    >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {solutionMeta.map((meta, index) => {

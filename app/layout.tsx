@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Lato } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({
+const lato = Lato({
   subsets: ['latin'],
-  variable: '--font-inter-var',
+  weight: ['300', '400', '700', '900'],
+  variable: '--font-lato-var',
 })
 
 export const metadata: Metadata = {
@@ -77,7 +78,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="id" className={inter.variable}>
+    <html lang="id" className={lato.variable}>
       <body>{children}</body>
     </html>
   )

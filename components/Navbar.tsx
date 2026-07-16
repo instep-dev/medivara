@@ -16,7 +16,7 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
   const [isHeroVisible, setIsHeroVisible] = useState(true)
 
   useEffect(() => {
-    const sectionIds = ['home', 'about', 'solution', 'teams', 'clients', 'contact']
+    const sectionIds = ['home', 'about', 'services', 'teams', 'clients', 'contact']
     const observers: IntersectionObserver[] = []
 
     sectionIds.forEach((id, index) => {

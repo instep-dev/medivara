@@ -3,7 +3,7 @@
     "links": [
       "HOME",
       "ABOUT US",
-      "SOLUTIONS",
+      "SERVICES",
       "TEAM",
       "CLIENTS",
       "CONTACT",
@@ -16,7 +16,7 @@
     "learnMore": "Learn More",
     "serviceCards": [
       {
-        "label": "Develop a New Hospital",
+        "label": "A New Hospital Development",
         "desc": "Build new hospitals from the ground up."
       },
       {
@@ -109,7 +109,7 @@
     "title": "Our Services",
     "items": [
       {
-        "title": "Development\na New Hospital",
+        "title": "A New Hospital\nDevelopment",
         "description": "We partner with healthcare leaders to build new hospitals from the ground up — from strategy to operational readiness.",
         "bulletPoints": [
           "Feasibility & market validation",
@@ -298,6 +298,30 @@
         "author": "Ihfa Firdausya",
         "source": "Media Indonesia",
         "sourceUrl": "https://mediaindonesia.com/humaniora/882404/industri-rs-makin-kompetitif-transformasi-sistem-jadi-kunci-bertahan",
+        "category": "Health"
+      },
+      {
+        "id": 5,
+        "slug": "transforming-hospitals-from-the-inside-out",
+        "title": "Transforming Hospitals from the Inside Out: How MEDIVARA Leads Dharma Nugraha Hospital's Transformation",
+        "excerpt": "Real hospital transformation doesn't start with a new building — it starts with systems, governance, and leadership. MEDIVARA's Lead Advisor Rima Fatmasari shares how this approach transformed Dharma Nugraha Hospital from the inside out.",
+        "content": "A hospital's transformation doesn't always begin with a new building or a major technology investment. More than that, sustainable transformation begins with fixing the system, governance, organizational culture, and leadership capable of driving change.\n\nThis is the approach championed by MEDIVARA, a healthcare advisory and management partner focused on the development, transformation, and optimization of healthcare institutions in Indonesia.\n\nOne real-world implementation of this approach is the transformation of Dharma Nugraha Hospital, where MEDIVARA was entrusted to lead a comprehensive recovery and performance-strengthening program for the hospital.\n\nLed by Rima Fatmasari, S.Si., Apt., MARS, as Lead Advisor, Clinical Operations & Governance Excellence, MEDIVARA conducted a thorough evaluation of the hospital's operations, governance, clinical services, and management systems. The transformation focused not only on resolving short-term issues, but on building a stronger organizational foundation for long-term growth.\n\nThrough a structured approach, MEDIVARA strengthened operational systems, improved management accountability, optimized service workflows, and built a more disciplined, performance-oriented work culture.\n\nWithin a relatively short time, the transformation began to show tangible results. Operational performance improved, public trust grew, and Dharma Nugraha Hospital entered a new phase as a healthcare institution better prepared to face the industry's evolving challenges.\n\nFor Rima Fatmasari, a successful transformation is reflected in more than just improved operational or financial indicators.\n\n\"Real transformation happens when a hospital has a system that can work consistently, supported by a team united by a shared purpose — so that patient care improves every single day.\"\n\nThrough transformation projects like Dharma Nugraha Hospital, MEDIVARA continues to strengthen its commitment to accompanying hospitals, investors, and healthcare institutions in building organizations that are more professional, sustainable, and ready for the future.\n\nBecause for MEDIVARA, building a hospital is not merely about improving performance — it is about building a healthcare institution that communities will continue to trust for generations to come.",
+        "date": "2026-07-16",
+        "author": "Rima Fatmasari, S.Si., Apt., MARS — Lead Advisor, Clinical Operations & Governance Excellence, MEDIVARA",
+        "source": "MEDIVARA",
+        "sourceUrl": "https://www.medivara.co.id",
+        "category": "Health"
+      },
+      {
+        "id": 6,
+        "slug": "rs-di-indonesia-tidak-benar-benar-sehat-tapi-mengapa-bertahan",
+        "title": "Indonesian Hospitals Aren't Truly Healthy — So Why Do They Survive?",
+        "excerpt": "Many healthcare institutions are under serious pressure — from tight competition and dependence on a handful of key doctors, to ever-evolving regulations and relentless funding demands.",
+        "content": "REPUBLIKA.CO.ID, JAKARTA -- Many healthcare institutions are facing no small amount of pressure. This is happening amid increasingly tight competition, dependence on a handful of anchor doctors, ever-evolving regulations, and funding needs that never let up.\n\nNot a few hospitals have grown \"naturally\" — developing over time without a strong systemic foundation. Operations continue, but without standardization. Performance looks stable, but is hard to measure. When pressure hits, the organization falters because it relies too heavily on individuals rather than systems.\n\nAddressing this complexity, Medivara Healthcare Consulting is present not merely as a consultant, but as an execution partner in the healthcare industry. Unlike conventional approaches that stop at strategy, Medivara is directly involved down to the implementation level, ensuring every change truly happens on the ground.\n\n\"Many hospitals want to change, but they stop at the planning stage. The real challenge is execution. That's where we come in, making sure transformation actually happens and delivers impact,\" said Rima Fatmasari, S.Apt., MARS, Lead Advisor for Clinical Operations & Governance Excellence at Medivara, in a press statement in Jakarta, Friday (24/4/2026).\n\nAccording to her, this approach has proven itself in the transformation of Dharma Nugraha Hospital in East Jakarta. The hospital, with a long history in oncology, had previously faced serious challenges in operational consistency and patient trust.\n\nBefore the transformation, she continued, processes ran without strong standards, coordination between units was suboptimal, and performance was difficult to control comprehensively. The hospital depended on key individuals, without a system capable of maintaining quality consistently. \"Transformation isn't about fixing what's broken — it's about building a system that keeps the organization from breaking easily in the first place,\" Rima said.\n\nWithin less than a year of Medivara's involvement, real change began to show. Operational systems were standardized, management structures strengthened, and service quality improved significantly. The impact was felt not only in internal efficiency, but also in patient experience and public perception of the hospital.\n\n\"Medivara didn't just give direction — they truly walked alongside us throughout this transformation process. The changes weren't just on paper; we felt them in our systems, our team, and our patients' trust,\" said Sekar Dewi Dinawati Tjindarbumi, Sp.THT-KL.",
+        "date": "2026-04-24",
+        "author": "Erik Purnama Putra",
+        "source": "Republika",
+        "sourceUrl": "",
         "category": "Health"
       }
     ]

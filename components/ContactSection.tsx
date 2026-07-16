@@ -38,7 +38,11 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
   const f = dict.form
 
   return (
-    <section id="contact" className="bg-white">
+    <section
+      id="contact"
+      className="bg-white bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/BACKGROUND LOGO.png')" }}
+    >
       {/* Contact Form */}
       <div className="py-16 md:py-20 px-4 md:px-8">
         <motion.div

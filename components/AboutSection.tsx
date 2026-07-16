@@ -52,10 +52,10 @@ function BulletContent({
   )
 }
 
-function SubsectionBlock({ sub, titleColor }: { sub: Subsection; titleColor: 'coral' | 'teal' }) {
+function SubsectionBlock({ sub }: { sub: Subsection }) {
   return (
     <div className="mb-8">
-      <h3 className={`text-xl font-bold mb-3 ${titleColor === 'coral' ? 'text-coral' : 'text-teal'}`}>
+      <h3 className="text-2xl font-bold mb-3 text-graphite">
         {sub.title}
       </h3>
       {sub.content && (
@@ -111,7 +111,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
               <motion.div variants={isEven ? fadeRight : fadeLeft}>
                 {meta.type === 'paragraphs' && section.title && (
                   <>
-                    <h2 className={`text-xl md:text-2xl font-bold mb-5 ${meta.titleColor === 'coral' ? 'text-coral' : 'text-teal'}`}>
+                    <h2 className="text-2xl md:text-[28px] font-bold mb-5 text-graphite">
                       {section.title}
                     </h2>
                     {section.content?.map((para, i) => (
@@ -124,7 +124,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
 
                 {meta.type === 'bullets' && section.title && (
                   <>
-                    <h2 className={`text-xl md:text-2xl font-bold mb-5 ${meta.titleColor === 'coral' ? 'text-coral' : 'text-teal'}`}>
+                    <h2 className="text-2xl md:text-[28px] font-bold mb-5 text-graphite">
                       {section.title}
                     </h2>
                     <BulletContent
@@ -138,11 +138,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
                 {meta.type === 'subsections' && section.subsections && (
                   <>
                     {section.subsections.map((sub, i) => (
-                      <SubsectionBlock
-                        key={i}
-                        sub={sub}
-                        titleColor={meta.subsectionColors[i] as 'coral' | 'teal'}
-                      />
+                      <SubsectionBlock key={i} sub={sub} />
                     ))}
                   </>
                 )}

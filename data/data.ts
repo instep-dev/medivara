@@ -6,7 +6,7 @@ export const navLinks = [
   { label: 'CONTACT', href: '#contact' },
 ]
 
-export const navHrefs = ['#home', '#about', '#solution', '#teams', '#clients', '#contact', 'news']
+export const navHrefs = ['#home', '#about', '#services', '#teams', '#clients', '#contact', 'news']
 
 export const heroServiceCardImages = [
   '/DEVELOP HOSPITAL.svg',
@@ -24,7 +24,7 @@ export const heroData = {
   description:
     'Medivara is a healthcare consulting, management, and development firm helping hospitals and healthcare organizations from strategy and system design to actual operations.',
   serviceCards: [
-    { label: 'Develop a New Hospital', desc:"The Indonesian government estimate around half a million new hospital beds", image: '/DEVELOP HOSPITAL.svg' },
+    { label: 'A New Hospital Development', desc:"The Indonesian government estimate around half a million new hospital beds", image: '/DEVELOP HOSPITAL.svg' },
     { label: 'Expand a Hospital', desc:"Our business tools and experienced consultants can also support initiatives..", image: '/EXPAND THE HOSPITAL.svg' },
     { label: 'Make a Business Plan', desc:"A watertight business plan may sound like a really obvious place to startstrategy...", image: '/MAKE A BUSINESS PLAN.png' },
     { label: 'Implement a Business Plan', desc:"Not only does HCM excellence providea precise and exacting business strategy...", image: '/IMPLEMENT BUSSINESS.svg' },
@@ -184,7 +184,7 @@ const loremText =
 export const solutions: Solution[] = [
   {
     id: 1,
-    title: 'Development\na New Hospital',
+    title: 'A New Hospital\nDevelopment',
     cardColor: 'teal',
     image: '/DEVELOP HOSPITAL.svg',
     type: 'lorem',
@@ -327,7 +327,11 @@ export const newsArticleImages: Record<string, string> = {
   'wajah-baru-dharma-nugraha-hospital-modern-nyaman':
     'https://img.herstory.co.id/articles/archive_20260422/rumah-sakit-20260422-070341.webp',
   'industri-rs-makin-kompetitif-transformasi-sistem':
-    'https://mediaindonesia.gumlet.io/news/2026/04/22/1776867641_d62efdcced373220724a.jpeg?w=700&dpr=1.3',
+    '/article1.jpeg',
+  'transforming-hospitals-from-the-inside-out':
+    '/Rima.png',
+  'rs-di-indonesia-tidak-benar-benar-sehat-tapi-mengapa-bertahan':
+    '/article6.jpeg',
 }
 
 export const contactInfo = {

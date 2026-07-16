@@ -4,7 +4,8 @@
   --color-teal: #2CC4C4;
   --color-coral: #F07878;
   --color-navy: #2D3A4A;
-  --font-inter: var(--font-inter-var);
+  --color-graphite: #495254;
+  --font-lato: var(--font-lato-var);
 }
 
 html {
@@ -12,6 +13,6 @@ html {
 }
 
 body {
-  font-family: var(--font-inter-var), Arial, sans-serif;
+  font-family: var(--font-lato-var), Arial, sans-serif;
   overflow-x: hidden;
 }
