@@ -24,7 +24,7 @@ export const heroData = {
   description:
     'Medivara is a healthcare consulting, management, and development firm helping hospitals and healthcare organizations from strategy and system design to actual operations.',
   serviceCards: [
-    { label: 'A New Hospital Development', desc:"The Indonesian government estimate around half a million new hospital beds", image: '/DEVELOP HOSPITAL.svg' },
+    { label: 'New Hospital Development', desc:"The Indonesian government estimate around half a million new hospital beds", image: '/DEVELOP HOSPITAL.svg' },
     { label: 'Expand a Hospital', desc:"Our business tools and experienced consultants can also support initiatives..", image: '/EXPAND THE HOSPITAL.svg' },
     { label: 'Make a Business Plan', desc:"A watertight business plan may sound like a really obvious place to startstrategy...", image: '/MAKE A BUSINESS PLAN.png' },
     { label: 'Implement a Business Plan', desc:"Not only does HCM excellence providea precise and exacting business strategy...", image: '/IMPLEMENT BUSSINESS.svg' },
@@ -338,6 +338,7 @@ export const contactInfo = {
   web: 'www.medivara.id',
   email: 'info@medivara.co.id',
   phone: '+62 21 7179-XXXX',
+  linkedin: '#', // TODO: replace with the real Medivara LinkedIn URL once provided
   address: [
     'Forest Building 4th Floor',
     'Jl. Kemang Raya no.17 Jakarta Selatan 12730',

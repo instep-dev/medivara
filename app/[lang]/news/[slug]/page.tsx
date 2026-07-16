@@ -43,9 +43,13 @@ export default async function NewsDetailPage({
 
           {/* Author · Date */}
           <p className="text-sm text-gray-400 mb-6">
-            {lang === 'id' ? 'Oleh' : 'By'}:{' '}
-            <span className="text-gray-600 font-medium">{article.author}</span>
-            {' · '}
+            {article.slug !== 'transforming-hospitals-from-the-inside-out' && (
+              <>
+                {lang === 'id' ? 'Oleh' : 'By'}:{' '}
+                <span className="text-gray-600 font-medium">{article.author}</span>
+                {' · '}
+              </>
+            )}
             {article.date}
           </p>
 

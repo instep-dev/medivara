@@ -79,6 +79,9 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
   return (
     <section id="teams" className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <h2 className="text-[28px] md:text-[34px] font-bold text-graphite text-center mb-12">
+          {dict.title}
+        </h2>
 
         {/* Mobile & tablet: 2-3 column grid */}
         <motion.div

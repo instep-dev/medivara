@@ -55,6 +55,15 @@ export default function NewsPreviewSection({ dict, lang }: { dict: NewsPreviewDi
             )
           })}
         </div>
+
+        <div className="flex justify-center mt-10">
+          <Link
+            href={`/${lang}/news`}
+            className="inline-block px-7 py-2.5 border-2 border-graphite text-graphite text-sm font-semibold rounded hover:bg-graphite hover:text-white transition-all duration-200"
+          >
+            More
+          </Link>
+        </div>
       </div>
     </section>
   )

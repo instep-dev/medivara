@@ -39,8 +39,8 @@ function NavButton({ onClick, children }: { onClick: () => void; children: React
 
 function ServiceCardItem({ card }: { card: ServiceCard }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 py-6 px-5 rounded-xl h-full bg-[#808185] text-center">
-      <h3 className="text-white text-lg font-bold leading-tight">{card.label}</h3>
+    <div className="flex flex-col items-center justify-center gap-2 py-5 px-5 rounded-xl h-full bg-[#808185] text-center">
+      <h3 className="text-white text-lg font-black uppercase tracking-wide leading-tight">{card.label}</h3>
       <p className="text-white/70 text-sm leading-relaxed line-clamp-3">{card.desc}</p>
     </div>
   )
@@ -109,10 +109,10 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
         <Swiper
           onSwiper={setMobileSwiper}
           slidesPerView={2}
-          spaceBetween={12}
+          spaceBetween={8}
           breakpoints={{
-            480: { slidesPerView: 2, spaceBetween: 12 },
-            640: { slidesPerView: 3, spaceBetween: 14 },
+            480: { slidesPerView: 2, spaceBetween: 8 },
+            640: { slidesPerView: 3, spaceBetween: 10 },
           }}
         >
           {cards.map((card, index) => (
@@ -148,9 +148,9 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
             <Swiper
               onSwiper={setDesktopSwiper}
               slidesPerView={4}
-              spaceBetween={24}
+              spaceBetween={16}
               breakpoints={{
-                1280: { slidesPerView: 4, spaceBetween: 28 },
+                1280: { slidesPerView: 4, spaceBetween: 18 },
               }}
             >
               {cards.map((card, index) => (

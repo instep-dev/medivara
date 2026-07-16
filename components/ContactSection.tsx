@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { contactInfo } from '@/data/data'
 import { motion } from 'framer-motion'
+import { LinkedinLogo } from '@phosphor-icons/react'
 
 type ContactDict = {
   form: {
@@ -105,6 +106,21 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
             </div>
           </form>
         </motion.div>
+
+        <div className="max-w-2xl mx-auto flex items-center justify-between mt-6 px-1">
+          <p className="text-sm text-gray-500">
+            &copy; {new Date().getFullYear()} Medivara
+          </p>
+          <a
+            href={contactInfo.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="text-gray-500 hover:text-coral transition-colors"
+          >
+            <LinkedinLogo size={22} weight="fill" />
+          </a>
+        </div>
       </div>
     </section>
   )
