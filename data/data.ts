@@ -1,12 +1,12 @@
 export const navLinks = [
   { label: 'HOME', href: '#home' },
   { label: 'ABOUT US', href: '#about' },
-  { label: 'SOLUTION', href: '#solution' },
+  { label: 'SOLUTIONS', href: '#solutions' },
   { label: 'TEAM', href: '#team' },
   { label: 'CONTACT', href: '#contact' },
 ]
 
-export const navHrefs = ['#home', '#about', '#services', '#teams', '#clients', '#contact', 'news']
+export const navHrefs = ['#home', '#about', '#solutions', '#teams', '#clients', '#contact', 'news']
 
 export const heroServiceCardImages = [
   '/DEVELOP HOSPITAL.svg',

@@ -29,7 +29,7 @@ const itemVariants = {
 export default function SolutionSection({ dict }: { dict: SolutionDict }) {
   return (
     <section
-      id="services"
+      id="solutions"
       className="bg-white py-20 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/BACKGROUND LOGO panjang.png')" }}
     >
