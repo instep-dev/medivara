@@ -27,23 +27,35 @@ type AboutDict = { title: string; sections: Section[] };
 function BulletContent({
   intro,
   bulletPoints,
-  outro
+  outro,
+  partner
 }: {
   intro?: string;
   bulletPoints?: string[];
   outro?: string;
+  partner?: boolean;
 }) {
   return (
     <>
       {intro && (
-        <p className="text-gray-700 text-sm leading-relaxed mb-3">{intro}</p>
+        <p
+          className={
+            "text-gray-700 text-lg leading-relaxed mb-3" +
+            (partner ? " text-white" : "")
+          }
+        >
+          {intro}
+        </p>
       )}
       {bulletPoints && (
         <ul className="space-y-1 mb-3">
           {bulletPoints.map((point, i) => (
             <li
               key={i}
-              className="text-gray-700 text-sm leading-relaxed flex gap-2"
+              className={
+                "text-gray-700 text-lg leading-relaxed flex gap-2" +
+                (partner ? " text-white" : "")
+              }
             >
               <span className="text-gray-500 mt-0.5">•</span>
               <span>{point}</span>
@@ -52,7 +64,12 @@ function BulletContent({
         </ul>
       )}
       {outro && (
-        <p className="text-gray-700 text-sm leading-relaxed font-semibold">
+        <p
+          className={
+            "text-gray-700 text-lg leading-relaxed font-semibold" +
+            (partner ? " text-white" : "")
+          }
+        >
           {outro}
         </p>
       )}
@@ -63,9 +80,11 @@ function BulletContent({
 function SubsectionBlock({ sub }: { sub: Subsection }) {
   return (
     <div className="mb-8">
-      <h3 className="text-2xl font-bold mb-3 text-graphite">{sub.title}</h3>
+      <h3 className="text-3xl md:text-[2.5rem] font-bold mb-3 text-graphite">
+        {sub.title}
+      </h3>
       {sub.content && (
-        <p className="text-gray-700 text-sm leading-relaxed">{sub.content}</p>
+        <p className="text-gray-700 text-lg leading-relaxed">{sub.content}</p>
       )}
       {!sub.content && (
         <BulletContent
@@ -108,9 +127,9 @@ const fadeUp = {
 export default function AboutSection({ dict }: { dict: AboutDict }) {
   return (
     <section id="about" className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 mt-8 lg:mt-42">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mt-8 lg:mt-42">
         <div className="">
-          <h1 className="text-4xl md:text-5xl font-bold text-graphite">
+          <h1 className="text-4xl md:text-6xl font-bold text-graphite">
             {dict.title}
           </h1>
           <Image
@@ -122,82 +141,93 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             style={{ width: "auto", height: "auto" }}
           />
         </div>
-
-        {aboutSectionMeta.map((meta, index) => {
-          const section = dict.sections[index];
-          if (!section) return null;
-
-          const isEven = index % 2 === 0;
-
-          return (
-            <motion.div
-              key={meta.id}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-80px" }}
-              className="relative left-1/2 w-screen -translate-x-1/2 border-b border-gray-100 last:border-0"
-              style={
-                !isEven
-                  ? {
-                      backgroundImage: "url('/BACKGROUND LOGO panjang.png')",
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover"
-                    }
-                  : undefined
-              }
-            >
-              <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start py-10 md:py-16">
-                <motion.div
-                  variants={isEven ? fadeLeft : fadeRight}
-                  className="relative h-60 md:h-72 rounded-lg overflow-hidden md:order-last"
-                >
-                  <FramedImage src={meta.image} alt={meta.imageAlt} />
-                </motion.div>
-
-                <motion.div variants={isEven ? fadeRight : fadeLeft}>
-                  {meta.type === "paragraphs" && section.title && (
-                    <>
-                      <h2 className="text-2xl md:text-[28px] font-bold mb-5 text-graphite">
-                        {section.title}
-                      </h2>
-                      {section.content?.map((para, i) => (
-                        <p
-                          key={i}
-                          className="text-gray-700 text-sm leading-relaxed mb-4 last:mb-0"
-                        >
-                          {para}
-                        </p>
-                      ))}
-                    </>
-                  )}
-
-                  {meta.type === "bullets" && section.title && (
-                    <>
-                      <h2 className="text-2xl md:text-[28px] font-bold mb-5 text-graphite">
-                        {section.title}
-                      </h2>
-                      <BulletContent
-                        intro={section.intro}
-                        bulletPoints={section.bulletPoints}
-                        outro={section.outro}
-                      />
-                    </>
-                  )}
-
-                  {meta.type === "subsections" && section.subsections && (
-                    <>
-                      {section.subsections.map((sub, i) => (
-                        <SubsectionBlock key={i} sub={sub} />
-                      ))}
-                    </>
-                  )}
-                </motion.div>
-              </div>
-            </motion.div>
-          );
-        })}
       </div>
+
+      {aboutSectionMeta.map((meta, index) => {
+        const section = dict.sections[index];
+        if (!section) return null;
+
+        const isEven = index % 2 === 0;
+        const partner = index === 3;
+
+        return (
+          <motion.div
+            key={meta.id}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-80px" }}
+            className="w-full border-b border-gray-100 last:border-0"
+            style={
+              !isEven
+                ? {
+                    backgroundImage: `url("${partner ? "/new-images/IMAGE TRUSTED.jpg" : "/BACKGROUND LOGO panjang.png"}")`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover"
+                  }
+                : undefined
+            }
+          >
+            <div
+              className={`max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-[8fr_7fr] gap-8 items-start pb-12 md:pb-20 ${
+                index === 0 ? "pt-4 md:pt-8" : "pt-12 md:pt-20"
+              }`}
+            >
+              <motion.div
+                variants={isEven ? fadeLeft : fadeRight}
+                className="relative mx-auto aspect-9/10 w-full md:order-last flex justify-end"
+              >
+                <FramedImage src={meta.image} alt={meta.imageAlt} />
+              </motion.div>
+
+              <motion.div variants={isEven ? fadeRight : fadeLeft}>
+                {meta.type === "paragraphs" && section.title && (
+                  <>
+                    <h2 className="text-3xl md:text-[2.5rem] font-bold mb-5 text-graphite">
+                      {section.title}
+                    </h2>
+                    {section.content?.map((para, i) => (
+                      <p
+                        key={i}
+                        className="text-gray-700 text-lg font-medium leading-relaxed mb-4 last:mb-0"
+                      >
+                        {para}
+                      </p>
+                    ))}
+                  </>
+                )}
+
+                {meta.type === "bullets" && section.title && (
+                  <>
+                    <h2
+                      className={
+                        "text-3xl md:text-[2.5rem] font-bold mb-5 text-graphite" +
+                        (partner ? " text-white" : "")
+                      }
+                    >
+                      {section.title}
+                    </h2>
+                    <BulletContent
+                      intro={section.intro}
+                      bulletPoints={section.bulletPoints}
+                      outro={section.outro}
+                      partner={partner}
+                    />
+                  </>
+                )}
+
+                {meta.type === "subsections" && section.subsections && (
+                  <>
+                    {section.subsections.map((sub, i) => (
+                      <SubsectionBlock key={i} sub={sub} />
+                    ))}
+                  </>
+                )}
+              </motion.div>
+            </div>
+          </motion.div>
+        );
+      })}
     </section>
   );
 }

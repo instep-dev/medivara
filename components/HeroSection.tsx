@@ -86,13 +86,13 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
   const cards = dict.serviceCards;
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col">
+    <section id="home" className="relative min-h-[90vh] flex flex-col">
       <div className="absolute inset-0">
         <Image
-          src="/IMAGE HOME.png"
+          src="/new-images/GEDUNG HOME.jpg"
           alt="Healthcare professionals"
           fill
-          className="object-cover object-top"
+          className="object-cover object-bottom"
           sizes="100vw"
           priority
         />
@@ -105,7 +105,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" as const }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4"
+            className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4"
           >
             {dict.heading}
           </motion.h1>
@@ -117,7 +117,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
               ease: "easeOut" as const,
               delay: 0.25
             }}
-            className="text-white/90 text-sm leading-relaxed"
+            className="text-white/90 text-md leading-relaxed"
           >
             {dict.description}
           </motion.p>
@@ -133,7 +133,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
           >
             <a
               href="#about"
-              className="inline-block px-7 py-2.5 bg-teal text-white text-sm font-semibold rounded-full hover:bg-white hover:text-gray-800 transition-all duration-200"
+              className="inline-block px-9 py-2.5 bg-teal text-white text-lg font-semibold rounded-full hover:bg-white hover:text-gray-800 transition-all duration-200"
             >
               {dict.learnMore}
             </a>

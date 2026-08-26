@@ -11,30 +11,20 @@ export default function FramedImage({
   alt,
   className = ""
 }: FramedImageProps) {
+  if (!src) return null;
   return (
-    <div className={`relative ${className}`}>
-      {/* ambient shadow — asymmetric ellipse, heavier under the left/front
-          of the card and tapering away to the right */}
-      <div
-        className="absolute -bottom-4 left-0 h-10 w-[75%] rounded-[100%] bg-black/40 blur-2xl"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute -bottom-3 left-1/3 h-6 w-1/2 rounded-[100%] bg-black/30 blur-xl"
-        aria-hidden="true"
-      />
-
-      {/* the framed image itself */}
-      <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl shadow-black/20 ring-1 ring-black/5">
+    <div className={`relative h-full w-full ${className}`}>
+      <div className="relative h-full w-full overflow-hidden rounded-4xl shadow-[0px_10px_15px_rgba(0,0,0,0.7)]">
         <Image
           src={src}
           alt={alt}
-          width={1040}
-          height={1200}
-          className="h-auto w-full object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover z-1"
           priority
         />
       </div>
+      <div className="curved-drop-shadow"></div>
     </div>
   );
 }
