@@ -1,6 +1,6 @@
 {
   "nav": {
-    "links": ["HOME", "ABOUT US", "SOLUTIONS", "NEWS", "TEAM", "CONTACT"]
+    "links": ["HOME", "ABOUT US", "SOLUTIONS", "TEAM", "NEWS", "CONTACT"]
   },
   "hero": {
     "heading": "Shaping the Future of Healthcare Institutions",
@@ -98,7 +98,7 @@
     ]
   },
   "solutions": {
-    "title": "Our Services",
+    "title": "Solutions",
     "items": [
       {
         "title": "New Hospital\nDevelopment",
@@ -165,26 +165,6 @@
           "IoT & Medical Equipment Integration"
         ],
         "goal": "Goal: Operational efficiency and long-term infrastructure sustainability."
-      },
-      {
-        "title": "Quality &\nAccreditation Service",
-        "bulletPoints": [
-          "KARS & JCI Accreditation Advisory",
-          "Patient Safety & Quality Programs",
-          "Workforce Development & Clinical Training"
-        ],
-        "goal": "Goal: hospitals achieve higher standards of healthcare quality, governance and compliance"
-      },
-      {
-        "title": "Strategic &\nbusiness development",
-        "bulletPoints": [
-          "Feasibility study",
-          "Land banking & hospital planning",
-          "Business plan & financial modelling",
-          "Strategic marketing planning",
-          "Investment structuring & capital funding"
-        ],
-        "goal": "Goal: Your hospital is built on clear numbers and realistic expectations."
       }
     ]
   },
@@ -192,7 +172,7 @@
     "title": "Our Clients"
   },
   "teams": {
-    "title": "Our Team",
+    "title": "Team",
     "members": [
       {
         "name": "M. Firas",
@@ -215,7 +195,7 @@
         "role": "Strategic Finance"
       },
       {
-        "name": "Jojo S. Nugroho, M.Sos, CCM, CPR",
+        "name": "Jojo S. Nugroho",
         "role": "PR & Comms Strategist"
       },
       {

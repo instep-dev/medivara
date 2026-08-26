@@ -22,8 +22,8 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
       "home",
       "about",
       "solutions",
-      "news",
       "teams",
+      "news",
       "contact"
     ];
     const observers: IntersectionObserver[] = [];

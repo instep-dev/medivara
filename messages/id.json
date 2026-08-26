@@ -1,6 +1,6 @@
 {
   "nav": {
-    "links": ["BERANDA", "TENTANG KAMI", "SOLUSI", "BERITA", "TIM", "KONTAK"]
+    "links": ["BERANDA", "TENTANG KAMI", "SOLUSI", "TIM", "BERITA", "KONTAK"]
   },
   "hero": {
     "heading": "Membentuk Masa Depan Institusi Layanan Kesehatan",
@@ -98,7 +98,7 @@
     ]
   },
   "solutions": {
-    "title": "Layanan Kami",
+    "title": "Solusi",
     "items": [
       {
         "title": "Pembangunan\nRumah Sakit Baru",
@@ -165,26 +165,6 @@
           "Integrasi IoT & Peralatan Medis"
         ],
         "goal": "Tujuan: Efisiensi operasional dan keberlanjutan infrastruktur jangka panjang."
-      },
-      {
-        "title": "Layanan Kualitas &\nAkreditasi",
-        "bulletPoints": [
-          "Konsultasi Akreditasi KARS & JCI",
-          "Program Keselamatan Pasien & Kualitas",
-          "Pengembangan Tenaga Kerja & Pelatihan Klinis"
-        ],
-        "goal": "Tujuan: Rumah sakit mencapai standar yang lebih tinggi dalam kualitas layanan kesehatan, tata kelola, dan kepatuhan."
-      },
-      {
-        "title": "Strategi &\nPengembangan Bisnis",
-        "bulletPoints": [
-          "Studi kelayakan",
-          "Perbankan lahan & perencanaan rumah sakit",
-          "Rencana bisnis & pemodelan keuangan",
-          "Perencanaan pemasaran strategis",
-          "Strukturisasi investasi & pendanaan modal"
-        ],
-        "goal": "Tujuan: Rumah sakit Anda dibangun di atas angka yang jelas dan ekspektasi yang realistis."
       }
     ]
   },
@@ -192,7 +172,7 @@
     "title": "Klien Kami"
   },
   "teams": {
-    "title": "Tim Kami",
+    "title": "Tim",
     "members": [
       {
         "name": "M. Firas",
@@ -215,7 +195,7 @@
         "role": "Strategic Finance"
       },
       {
-        "name": "Jojo S. Nugroho, M.Sos, CCM, CPR",
+        "name": "Jojo S. Nugroho",
         "role": "PR & Comms Strategist"
       },
       {

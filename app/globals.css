@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-/* * {
-  outline: red 1px solid !important;
-} */
+* {
+  /* outline: red 1px solid !important; */
+}
 
 @theme {
   --color-teal: #2cc4c4;
@@ -30,7 +30,7 @@ body {
   height: 60%;
   transform: skewY(-8.5deg);
   transform-origin: right;
-  bottom: 10px;
+  bottom: 15px;
   left: 5px;
   border-radius: 2.5rem;
   filter: blur(5px);
@@ -46,7 +46,7 @@ body {
   height: 60%;
   transform: skewY(8.5deg);
   transform-origin: left;
-  bottom: 10px;
+  bottom: 15px;
   right: 5px;
   border-radius: 2.5rem;
   filter: blur(5px);

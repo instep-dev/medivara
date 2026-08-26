@@ -169,7 +169,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             }
           >
             <div
-              className={`max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-[8fr_7fr] gap-8 items-start ${
+              className={`max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 ${partner ? "md:grid-cols-2" : "md:grid-cols-[8fr_7fr]"} gap-8 items-start ${
                 index === 0 ? "py-4 md:py-8" : "py-12 md:py-24"
               }`}
             >

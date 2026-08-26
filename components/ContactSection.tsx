@@ -45,8 +45,8 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
   return (
     <section
       id="contact"
-      className="bg-white bg-cover bg-center bg-no-repeat "
-      style={{ backgroundImage: "url('/BACKGROUND LOGO.png')" }}
+      className="bg-slate-600 bg-cover bg-center bg-no-repeat "
+      style={{ backgroundImage: "url('/new-images/BACKGROUND CONTACT.jpg')" }}
     >
       {/* Contact Form */}
       <div className="py-16 md:py-20 px-4 md:px-8">

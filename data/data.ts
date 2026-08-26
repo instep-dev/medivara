@@ -10,8 +10,8 @@ export const navHrefs = [
   "#home",
   "#about",
   "#solutions",
-  "news",
   "#teams",
+  "news",
   "#contact"
 ];
 

@@ -31,7 +31,7 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
     <section
       id="solutions"
       className="bg-slate-700 py-20 bg-cover bg-center bg-no-repeat"
-      // style={{ backgroundImage: "url('/BACKGROUND LOGO panjang.png')" }}
+      style={{ backgroundImage: "url('/new-images/BACKGROUND BIRU.jpg')" }}
     >
       <div className="max-w-7xl mx-auto px-8 md:px-12">
         <div className="mb-8 md:mb-10">
@@ -47,7 +47,7 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-40 gap-y-8 md:gap-y-14">
           {solutionMeta.map((meta, index) => {
             const text = dict.items[index];
             if (!text) return null;
@@ -74,11 +74,11 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
                 </div>
 
                 <div className="pt-5">
-                  <h3 className="text-teal font-bold text-2xl leading-tight mb-3">
+                  <h3 className="text-teal font-bold text-3xl leading-tight mb-3">
                     {text.title.replace("\n", " ")}
                   </h3>
                   {text.description && (
-                    <p className="text-white text-base leading-relaxed mb-2">
+                    <p className="text-white text-lg leading-relaxed mb-2">
                       {text.description}
                     </p>
                   )}
@@ -109,3 +109,54 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
     </section>
   );
 }
+
+/*
+UNUSED JSON DATA
+
+EN: 
+
+{
+  "title": "Quality &\nAccreditation Service",
+  "bulletPoints": [
+    "KARS & JCI Accreditation Advisory",
+    "Patient Safety & Quality Programs",
+    "Workforce Development & Clinical Training"
+  ],
+  "goal": "Goal: hospitals achieve higher standards of healthcare quality, governance and compliance"
+},
+{
+  "title": "Strategic &\nbusiness development",
+  "bulletPoints": [
+    "Feasibility study",
+    "Land banking & hospital planning",
+    "Business plan & financial modelling",
+    "Strategic marketing planning",
+    "Investment structuring & capital funding"
+  ],
+  "goal": "Goal: Your hospital is built on clear numbers and realistic expectations."
+}
+
+ID:
+
+{
+  "title": "Layanan Kualitas &\nAkreditasi",
+  "bulletPoints": [
+    "Konsultasi Akreditasi KARS & JCI",
+    "Program Keselamatan Pasien & Kualitas",
+    "Pengembangan Tenaga Kerja & Pelatihan Klinis"
+  ],
+  "goal": "Tujuan: Rumah sakit mencapai standar yang lebih tinggi dalam kualitas layanan kesehatan, tata kelola, dan kepatuhan."
+},
+{
+  "title": "Strategi &\nPengembangan Bisnis",
+  "bulletPoints": [
+    "Studi kelayakan",
+    "Perbankan lahan & perencanaan rumah sakit",
+    "Rencana bisnis & pemodelan keuangan",
+    "Perencanaan pemasaran strategis",
+    "Strukturisasi investasi & pendanaan modal"
+  ],
+  "goal": "Tujuan: Rumah sakit Anda dibangun di atas angka yang jelas dan ekspektasi yang realistis."
+}
+
+*/
