@@ -169,13 +169,16 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             }
           >
             <div
-              className={`max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-[8fr_7fr] gap-8 items-start pb-12 md:pb-20 ${
-                index === 0 ? "pt-4 md:pt-8" : "pt-12 md:pt-20"
+              className={`max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-[8fr_7fr] gap-8 items-start ${
+                index === 0 ? "py-4 md:py-8" : "py-12 md:py-24"
               }`}
             >
               <motion.div
                 variants={isEven ? fadeLeft : fadeRight}
-                className="relative mx-auto aspect-9/10 w-full md:order-last flex justify-end"
+                className={
+                  "relative mx-auto aspect-9/10 w-full md:order-last flex justify-end " +
+                  (partner ? "hidden" : "")
+                }
               >
                 <FramedImage src={meta.image} alt={meta.imageAlt} />
               </motion.div>
