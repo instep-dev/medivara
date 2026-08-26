@@ -205,37 +205,37 @@ export const solutionMeta = [
   {
     id: 1,
     cardColor: "teal" as const,
-    image: "/DEVELOP HOSPITAL.svg",
+    image: "/new-images/IMAGE SOLUTION 1.jpg",
     type: "bullets" as const
   },
   {
     id: 2,
     cardColor: "coral" as const,
-    image: "/EXPAND THE HOSPITAL.svg",
+    image: "/new-images/IMAGE SOLUTION 2.jpg",
     type: "bullets" as const
   },
   {
     id: 3,
     cardColor: "teal" as const,
-    image: "/HOSPITAL TURN ARROUND.svg",
+    image: "/new-images/IMAGE SOLUTION 3.jpg",
     type: "bullets" as const
   },
   {
     id: 4,
     cardColor: "coral" as const,
-    image: "/strategic.svg",
+    image: "/new-images/IMAGE SOLUTION 4.jpg",
     type: "bullets" as const
   },
   {
     id: 5,
     cardColor: "teal" as const,
-    image: "/oprational.svg",
+    image: "/new-images/IMAGE SOLUTION 5.jpg",
     type: "bullets" as const
   },
   {
     id: 6,
     cardColor: "coral" as const,
-    image: "/infra.svg",
+    image: "/new-images/IMAGE SOLUTION 6.jpg",
     type: "bullets" as const
   },
   {

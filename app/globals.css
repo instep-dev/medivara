@@ -14,11 +14,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   font-family: var(--font-lato-var), Arial, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .curved-drop-shadow::before {

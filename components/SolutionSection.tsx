@@ -30,11 +30,24 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
   return (
     <section
       id="solutions"
-      className="bg-white py-20 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/BACKGROUND LOGO panjang.png')" }}
+      className="bg-slate-700 py-20 bg-cover bg-center bg-no-repeat"
+      // style={{ backgroundImage: "url('/BACKGROUND LOGO panjang.png')" }}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <div className="max-w-7xl mx-auto px-8 md:px-12">
+        <div className="mb-8 md:mb-10">
+          <h2 className="text-4xl md:text-6xl font-bold text-white">
+            {dict.title}
+          </h2>
+          <Image
+            src="/underline.png"
+            alt=""
+            width={220}
+            height={30}
+            className="mt-1 h-auto w-44 md:w-56"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-14">
           {solutionMeta.map((meta, index) => {
             const text = dict.items[index];
             if (!text) return null;
@@ -48,24 +61,24 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-60px" }}
-                className="flex gap-5 items-start rounded-2xl border-3 border-gray-200 p-6 md:p-8"
+                className="min-w-0"
               >
-                <div className="relative w-14 h-14 md:w-32 md:h-32 flex-shrink-0">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[1.5rem] bg-gray-200">
                   <Image
                     src={meta.image}
                     alt={text.title.replace("\n", " ")}
                     fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 56px, 128px"
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
 
-                <div className="flex-1">
-                  <h3 className="text-gray-700 font-bold text-lg leading-tight mb-2">
+                <div className="pt-5">
+                  <h3 className="text-teal font-bold text-2xl leading-tight mb-3">
                     {text.title.replace("\n", " ")}
                   </h3>
                   {text.description && (
-                    <p className="text-gray-600 text-sm leading-relaxed mb-2">
+                    <p className="text-white text-base leading-relaxed mb-2">
                       {text.description}
                     </p>
                   )}
@@ -74,16 +87,16 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
                       {text.bulletPoints.map((point, i) => (
                         <li
                           key={i}
-                          className="text-gray-600 text-sm leading-relaxed flex gap-2"
+                          className="text-white text-base leading-relaxed flex gap-2"
                         >
-                          <span className="text-gray-500">•</span>
+                          <span className="text-white">•</span>
                           <span>{point}</span>
                         </li>
                       ))}
                     </ul>
                   )}
                   {text.goal && (
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-white text-base leading-relaxed mt-2">
                       {text.goal}
                     </p>
                   )}
