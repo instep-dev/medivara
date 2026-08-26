@@ -20,8 +20,8 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
       "home",
       "about",
       "solutions",
+      "news",
       "teams",
-      "clients",
       "contact"
     ];
     const observers: IntersectionObserver[] = [];
@@ -98,6 +98,18 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
             return isPageLink ? (
               <Link key={label} href={`/${lang}/${href}`} className={linkClass}>
                 {label}
+                {isActive && (
+                  <span className="absolute bottom-0 left-0 right-0 flex justify-center">
+                    <Image
+                      src="/underline.png"
+                      alt=""
+                      width={60}
+                      height={8}
+                      className="object-contain"
+                      style={{ width: "auto", height: "auto" }}
+                    />
+                  </span>
+                )}
               </Link>
             ) : (
               <a key={label} href={href} className={linkClass}>

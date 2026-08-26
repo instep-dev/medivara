@@ -6,7 +6,7 @@ export const navLinks = [
   { label: 'CONTACT', href: '#contact' },
 ]
 
-export const navHrefs = ['#home', '#about', '#solutions', '#teams', '#clients', '#contact', 'news']
+export const navHrefs = ['#home', '#about', '#solutions', 'news', '#teams', '#contact']
 
 export const heroServiceCardImages = [
   '/DEVELOP HOSPITAL.svg',

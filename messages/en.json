@@ -1,6 +1,6 @@
 {
   "nav": {
-    "links": ["HOME", "ABOUT US", "SOLUTIONS", "TEAM", "CONTACT", "NEWS"]
+    "links": ["HOME", "ABOUT US", "SOLUTIONS", "NEWS", "TEAM", "CONTACT"]
   },
   "hero": {
     "heading": "Shaping the Future of Healthcare Institutions",

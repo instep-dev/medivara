@@ -135,7 +135,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, margin: "-80px" }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start py-10 md:py-16 border-b border-gray-100 last:border-0"
+              className="relative left-1/2 w-screen -translate-x-1/2 border-b border-gray-100 last:border-0"
               style={
                 !isEven
                   ? {
@@ -147,51 +147,53 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
                   : undefined
               }
             >
-              <motion.div
-                variants={isEven ? fadeLeft : fadeRight}
-                className="relative h-60 md:h-72 rounded-lg overflow-hidden md:order-last"
-              >
-                <FramedImage src={meta.image} alt={meta.imageAlt} />
-              </motion.div>
+              <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start py-10 md:py-16">
+                <motion.div
+                  variants={isEven ? fadeLeft : fadeRight}
+                  className="relative h-60 md:h-72 rounded-lg overflow-hidden md:order-last"
+                >
+                  <FramedImage src={meta.image} alt={meta.imageAlt} />
+                </motion.div>
 
-              <motion.div variants={isEven ? fadeRight : fadeLeft}>
-                {meta.type === "paragraphs" && section.title && (
-                  <>
-                    <h2 className="text-2xl md:text-[28px] font-bold mb-5 text-graphite">
-                      {section.title}
-                    </h2>
-                    {section.content?.map((para, i) => (
-                      <p
-                        key={i}
-                        className="text-gray-700 text-sm leading-relaxed mb-4 last:mb-0"
-                      >
-                        {para}
-                      </p>
-                    ))}
-                  </>
-                )}
+                <motion.div variants={isEven ? fadeRight : fadeLeft}>
+                  {meta.type === "paragraphs" && section.title && (
+                    <>
+                      <h2 className="text-2xl md:text-[28px] font-bold mb-5 text-graphite">
+                        {section.title}
+                      </h2>
+                      {section.content?.map((para, i) => (
+                        <p
+                          key={i}
+                          className="text-gray-700 text-sm leading-relaxed mb-4 last:mb-0"
+                        >
+                          {para}
+                        </p>
+                      ))}
+                    </>
+                  )}
 
-                {meta.type === "bullets" && section.title && (
-                  <>
-                    <h2 className="text-2xl md:text-[28px] font-bold mb-5 text-graphite">
-                      {section.title}
-                    </h2>
-                    <BulletContent
-                      intro={section.intro}
-                      bulletPoints={section.bulletPoints}
-                      outro={section.outro}
-                    />
-                  </>
-                )}
+                  {meta.type === "bullets" && section.title && (
+                    <>
+                      <h2 className="text-2xl md:text-[28px] font-bold mb-5 text-graphite">
+                        {section.title}
+                      </h2>
+                      <BulletContent
+                        intro={section.intro}
+                        bulletPoints={section.bulletPoints}
+                        outro={section.outro}
+                      />
+                    </>
+                  )}
 
-                {meta.type === "subsections" && section.subsections && (
-                  <>
-                    {section.subsections.map((sub, i) => (
-                      <SubsectionBlock key={i} sub={sub} />
-                    ))}
-                  </>
-                )}
-              </motion.div>
+                  {meta.type === "subsections" && section.subsections && (
+                    <>
+                      {section.subsections.map((sub, i) => (
+                        <SubsectionBlock key={i} sub={sub} />
+                      ))}
+                    </>
+                  )}
+                </motion.div>
+              </div>
             </motion.div>
           );
         })}
