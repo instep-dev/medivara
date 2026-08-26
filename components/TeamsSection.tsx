@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { teamImages } from '@/data/data'
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { teamImages } from "@/data/data";
 
-type Member = { name: string; role: string }
-type TeamsDict = { title: string; members: Member[] }
+type Member = { name: string; role: string };
+type TeamsDict = { title: string; members: Member[] };
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
@@ -13,20 +13,20 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.6, ease: 'easeOut' as const, delay: i * 0.09 },
-  }),
-}
+    transition: { duration: 0.6, ease: "easeOut" as const, delay: i * 0.09 }
+  })
+};
 
 function MemberCard({
   member,
   image,
   index,
-  compact = false,
+  compact = false
 }: {
-  member: Member
-  image: string
-  index: number
-  compact?: boolean
+  member: Member;
+  image: string;
+  index: number;
+  compact?: boolean;
 }) {
   return (
     <motion.div
@@ -36,7 +36,7 @@ function MemberCard({
     >
       <div
         className={`relative overflow-hidden rounded-md shadow-md ring-2 ring-gray-100 flex-shrink-0 ${
-          compact ? 'w-full aspect-[3/2]' : 'lg:w-52 lg:h-44 xl:w-64 xl:h-52'
+          compact ? "w-full aspect-[3/2]" : "lg:w-52 lg:h-44 xl:w-64 xl:h-52"
         }`}
       >
         <Image
@@ -44,37 +44,44 @@ function MemberCard({
           alt={member.name}
           fill
           className="object-cover object-top z-10"
+          sizes="(max-width: 1023px) 50vw, 256px"
         />
         <div className="absolute top-6 left-0 right-0 bottom-0">
-          <Image src="/SHADOW PHOTO.png" alt="shadow" fill className="object-cover object-bottom" />
+          <Image
+            src="/SHADOW PHOTO.png"
+            alt="shadow"
+            fill
+            className="object-cover object-bottom"
+            sizes="(max-width: 1023px) 50vw, 256px"
+          />
         </div>
       </div>
       <h3
         className={`text-teal font-semibold text-center leading-tight mt-6 ${
-          compact ? 'text-sm' : 'text-base lg:text-lg'
+          compact ? "text-sm" : "text-base lg:text-lg"
         }`}
       >
         {member.name}
       </h3>
       <p
         className={`text-gray-500 text-center leading-tight mt-1 max-w-[160px] ${
-          compact ? 'text-[11px]' : 'text-xs'
+          compact ? "text-[11px]" : "text-xs"
         }`}
       >
         {member.role}
       </p>
     </motion.div>
-  )
+  );
 }
 
 export default function TeamsSection({ dict }: { dict: TeamsDict }) {
   const members = dict.members.map((member, i) => ({
     ...member,
-    image: teamImages[i] ?? '',
-  }))
+    image: teamImages[i] ?? ""
+  }));
 
-  const row1 = members.slice(0, 4)
-  const row2 = members.slice(4, 7)
+  const row1 = members.slice(0, 4);
+  const row2 = members.slice(4, 7);
 
   return (
     <section id="teams" className="bg-white py-20">
@@ -87,7 +94,7 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: '-60px' }}
+          viewport={{ once: true, margin: "-60px" }}
           className="grid grid-cols-2 sm:grid-cols-3 lg:hidden gap-6"
         >
           {members.map((member, i) => (
@@ -106,7 +113,7 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
           <motion.div
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, margin: '-60px' }}
+            viewport={{ once: true, margin: "-60px" }}
             className="flex justify-center gap-4 xl:gap-6"
           >
             {row1.map((member, i) => (
@@ -121,7 +128,7 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
           <motion.div
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, margin: '-60px' }}
+            viewport={{ once: true, margin: "-60px" }}
             className="flex justify-center gap-6 xl:gap-8 mt-10"
           >
             {row2.map((member, i) => (
@@ -136,5 +143,5 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
         </div>
       </div>
     </section>
-  )
+  );
 }

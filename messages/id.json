@@ -1,19 +1,11 @@
 {
   "nav": {
-    "links": [
-      "BERANDA",
-      "TENTANG KAMI",
-      "LAYANAN",
-      "TIM",
-      "KLIEN",
-      "KONTAK",
-      "BERITA"
-    ]
+    "links": ["BERANDA", "TENTANG KAMI", "SOLUSI", "TIM", "KONTAK", "BERITA"]
   },
   "hero": {
     "heading": "Membentuk Masa Depan Institusi Layanan Kesehatan",
     "description": "MEDIVARA bermitra dengan pemimpin layanan kesehatan, investor, dan institusi untuk membangun sistem yang lebih kuat, berkelanjutan, dan terpercaya—dari strategi hingga keunggulan operasional yang berkelanjutan.",
-    "learnMore": "Pelajari Lebih Lanjut",
+    "learnMore": "Eksplor Lebih Lanjut",
     "serviceCards": [
       {
         "label": "Pembangunan Rumah Sakit Baru",

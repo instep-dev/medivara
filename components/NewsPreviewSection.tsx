@@ -1,27 +1,33 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { newsArticleImages } from '@/data/data'
+import Image from "next/image";
+import Link from "next/link";
+import { newsArticleImages } from "@/data/data";
 
 type NewsItem = {
-  id: number
-  slug: string
-  title: string
-  date: string
-}
+  id: number;
+  slug: string;
+  title: string;
+  date: string;
+};
 
 type NewsPreviewDict = {
-  pageTitle: string
-  items: NewsItem[]
-}
+  pageTitle: string;
+  items: NewsItem[];
+};
 
-export default function NewsPreviewSection({ dict, lang }: { dict: NewsPreviewDict; lang: string }) {
+export default function NewsPreviewSection({
+  dict,
+  lang
+}: {
+  dict: NewsPreviewDict;
+  lang: string;
+}) {
   const latest = [...dict.items]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 3)
+    .slice(0, 3);
 
-  if (latest.length === 0) return null
+  if (latest.length === 0) return null;
 
   return (
     <section id="news" className="bg-white py-20">
@@ -34,9 +40,13 @@ export default function NewsPreviewSection({ dict, lang }: { dict: NewsPreviewDi
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {latest.map((item) => {
-            const imgSrc = newsArticleImages[item.slug]
+            const imgSrc = newsArticleImages[item.slug];
             return (
-              <Link key={item.id} href={`/${lang}/news`} className="group block">
+              <Link
+                key={item.id}
+                href={`/${lang}/news`}
+                className="group block"
+              >
                 <div className="relative h-44 md:h-52 rounded-lg overflow-hidden mb-4 bg-gray-200">
                   {imgSrc && (
                     <Image
@@ -52,7 +62,7 @@ export default function NewsPreviewSection({ dict, lang }: { dict: NewsPreviewDi
                   {item.title}
                 </h3>
               </Link>
-            )
+            );
           })}
         </div>
 
@@ -66,5 +76,5 @@ export default function NewsPreviewSection({ dict, lang }: { dict: NewsPreviewDi
         </div>
       </div>
     </section>
-  )
+  );
 }

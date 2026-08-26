@@ -1,25 +1,29 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import { usePathname } from 'next/navigation'
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 type NewsNavbarProps = {
-  lang: string
-  homeLabel: string
-  newsLabel: string
-}
+  lang: string;
+  homeLabel: string;
+  newsLabel: string;
+};
 
-export default function NewsNavbar({ lang, homeLabel, newsLabel }: NewsNavbarProps) {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const otherLang = lang === 'en' ? 'id' : 'en'
-  const pathname = usePathname()
+export default function NewsNavbar({
+  lang,
+  homeLabel,
+  newsLabel
+}: NewsNavbarProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const otherLang = lang === "en" ? "id" : "en";
+  const pathname = usePathname();
 
   // pathname: /{lang}/news  OR  /{lang}/news/{slug}
-  const segments = pathname.split('/').filter(Boolean)
-  const slug = segments.length > 2 ? segments[2] : null
-  const switchHref = slug ? `/${otherLang}/news/${slug}` : `/${otherLang}/news`
+  const segments = pathname.split("/").filter(Boolean);
+  const slug = segments.length > 2 ? segments[2] : null;
+  const switchHref = slug ? `/${otherLang}/news/${slug}` : `/${otherLang}/news`;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-coral to-teal">
@@ -31,6 +35,7 @@ export default function NewsNavbar({ lang, homeLabel, newsLabel }: NewsNavbarPro
             width={130}
             height={46}
             className="object-contain"
+            style={{ width: "auto", height: "auto" }}
             priority
           />
         </Link>
@@ -56,8 +61,9 @@ export default function NewsNavbar({ lang, homeLabel, newsLabel }: NewsNavbarPro
                 src="/underline.png"
                 alt=""
                 width={60}
-                height={6}
+                height={8}
                 className="object-contain"
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
           </Link>
@@ -90,9 +96,15 @@ export default function NewsNavbar({ lang, homeLabel, newsLabel }: NewsNavbarPro
             className="flex flex-col justify-center gap-1.5 p-1"
             aria-label="Toggle menu"
           >
-            <span className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            <span
+              className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+            />
+            <span
+              className={`block w-5 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            />
           </button>
         </div>
       </div>
@@ -117,5 +129,5 @@ export default function NewsNavbar({ lang, homeLabel, newsLabel }: NewsNavbarPro
         </div>
       )}
     </nav>
-  )
+  );
 }
