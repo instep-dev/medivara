@@ -13,6 +13,7 @@ type NewsItem = {
 
 type NewsPreviewDict = {
   pageTitle: string;
+  moreLabel: string;
   items: NewsItem[];
 };
 
@@ -47,7 +48,8 @@ export default function NewsPreviewSection({
             return (
               <Link
                 key={item.id}
-                href={`/${lang}/news`}
+                href={`/${lang}/news/${item.slug}`}
+                scroll={true}
                 className="group block"
               >
                 <div className="relative aspect-[16/9] sm:aspect-auto sm:h-44 md:h-52 rounded-lg overflow-hidden mb-3 sm:mb-4 bg-gray-200">
@@ -74,7 +76,7 @@ export default function NewsPreviewSection({
             href={`/${lang}/news`}
             className="inline-block px-7 py-2.5 border-2 border-graphite text-graphite text-sm font-semibold rounded hover:bg-graphite hover:text-white transition-all duration-200"
           >
-            More
+            {dict.moreLabel}
           </Link>
         </div>
       </div>

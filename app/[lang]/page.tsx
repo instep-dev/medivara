@@ -6,8 +6,8 @@ import AboutSection from "@/components/AboutSection";
 import SolutionSection from "@/components/SolutionSection";
 import NewsPreviewSection from "@/components/NewsPreviewSection";
 import TeamsSection from "@/components/TeamsSection";
-import ClientsSection from "@/components/ClientsSection";
 import ContactSection from "@/components/ContactSection";
+import PartnerSection from "@/components/PartnerSection";
 
 export default async function Page({
   params
@@ -28,7 +28,8 @@ export default async function Page({
         <SolutionSection dict={dict.solutions} />
         <TeamsSection dict={dict.teams} />
         <NewsPreviewSection dict={dict.news} lang={lang} />
-        <ClientsSection title={dict.clients.title} />
+        {/* <ClientsSection title={dict.clients.title} /> */}
+        <PartnerSection section={dict.partner} />
         <ContactSection dict={dict.contact} />
       </main>
     </>

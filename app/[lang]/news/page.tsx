@@ -83,7 +83,7 @@ export default async function NewsPage({
 
   return (
     <>
-      <NewsNavbar lang={lang} homeLabel={links[0]} newsLabel={links[6]} />
+      <NewsNavbar lang={lang} homeLabel={links[0]} newsLabel={links[4]} />
 
       <main className="min-h-screen bg-white pt-28">
         {/* News grid */}
