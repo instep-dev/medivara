@@ -142,9 +142,9 @@ const fadeUp = {
 export default function AboutSection({ dict }: { dict: AboutDict }) {
   return (
     <section id="about" className="bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 mt-8 lg:mt-42">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mt-8 lg:mt-42">
         <div className="">
-          <h1 className="text-4xl md:text-6xl font-bold text-graphite">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-graphite">
             {dict.title}
           </h1>
           <Image
@@ -152,8 +152,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             alt=""
             width={120}
             height={16}
-            className="object-contain"
-            style={{ width: "auto", height: "auto" }}
+            className="h-2 w-40 object-fill sm:h-2.5"
           />
         </div>
       </div>
@@ -184,8 +183,8 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             }
           >
             <div
-              className={`relative z-10 max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 ${partner ? "md:grid-cols-2" : "md:grid-cols-[8fr_7fr]"} gap-8 items-start ${
-                index === 0 ? "py-4 md:py-8" : "py-12 md:py-24"
+              className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 ${partner ? "md:grid-cols-2" : "md:grid-cols-[8fr_7fr]"} gap-6 md:gap-8 items-start ${
+                index === 0 ? "py-4 md:py-8" : "py-8 md:py-24"
               }`}
             >
               <motion.div

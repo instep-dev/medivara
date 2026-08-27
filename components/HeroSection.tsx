@@ -86,7 +86,10 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
   const cards = dict.serviceCards;
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex flex-col">
+    <section
+      id="home"
+      className="relative min-h-[100svh] flex flex-col lg:min-h-[90vh]"
+    >
       <div className="absolute inset-0">
         <Image
           src="/new-images/GEDUNG HOME.jpg"
@@ -99,7 +102,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
       </div>
 
-      <div className="relative z-10 flex-1 flex flex-col justify-center pt-24 pb-8 px-4 md:px-8 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 flex-1 flex flex-col justify-center pt-24 pb-6 px-5 sm:px-6 md:px-8 max-w-7xl mx-auto w-full">
         <div className="max-w-xl">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
@@ -117,7 +120,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
               ease: "easeOut" as const,
               delay: 0.25
             }}
-            className="text-white/90 text-md leading-relaxed"
+            className="text-white/90 text-base leading-relaxed"
           >
             {dict.description}
           </motion.p>
@@ -129,7 +132,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
               ease: "easeOut" as const,
               delay: 0.45
             }}
-            className="mt-6 flex justify-center md:justify-start"
+            className="mt-5 flex justify-center md:mt-6 md:justify-start"
           >
             <a
               href="#about"
@@ -146,7 +149,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4 }}
-        className="relative z-10 px-4 pb-10 lg:hidden"
+        className="relative z-10 px-4 pb-6 sm:pb-8 lg:hidden"
       >
         <Swiper
           onSwiper={setMobileSwiper}

@@ -13,7 +13,10 @@ const filledClients = Array.from({ length: 8 }, () => clients).flat();
 
 export default function ClientsSection({ title }: { title: string }) {
   return (
-    <section id="clients" className="overflow-hidden bg-white py-20">
+    <section
+      id="clients"
+      className="overflow-hidden bg-white py-12 sm:py-16 md:py-20"
+    >
       <Marquee
         speed={50}
         gradient
@@ -22,7 +25,10 @@ export default function ClientsSection({ title }: { title: string }) {
         pauseOnHover
       >
         {filledClients.map((client, i) => (
-          <div key={i} className="relative h-20 w-48 mx-12">
+          <div
+            key={i}
+            className="relative mx-6 h-16 w-40 sm:mx-12 sm:h-20 sm:w-48"
+          >
             <Image
               src={client.logo}
               alt={client.name}

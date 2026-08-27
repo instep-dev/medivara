@@ -75,10 +75,10 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
   const row2 = members.slice(4, 7);
 
   return (
-    <section id="teams" className="bg-white py-10">
-      <div className="max-w-7xl mx-auto px-8 md:px-12">
-        <div className="mb-8 md:mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-graphite">
+    <section id="teams" className="bg-white py-8 sm:py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
+        <div className="mb-6 sm:mb-8 md:mb-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-graphite">
             {dict.title}
           </h2>
           <Image
@@ -86,7 +86,7 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
             alt=""
             width={220}
             height={30}
-            className="mt-1 h-auto w-22 md:w-28"
+            className="mt-1 h-2 w-20 object-fill md:h-3 md:w-28"
           />
         </div>
 
@@ -95,7 +95,7 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:hidden"
+          className="grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 sm:gap-x-5 lg:hidden"
         >
           {members.map((member, i) => (
             <MemberCard
