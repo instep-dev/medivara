@@ -27,9 +27,7 @@ export default async function NewsDetailPage({
 
       <main className="min-h-screen bg-white pt-24 pb-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ArticleBackLink
-            label={lang === "id" ? "Kembali" : "Back"}
-          />
+          <ArticleBackLink label={dict.news.backLabel} />
 
           {/* Title */}
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-4">
@@ -40,7 +38,7 @@ export default async function NewsDetailPage({
           <p className="text-sm text-gray-400 mb-6">
             {article.slug !== "transforming-hospitals-from-the-inside-out" && (
               <>
-                {lang === "id" ? "Oleh" : "By"}:{" "}
+                {dict.news.byLabel}:{" "}
                 <span className="text-gray-600 font-medium">
                   {article.author}
                 </span>
@@ -75,7 +73,7 @@ export default async function NewsDetailPage({
 
           {/* Source */}
           <div className="mt-10 pt-6 border-t border-gray-200 text-sm text-gray-500">
-            {lang === "id" ? "Sumber" : "Source"}:{" "}
+            {dict.news.sourceLabel}:{" "}
             <a
               href={article.sourceUrl}
               target="_blank"

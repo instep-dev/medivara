@@ -13,6 +13,7 @@ type NewsItem = {
 
 type NewsPreviewDict = {
   pageTitle: string;
+  moreLabel: string;
   items: NewsItem[];
 };
 
@@ -75,7 +76,7 @@ export default function NewsPreviewSection({
             href={`/${lang}/news`}
             className="inline-block px-7 py-2.5 border-2 border-graphite text-graphite text-sm font-semibold rounded hover:bg-graphite hover:text-white transition-all duration-200"
           >
-            More
+            {dict.moreLabel}
           </Link>
         </div>
       </div>

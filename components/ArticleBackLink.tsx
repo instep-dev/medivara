@@ -1,16 +1,10 @@
 "use client";
 
-export default function ArticleBackLink({
-  label
-}: {
-  label: string;
-}) {
+export default function ArticleBackLink({ label }: { label: string }) {
   const handleBack = () => {
-    window.addEventListener(
-      "popstate",
-      () => window.location.reload(),
-      { once: true }
-    );
+    window.addEventListener("popstate", () => window.location.reload(), {
+      once: true
+    });
     window.history.back();
   };
 
