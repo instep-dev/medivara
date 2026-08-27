@@ -93,6 +93,7 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
               width={143}
               height={48}
               className="h-10 w-auto sm:h-12"
+              style={{ width: "auto", height: "auto" }}
               priority
             />
           </a>

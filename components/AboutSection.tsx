@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { aboutSectionMeta } from "@/data/data";
+import { aboutSectionMeta, partnerBulletIcons } from "@/data/data";
 import FramedImage from "./ImageFrame";
 
 type Subsection = {
@@ -40,7 +40,7 @@ function BulletContent({
       {intro && (
         <p
           className={
-            "text-gray-700 text-lg leading-relaxed mb-3" +
+            "text-gray-700 text-lg leading-relaxed mb-6" +
             (partner ? " text-white" : "")
           }
         >
@@ -48,16 +48,31 @@ function BulletContent({
         </p>
       )}
       {bulletPoints && (
-        <ul className="space-y-1 mb-3">
+        <ul
+          className={
+            partner ? "grid grid-cols-2 gap-x-6 gap-y-2 mb-6" : "space-y-1 mb-6"
+          }
+        >
           {bulletPoints.map((point, i) => (
             <li
               key={i}
               className={
-                "text-gray-700 text-lg leading-relaxed flex gap-2" +
+                "text-gray-700 leading-relaxed flex gap-2" +
+                (partner ? " text-sm" : " text-lg") +
                 (partner ? " text-white" : "")
               }
             >
-              <span className="text-gray-500 mt-0.5">•</span>
+              {partner ? (
+                <Image
+                  src={partnerBulletIcons[i % partnerBulletIcons.length]}
+                  alt=""
+                  width={80}
+                  height={80}
+                  className="mt-0.5 h-12 w-12 shrink-0 object-contain"
+                />
+              ) : (
+                <span className="text-gray-500 mt-0.5">•</span>
+              )}
               <span>{point}</span>
             </li>
           ))}
@@ -156,7 +171,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
-            className="w-full border-b border-gray-100 last:border-0"
+            className="relative w-full border-b border-gray-100 last:border-0"
             style={
               !isEven
                 ? {
@@ -169,7 +184,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             }
           >
             <div
-              className={`max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 ${partner ? "md:grid-cols-2" : "md:grid-cols-[8fr_7fr]"} gap-8 items-start ${
+              className={`relative z-10 max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 ${partner ? "md:grid-cols-2" : "md:grid-cols-[8fr_7fr]"} gap-8 items-start ${
                 index === 0 ? "py-4 md:py-8" : "py-12 md:py-24"
               }`}
             >
@@ -228,6 +243,12 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
                 )}
               </motion.div>
             </div>
+            {partner && (
+              <div
+                className="absolute inset-0 bg-black/25"
+                aria-hidden="true"
+              />
+            )}
           </motion.div>
         );
       })}
