@@ -67,14 +67,14 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
       <div
         className={`relative transition-all duration-300 ${
           overHero
-            ? "px-6 pt-6 pb-2 sm:px-10 lg:px-20"
-            : "px-6 py-4 sm:px-10 lg:px-20"
+            ? "px-4 pt-4 pb-2 sm:px-6 lg:px-8"
+            : "px-4 py-3 sm:px-6 lg:px-8"
         }`}
       >
         <div
           className={`mx-auto flex w-full max-w-6xl items-center justify-between gap-4 transition-all duration-300 ${
             overHero
-              ? "rounded-2xl border border-white/20 bg-white/15 px-6 py-3 shadow-lg backdrop-blur-md"
+              ? "rounded-2xl border border-white/20 bg-white/15 px-4 py-2.5 sm:px-6 sm:py-3 shadow-lg backdrop-blur-md"
               : "rounded-none border border-transparent bg-transparent px-0 py-0 shadow-none"
           }`}
         >
@@ -93,6 +93,7 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
               width={143}
               height={48}
               className="h-10 w-auto sm:h-12"
+              style={{ width: "auto", height: "auto" }}
               priority
             />
           </a>
@@ -164,7 +165,7 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
         </div>
 
         {open && (
-          <div className="mt-4 rounded-lg bg-navy/90 px-6 py-4 backdrop-blur-sm sm:px-10 lg:hidden">
+          <div className="mt-3 rounded-lg bg-navy/90 px-4 py-3 backdrop-blur-sm sm:mt-4 sm:px-10 sm:py-4 lg:hidden">
             <nav className="flex flex-col gap-4 text-lg font-bold text-white">
               {navLabels.map((label, index) => {
                 const href = navHrefs[index];

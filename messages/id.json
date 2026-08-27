@@ -218,7 +218,13 @@
       "sendButton": "kirim"
     },
     "info": {
-      "heading": "HUBUNGI KAMI"
+      "heading": "HUBUNGI KAMI",
+      "companyName": "PT. MAHARDHIKA VARIA MEDIKA",
+      "website": "www.medivara.id",
+      "phone": "+62 21 7179-XXXX",
+      "email": "info@medivara.co.id",
+      "linkedinLabel": "LinkedIn",
+      "copyright": "Medivara"
     }
   },
   "news": {

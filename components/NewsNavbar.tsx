@@ -27,7 +27,7 @@ export default function NewsNavbar({
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-coral to-teal">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 p-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 sm:py-4 lg:px-8 flex items-center justify-between">
         <Link href={`/${lang}`}>
           <Image
             src="/LOGO MEDIVARA PUTIH WEBSITE.png"
@@ -62,8 +62,7 @@ export default function NewsNavbar({
                 alt=""
                 width={60}
                 height={8}
-                className="object-contain"
-                style={{ width: "auto", height: "auto" }}
+                className="h-1.5 w-15 object-fill"
               />
             </span>
           </Link>
@@ -111,7 +110,7 @@ export default function NewsNavbar({
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4 bg-gradient-to-b from-coral to-teal">
+        <div className="md:hidden px-3 pb-3 sm:px-4 sm:pb-4 bg-gradient-to-b from-coral to-teal">
           <Link
             href={`/${lang}`}
             onClick={() => setMenuOpen(false)}

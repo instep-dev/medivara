@@ -26,7 +26,7 @@ export default async function NewsDetailPage({
       <NewsNavbar lang={lang} homeLabel={links[0]} newsLabel={links[6]} />
 
       <main className="min-h-screen bg-white pt-24 pb-20">
-        <div className="max-w-3xl mx-auto px-4 md:px-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back link */}
           <Link
             href={`/${lang}/news`}

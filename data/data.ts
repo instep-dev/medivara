@@ -15,6 +15,13 @@ export const navHrefs = [
   "#contact"
 ];
 
+export const isPartnerBulletIcons = [
+  "/new-images/icons/icon 1.png",
+  "/new-images/icons/icon 2.png",
+  "/new-images/icons/icon 3.png",
+  "/new-images/icons/icon 4.png"
+];
+
 export const heroServiceCardImages = [
   "/DEVELOP HOSPITAL.svg",
   "/EXPAND THE HOSPITAL.svg",
