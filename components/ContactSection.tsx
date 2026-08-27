@@ -61,12 +61,12 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
       className="relative overflow-hidden bg-[#080d0f] bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/new-images/BACKGROUND CONTACT.jpg')" }}
     >
-      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-8 sm:px-6 md:grid-cols-[2fr_3.5fr] md:gap-3 md:px-12 md:py-30">
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[2fr_3.5fr] lg:gap-3 lg:px-8 lg:py-30">
         <div className="flex flex-col justify-center text-white">
-          <h2 className="mb-4 text-lg font-bold sm:text-xl md:mb-5 md:text-2xl">
+          <h2 className="mb-4 text-lg font-bold sm:text-xl lg:mb-5 lg:text-2xl">
             {dict.info.companyName}
           </h2>
-          <div className="space-y-3 text-sm font-semibold sm:text-md md:text-lg">
+          <div className="space-y-3 text-sm font-semibold sm:text-lg lg:text-lg">
             <p className="flex items-center gap-3 transition-colors sm:gap-4">
               <Globe size={28} weight="bold" />
               <span>{dict.info.website}</span>
@@ -87,7 +87,7 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="border border-teal px-4 py-4 sm:px-5 md:px-20 md:py-7"
+          className="border border-teal px-4 py-4 sm:px-5 lg:px-20 lg:py-7"
         >
           <div className="mb-5 text-center text-white">
             <p className="mb-2 text-xs font-bold lowercase">— {f.label}</p>
@@ -155,7 +155,7 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
       </div>
 
       <div className="relative z-10 bg-linear-to-r from-coral to-teal">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2.5 sm:py-3 md:px-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8">
           <p className="text-sm text-white">
             &copy; {new Date().getFullYear()} {dict.info.copyright}
           </p>

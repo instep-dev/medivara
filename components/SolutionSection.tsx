@@ -33,7 +33,7 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
       className="bg-slate-700 py-12 sm:py-16 md:py-20 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/new-images/BACKGROUND BIRU.jpg')" }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-6 sm:mb-8 md:mb-10">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white">
             {dict.title}

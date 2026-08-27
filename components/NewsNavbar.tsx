@@ -27,7 +27,7 @@ export default function NewsNavbar({
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-coral to-teal">
-      <div className="max-w-7xl mx-auto px-3 py-3 sm:px-4 sm:py-4 md:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 sm:py-4 lg:px-8 flex items-center justify-between">
         <Link href={`/${lang}`}>
           <Image
             src="/LOGO MEDIVARA PUTIH WEBSITE.png"

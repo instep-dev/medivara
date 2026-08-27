@@ -67,8 +67,8 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
       <div
         className={`relative transition-all duration-300 ${
           overHero
-            ? "px-4 pt-4 pb-2 sm:px-10 lg:px-20"
-            : "px-4 py-3 sm:px-10 lg:px-20"
+            ? "px-4 pt-4 pb-2 sm:px-6 lg:px-8"
+            : "px-4 py-3 sm:px-6 lg:px-8"
         }`}
       >
         <div

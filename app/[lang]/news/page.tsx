@@ -87,7 +87,7 @@ export default async function NewsPage({
 
       <main className="min-h-screen bg-white pt-28">
         {/* News grid */}
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 py-4 sm:py-6 md:py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 md:py-8">
           {/* Featured row: 1 big + 2 stacked */}
           {featured.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">

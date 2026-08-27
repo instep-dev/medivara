@@ -76,7 +76,7 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
 
   return (
     <section id="teams" className="bg-white py-8 sm:py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-6 sm:mb-8 md:mb-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-graphite">
             {dict.title}

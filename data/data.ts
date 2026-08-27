@@ -15,7 +15,7 @@ export const navHrefs = [
   "#contact"
 ];
 
-export const partnerBulletIcons = [
+export const isPartnerBulletIcons = [
   "/new-images/icons/icon 1.png",
   "/new-images/icons/icon 2.png",
   "/new-images/icons/icon 3.png",

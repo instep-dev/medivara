@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { aboutSectionMeta, partnerBulletIcons } from "@/data/data";
+import { aboutSectionMeta, isPartnerBulletIcons } from "@/data/data";
 import FramedImage from "./ImageFrame";
 
 type Subsection = {
@@ -28,12 +28,12 @@ function BulletContent({
   intro,
   bulletPoints,
   outro,
-  partner
+  isPartner
 }: {
   intro?: string;
   bulletPoints?: string[];
   outro?: string;
-  partner?: boolean;
+  isPartner?: boolean;
 }) {
   return (
     <>
@@ -41,7 +41,7 @@ function BulletContent({
         <p
           className={
             "text-gray-700 text-lg leading-relaxed mb-6" +
-            (partner ? " text-white" : "")
+            (isPartner ? " text-white" : "")
           }
         >
           {intro}
@@ -50,7 +50,9 @@ function BulletContent({
       {bulletPoints && (
         <ul
           className={
-            partner ? "grid grid-cols-2 gap-x-6 gap-y-2 mb-6" : "space-y-1 mb-6"
+            isPartner
+              ? "grid grid-cols-2 gap-x-6 gap-y-2 mb-6"
+              : "space-y-1 mb-6"
           }
         >
           {bulletPoints.map((point, i) => (
@@ -58,13 +60,13 @@ function BulletContent({
               key={i}
               className={
                 "text-gray-700 leading-relaxed flex gap-2" +
-                (partner ? " text-sm" : " text-lg") +
-                (partner ? " text-white" : "")
+                (isPartner ? " text-sm" : " text-lg") +
+                (isPartner ? " text-white" : "")
               }
             >
-              {partner ? (
+              {isPartner ? (
                 <Image
-                  src={partnerBulletIcons[i % partnerBulletIcons.length]}
+                  src={isPartnerBulletIcons[i % isPartnerBulletIcons.length]}
                   alt=""
                   width={80}
                   height={80}
@@ -82,7 +84,7 @@ function BulletContent({
         <p
           className={
             "text-gray-700 text-lg leading-relaxed font-semibold" +
-            (partner ? " text-white" : "")
+            (isPartner ? " text-white" : "")
           }
         >
           {outro}
@@ -142,7 +144,7 @@ const fadeUp = {
 export default function AboutSection({ dict }: { dict: AboutDict }) {
   return (
     <section id="about" className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mt-8 lg:mt-42">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 lg:mt-42">
         <div className="">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-graphite">
             {dict.title}
@@ -162,7 +164,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
         if (!section) return null;
 
         const isEven = index % 2 === 0;
-        const partner = index === 3;
+        const isPartner = index === 3;
 
         return (
           <motion.div
@@ -174,7 +176,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             style={
               !isEven
                 ? {
-                    backgroundImage: `url("${partner ? "/new-images/IMAGE TRUSTED.jpg" : "/BACKGROUND LOGO panjang.png"}")`,
+                    backgroundImage: `url("${isPartner ? "/new-images/IMAGE TRUSTED.jpg" : "/BACKGROUND LOGO panjang.png"}")`,
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
                     backgroundSize: "cover"
@@ -183,15 +185,15 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             }
           >
             <div
-              className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 ${partner ? "md:grid-cols-2" : "md:grid-cols-[8fr_7fr]"} gap-6 md:gap-8 items-start ${
-                index === 0 ? "py-4 md:py-8" : "py-8 md:py-24"
+              className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 ${isPartner ? "lg:grid-cols-2" : "lg:grid-cols-[8fr_7fr]"} gap-6 lg:gap-8 items-start ${
+                index === 0 ? "py-4 lg:py-8" : "py-8 lg:py-24"
               }`}
             >
               <motion.div
                 variants={isEven ? fadeLeft : fadeRight}
                 className={
                   "relative mx-auto aspect-9/10 w-full md:order-last flex justify-end " +
-                  (partner ? "hidden" : "")
+                  (isPartner ? "hidden" : "")
                 }
               >
                 <FramedImage src={meta.image} alt={meta.imageAlt} />
@@ -219,7 +221,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
                     <h2
                       className={
                         "text-3xl md:text-[2.5rem] font-bold mb-5 text-graphite" +
-                        (partner ? " text-white" : "")
+                        (isPartner ? " text-white" : "")
                       }
                     >
                       {section.title}
@@ -228,7 +230,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
                       intro={section.intro}
                       bulletPoints={section.bulletPoints}
                       outro={section.outro}
-                      partner={partner}
+                      isPartner={isPartner}
                     />
                   </>
                 )}
@@ -242,7 +244,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
                 )}
               </motion.div>
             </div>
-            {partner && (
+            {isPartner && (
               <div
                 className="absolute inset-0 bg-black/25"
                 aria-hidden="true"
