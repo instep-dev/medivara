@@ -36,7 +36,7 @@ function MemberCard({
       className="flex flex-col items-center"
     >
       <div
-        className={`relative shrink-0 ${compact ? "w-full" : "w-52 xl:w-60 flex flex-col gap-4"}`}
+        className={`relative shrink-0 ${compact ? "w-full flex flex-col gap-4" : "w-52 xl:w-60 flex flex-col gap-4"}`}
       >
         <Image
           src={image}
@@ -86,7 +86,7 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
             alt=""
             width={220}
             height={30}
-            className="mt-1 h-auto w-44 md:w-56"
+            className="mt-1 h-auto w-22 md:w-28"
           />
         </div>
 

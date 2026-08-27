@@ -129,7 +129,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
               ease: "easeOut" as const,
               delay: 0.45
             }}
-            className="mt-6"
+            className="mt-6 flex justify-center md:justify-start"
           >
             <a
               href="#about"

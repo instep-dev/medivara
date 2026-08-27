@@ -1,9 +1,14 @@
 "use client";
 
-import Image from "next/image";
 import { contactInfo } from "@/data/data";
 import { motion } from "framer-motion";
-import { LinkedinLogo } from "@phosphor-icons/react";
+import {
+  Envelope,
+  Globe,
+  LinkedinLogo,
+  Phone,
+  WhatsappLogoIcon
+} from "@phosphor-icons/react";
 
 type ContactDict = {
   form: {
@@ -18,7 +23,15 @@ type ContactDict = {
     privacyLink: string;
     sendButton: string;
   };
-  info: { heading: string };
+  info: {
+    heading: string;
+    companyName: string;
+    website: string;
+    phone: string;
+    email: string;
+    linkedinLabel: string;
+    copyright: string;
+  };
 };
 
 const fadeUp = {
@@ -45,73 +58,94 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
   return (
     <section
       id="contact"
-      className="bg-slate-600 bg-cover bg-center bg-no-repeat "
+      className="relative overflow-hidden bg-[#080d0f] bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/new-images/BACKGROUND CONTACT.jpg')" }}
     >
-      {/* Contact Form */}
-      <div className="py-16 md:py-20 px-4 md:px-8">
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-6 px-6 py-10 md:grid-cols-[2fr_3.5fr] md:gap-3 md:px-12 md:py-30">
+        <div className="flex flex-col justify-center text-white">
+          <h2 className="mb-5 text-xl font-bold md:text-2xl">
+            {dict.info.companyName}
+          </h2>
+          <div className="space-y-3 text-md font-semibold md:text-lg">
+            <p className="flex items-center gap-4 transition-colors">
+              <Globe size={28} weight="bold" />
+              <span>{dict.info.website}</span>
+            </p>
+            <p className="flex items-center gap-4 transition-colors">
+              <WhatsappLogoIcon size={28} weight="bold" />
+              <span>{dict.info.phone}</span>
+            </p>
+            <p className="flex items-center gap-4 transition-colors">
+              <Envelope size={28} weight="bold" />
+              <span>{dict.info.email}</span>
+            </p>
+          </div>
+        </div>
+
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="max-w-2xl mx-auto border border-coral rounded-2xl p-6 md:p-10"
+          className="border border-teal py-4 px-8 md:py-7 md:px-20"
         >
-          <div className="text-center mb-8">
-            <p className="text-black text-2xl font-semibold mb-2">
-              — {f.label}
-            </p>
+          <div className="mb-5 text-center text-white">
+            <p className="mb-2 text-xs font-bold lowercase">— {f.label}</p>
+            <p className="text-xl font-bold">{f.subtitle}</p>
           </div>
 
-          <form className="space-y-4">
+          <form className="space-y-3">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 type="text"
                 placeholder={f.namePlaceholder}
-                className="border border-coral rounded px-4 py-2.5 text-sm text-gray-700 outline-none placeholder:text-gray-400 focus:ring-1 focus:ring-coral"
+                className="border border-teal bg-transparent px-3 py-2.5 text-xs text-white outline-none placeholder:text-white focus:ring-1 focus:ring-teal"
               />
               <input
                 type="email"
                 placeholder={f.emailPlaceholder}
-                className="border border-coral rounded px-4 py-2.5 text-sm text-gray-700 outline-none placeholder:text-gray-400 focus:ring-1 focus:ring-coral"
+                className="border border-teal bg-transparent px-3 py-2.5 text-xs text-white outline-none placeholder:text-white focus:ring-1 focus:ring-teal"
               />
             </div>
 
             <input
               type="text"
               placeholder={f.titlePlaceholder}
-              className="w-full border border-coral rounded px-4 py-2.5 text-sm text-gray-700 outline-none placeholder:text-gray-400 focus:ring-1 focus:ring-coral"
+              className="w-full border border-teal bg-transparent px-3 py-2.5 text-xs text-white outline-none placeholder:text-white focus:ring-1 focus:ring-teal"
             />
 
             <textarea
               placeholder={f.messagePlaceholder}
               rows={5}
-              className="w-full border border-coral rounded px-4 py-2.5 text-sm text-gray-700 outline-none placeholder:text-gray-400 focus:ring-1 focus:ring-coral resize-none"
+              className="w-full resize-none border border-teal bg-transparent px-3 py-2.5 text-xs text-white outline-none placeholder:text-white focus:ring-1 focus:ring-teal"
             />
 
             <div>
-              <p className="text-sm text-gray-600 mb-1">{f.uploadLabel}</p>
-              <input type="file" className="text-sm text-gray-500" />
+              <p className="mb-1 text-xs text-white">{f.uploadLabel}</p>
+              <input
+                type="file"
+                className="text-xs text-white file:mr-3 file:rounded file:border-0 file:bg-teal file:px-2 file:py-1 file:text-xs file:font-medium file:text-black file:transition-colors hover:file:bg-teal/80"
+              />
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-white">
               <input
                 type="checkbox"
                 id="privacy"
-                className="accent-coral w-4 h-4"
+                className="appearance-none h-4 w-4 accent-teal bg-transparent border border-teal checked:bg-teal checked:border-teal focus:outline-none focus:ring-1 focus:ring-teal"
               />
-              <label htmlFor="privacy" className="text-sm text-gray-600">
+              <label htmlFor="privacy" className="text-xs">
                 {f.privacyText}{" "}
-                <span className="text-teal underline cursor-pointer">
+                <span className="cursor-pointer text-teal underline">
                   {f.privacyLink}
                 </span>
               </label>
             </div>
 
-            <div className="text-right pt-2">
+            <div className="pt-2 text-right">
               <button
                 type="submit"
-                className="text-navy font-medium text-sm tracking-wide hover:text-coral transition-colors"
+                className="text-xs font-medium tracking-wide text-teal transition-colors hover:text-white"
               >
                 {f.sendButton} →
               </button>
@@ -120,22 +154,23 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
         </motion.div>
       </div>
 
-      <div className="bg-gradient-to-r from-coral to-teal">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+      <div className="relative z-10 bg-linear-to-r from-coral to-teal">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 md:px-8">
           <p className="text-sm text-white">
-            &copy; {new Date().getFullYear()} Medivara
+            &copy; {new Date().getFullYear()} {dict.info.copyright}
           </p>
           <a
             href={contactInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn"
+            aria-label={dict.info.linkedinLabel}
             className="text-white hover:text-navy transition-colors"
           >
             <LinkedinLogo size={22} weight="fill" />
           </a>
         </div>
       </div>
+      <div className="absolute inset-0 z-0 bg-black/35" aria-hidden="true" />
     </section>
   );
 }

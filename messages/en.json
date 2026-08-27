@@ -218,7 +218,13 @@
       "sendButton": "send"
     },
     "info": {
-      "heading": "CONTACT US"
+      "heading": "CONTACT US",
+      "companyName": "PT. MAHARDHIKA VARIA MEDIKA",
+      "website": "www.medivara.id",
+      "phone": "+62 21 7179 1780",
+      "email": "info@medivara.co.id",
+      "linkedinLabel": "LinkedIn",
+      "copyright": "Medivara | Site developed and maintained by InStep"
     }
   },
   "news": {
