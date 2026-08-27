@@ -47,7 +47,8 @@ export default function NewsPreviewSection({
             return (
               <Link
                 key={item.id}
-                href={`/${lang}/news`}
+                href={`/${lang}/news/${item.slug}`}
+                scroll={true}
                 className="group block"
               >
                 <div className="relative aspect-[16/9] sm:aspect-auto sm:h-44 md:h-52 rounded-lg overflow-hidden mb-3 sm:mb-4 bg-gray-200">

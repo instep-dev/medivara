@@ -1,8 +1,8 @@
 import { getDictionary, hasLocale } from "@/lib/getDictionary";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import Image from "next/image";
 import NewsNavbar from "@/components/NewsNavbar";
+import ArticleBackLink from "@/components/ArticleBackLink";
 import { newsArticleImages } from "@/data/data";
 
 export default async function NewsDetailPage({
@@ -23,17 +23,13 @@ export default async function NewsDetailPage({
 
   return (
     <>
-      <NewsNavbar lang={lang} homeLabel={links[0]} newsLabel={links[6]} />
+      <NewsNavbar lang={lang} homeLabel={links[0]} newsLabel={links[4]} />
 
       <main className="min-h-screen bg-white pt-24 pb-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Back link */}
-          <Link
-            href={`/${lang}/news`}
-            className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-teal transition-colors mb-6"
-          >
-            ← {lang === "id" ? "Kembali" : "Back"}
-          </Link>
+          <ArticleBackLink
+            label={lang === "id" ? "Kembali" : "Back"}
+          />
 
           {/* Title */}
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-4">
