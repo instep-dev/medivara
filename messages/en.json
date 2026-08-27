@@ -215,7 +215,10 @@
       "uploadLabel": "Upload file",
       "privacyText": "I agree to the",
       "privacyLink": "Privacy Policy",
-      "sendButton": "send"
+      "sendButton": "send",
+      "sendingLabel": "sending",
+      "successMessage": "Your message has been sent.",
+      "errorMessage": "Unable to send your message. Please try again."
     },
     "info": {
       "heading": "CONTACT US",
@@ -304,78 +307,6 @@
         "author": "Erik Purnama Putra",
         "source": "Republika",
         "sourceUrl": "",
-        "category": "Health"
-      },
-      {
-        "id": 7,
-        "slug": "building-resilient-healthcare-systems",
-        "title": "Building Resilient Healthcare Systems for Long-Term Growth",
-        "excerpt": "Strong systems help healthcare institutions stay adaptable, efficient, and focused on patient needs.",
-        "content": "Healthcare institutions need more than strong clinical services to thrive. They also need systems that support consistent decisions, accountable teams, and sustainable growth.\n\nA resilient operating model connects governance, people, processes, and technology so that improvements can continue beyond a single project or leader.",
-        "date": "2026-01-02",
-        "author": "MEDIVARA Editorial Team",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
-        "category": "Health"
-      },
-      {
-        "id": 8,
-        "slug": "patient-centered-hospital-operations",
-        "title": "Why Patient-Centered Operations Begin Behind the Scenes",
-        "excerpt": "The patient experience is shaped by the systems and teams working together before, during, and after every visit.",
-        "content": "Patient-centered care depends on more than empathy at the point of service. It is supported by coordinated workflows, clear responsibilities, and reliable information.\n\nWhen these foundations work together, healthcare teams can respond faster while creating a calmer and more consistent experience for patients and families.",
-        "date": "2026-01-09",
-        "author": "MEDIVARA Editorial Team",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
-        "category": "Health"
-      },
-      {
-        "id": 9,
-        "slug": "digital-health-integration-principles",
-        "title": "Practical Principles for Digital Health Integration",
-        "excerpt": "Technology creates value when it is connected to real workflows, measurable goals, and the people who use it.",
-        "content": "Digital transformation should begin with the needs of patients and healthcare teams, not with technology alone. The right systems simplify work, improve visibility, and support better decisions.\n\nSuccessful implementation also requires training, governance, and a clear plan for measuring adoption and impact.",
-        "date": "2026-01-16",
-        "author": "MEDIVARA Editorial Team",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
-        "category": "Health"
-      },
-      {
-        "id": 10,
-        "slug": "healthcare-governance-that-enables-action",
-        "title": "Healthcare Governance That Enables Action",
-        "excerpt": "Effective governance gives hospital leaders the clarity and accountability needed to turn strategy into results.",
-        "content": "Governance is most valuable when it helps people act with clarity. Defined roles, reliable reporting, and disciplined review cycles make it easier to identify issues and respond early.\n\nThis creates a stronger foundation for operational excellence and continuous improvement across the institution.",
-        "date": "2026-01-23",
-        "author": "MEDIVARA Editorial Team",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
-        "category": "Health"
-      },
-      {
-        "id": 11,
-        "slug": "measuring-hospital-performance-beyond-revenue",
-        "title": "Measuring Hospital Performance Beyond Revenue",
-        "excerpt": "A complete performance view combines financial results with quality, efficiency, people, and patient outcomes.",
-        "content": "Financial performance is important, but it is only one part of a hospital's health. Leaders also need visibility into quality, access, team capability, patient experience, and operational efficiency.\n\nA balanced performance framework helps institutions make better decisions and sustain progress over time.",
-        "date": "2026-01-30",
-        "author": "MEDIVARA Editorial Team",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
-        "category": "Health"
-      },
-      {
-        "id": 12,
-        "slug": "the-next-era-of-healthcare-leadership",
-        "title": "The Next Era of Healthcare Leadership",
-        "excerpt": "Healthcare leaders are being called to combine clinical purpose, operational discipline, and a long-term view.",
-        "content": "The future of healthcare leadership belongs to those who can connect purpose with execution. This means building capable teams, using evidence to guide decisions, and creating systems that remain dependable as needs change.\n\nWith the right leadership foundation, institutions can grow while protecting the trust of the communities they serve.",
-        "date": "2026-01-06",
-        "author": "MEDIVARA Editorial Team",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
         "category": "Health"
       }
     ]

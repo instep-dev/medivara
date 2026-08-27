@@ -215,7 +215,10 @@
       "uploadLabel": "Unggah Berkas",
       "privacyText": "Saya setuju dengan",
       "privacyLink": "Kebijakan Privasi",
-      "sendButton": "kirim"
+      "sendButton": "kirim",
+      "sendingLabel": "mengirim",
+      "successMessage": "Pesan Anda telah terkirim.",
+      "errorMessage": "Pesan tidak dapat dikirim. Silakan coba lagi."
     },
     "info": {
       "heading": "HUBUNGI KAMI",
@@ -304,78 +307,6 @@
         "author": "Erik Purnama Putra",
         "source": "Republika",
         "sourceUrl": "",
-        "category": "Kesehatan"
-      },
-      {
-        "id": 7,
-        "slug": "membangun-sistem-kesehatan-yang-tangguh",
-        "title": "Membangun Sistem Layanan Kesehatan yang Tangguh untuk Pertumbuhan Jangka Panjang",
-        "excerpt": "Sistem yang kuat membantu institusi layanan kesehatan tetap adaptif, efisien, dan berfokus pada kebutuhan pasien.",
-        "content": "Institusi layanan kesehatan membutuhkan lebih dari sekadar pelayanan klinis yang kuat untuk berkembang. Mereka juga membutuhkan sistem yang mendukung keputusan yang konsisten, tim yang akuntabel, dan pertumbuhan yang berkelanjutan.\n\nModel operasional yang tangguh menghubungkan tata kelola, manusia, proses, dan teknologi agar perbaikan dapat terus berjalan melampaui satu proyek atau pemimpin.",
-        "date": "2026-01-02",
-        "author": "Tim Editorial MEDIVARA",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
-        "category": "Kesehatan"
-      },
-      {
-        "id": 8,
-        "slug": "operasional-rumah-sakit-berpusat-pada-pasien",
-        "title": "Mengapa Operasional yang Berpusat pada Pasien Dimulai dari Balik Layar",
-        "excerpt": "Pengalaman pasien dibentuk oleh sistem dan tim yang bekerja bersama sebelum, selama, dan setelah setiap kunjungan.",
-        "content": "Pelayanan yang berpusat pada pasien membutuhkan lebih dari empati di titik layanan. Hal ini didukung oleh alur kerja yang terkoordinasi, tanggung jawab yang jelas, dan informasi yang dapat diandalkan.\n\nKetika fondasi ini bekerja bersama, tim layanan kesehatan dapat merespons lebih cepat sekaligus menciptakan pengalaman yang lebih tenang dan konsisten bagi pasien serta keluarga.",
-        "date": "2026-01-09",
-        "author": "Tim Editorial MEDIVARA",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
-        "category": "Kesehatan"
-      },
-      {
-        "id": 9,
-        "slug": "prinsip-integrasi-kesehatan-digital",
-        "title": "Prinsip Praktis Integrasi Kesehatan Digital",
-        "excerpt": "Teknologi menciptakan nilai ketika terhubung dengan alur kerja nyata, tujuan yang terukur, dan orang yang menggunakannya.",
-        "content": "Transformasi digital sebaiknya dimulai dari kebutuhan pasien dan tim layanan kesehatan, bukan dari teknologi semata. Sistem yang tepat menyederhanakan pekerjaan, meningkatkan visibilitas, dan mendukung keputusan yang lebih baik.\n\nImplementasi yang berhasil juga membutuhkan pelatihan, tata kelola, dan rencana yang jelas untuk mengukur penggunaan serta dampaknya.",
-        "date": "2026-01-16",
-        "author": "Tim Editorial MEDIVARA",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
-        "category": "Kesehatan"
-      },
-      {
-        "id": 10,
-        "slug": "tata-kelola-kesehatan-yang-mendorong-aksi",
-        "title": "Tata Kelola Kesehatan yang Mendorong Aksi",
-        "excerpt": "Tata kelola yang efektif memberi pemimpin rumah sakit kejelasan dan akuntabilitas untuk mengubah strategi menjadi hasil.",
-        "content": "Tata kelola paling bernilai ketika membantu orang bertindak dengan jelas. Peran yang terdefinisi, pelaporan yang andal, dan siklus evaluasi yang disiplin memudahkan institusi mengidentifikasi masalah serta merespons lebih awal.\n\nHal ini menciptakan fondasi yang lebih kuat untuk keunggulan operasional dan perbaikan berkelanjutan di seluruh institusi.",
-        "date": "2026-01-23",
-        "author": "Tim Editorial MEDIVARA",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
-        "category": "Kesehatan"
-      },
-      {
-        "id": 11,
-        "slug": "mengukur-kinerja-rumah-sakit-di-luar-pendapatan",
-        "title": "Mengukur Kinerja Rumah Sakit di Luar Pendapatan",
-        "excerpt": "Gambaran kinerja yang lengkap menggabungkan hasil keuangan dengan mutu, efisiensi, sumber daya manusia, dan hasil bagi pasien.",
-        "content": "Kinerja keuangan penting, tetapi hanya merupakan satu bagian dari kesehatan rumah sakit. Pemimpin juga membutuhkan visibilitas atas mutu, akses, kemampuan tim, pengalaman pasien, dan efisiensi operasional.\n\nKerangka kinerja yang seimbang membantu institusi mengambil keputusan yang lebih baik dan mempertahankan kemajuan dari waktu ke waktu.",
-        "date": "2026-01-30",
-        "author": "Tim Editorial MEDIVARA",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
-        "category": "Kesehatan"
-      },
-      {
-        "id": 12,
-        "slug": "era-baru-kepemimpinan-kesehatan",
-        "title": "Era Baru Kepemimpinan Layanan Kesehatan",
-        "excerpt": "Pemimpin layanan kesehatan dituntut menggabungkan tujuan klinis, disiplin operasional, dan pandangan jangka panjang.",
-        "content": "Masa depan kepemimpinan layanan kesehatan berada di tangan mereka yang mampu menghubungkan tujuan dengan eksekusi. Hal ini berarti membangun tim yang kompeten, menggunakan bukti untuk memandu keputusan, dan menciptakan sistem yang tetap dapat diandalkan ketika kebutuhan berubah.\n\nDengan fondasi kepemimpinan yang tepat, institusi dapat berkembang sambil menjaga kepercayaan masyarakat yang dilayani.",
-        "date": "2026-01-06",
-        "author": "Tim Editorial MEDIVARA",
-        "source": "MEDIVARA",
-        "sourceUrl": "https://www.medivara.co.id",
         "category": "Kesehatan"
       }
     ]
