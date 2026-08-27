@@ -3,6 +3,7 @@ export const navLinks = [
   { label: "ABOUT US", href: "#about" },
   { label: "SOLUTIONS", href: "#solutions" },
   { label: "TEAM", href: "#team" },
+  { label: "NEWS", href: "#news" },
   { label: "CONTACT", href: "#contact" }
 ];
 
@@ -11,7 +12,7 @@ export const navHrefs = [
   "#about",
   "#solutions",
   "#teams",
-  "news",
+  "#news",
   "#contact"
 ];
 
