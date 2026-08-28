@@ -2,10 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import type { Swiper as SwiperType } from "swiper";
-import { useState } from "react";
-import "swiper/css";
 
 type ServiceCard = { label: string; desc: string };
 type HeroDict = {
@@ -15,64 +11,13 @@ type HeroDict = {
   serviceCards: ServiceCard[];
 };
 
-function ArrowLeft() {
-  return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M15 18l-6-6 6-6" />
-    </svg>
-  );
-}
-
-function ArrowRight() {
-  return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M9 18l6-6-6-6" />
-    </svg>
-  );
-}
-
-function NavButton({
-  onClick,
-  children
-}: {
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm shadow-md flex items-center justify-center text-gray-700 hover:bg-coral hover:text-white transition-all duration-200 active:scale-95 flex-shrink-0"
-    >
-      {children}
-    </button>
-  );
-}
-
 function ServiceCardItem({ card }: { card: ServiceCard }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 py-5 px-5 rounded-xl h-full bg-[#808185] text-center">
-      <h3 className="text-white text-lg font-black uppercase tracking-wide leading-tight text-balance">
+    <div className="flex h-full min-h-28 flex-col items-center justify-center gap-1 rounded-xl bg-[#808185] px-3 py-3 text-center sm:min-h-32 sm:px-4 sm:py-4">
+      <h3 className="text-white text-base font-black uppercase tracking-wide leading-tight text-balance sm:text-lg">
         {card.label}
       </h3>
-      <p className="text-white/70 text-sm leading-relaxed line-clamp-3 text-pretty">
+      <p className="text-white/70 text-xs leading-snug line-clamp-2 text-pretty sm:text-sm">
         {card.desc}
       </p>
     </div>
@@ -80,19 +25,13 @@ function ServiceCardItem({ card }: { card: ServiceCard }) {
 }
 
 export default function HeroSection({ dict }: { dict: HeroDict }) {
-  const [mobileSwiper, setMobileSwiper] = useState<SwiperType | null>(null);
-  const [desktopSwiper, setDesktopSwiper] = useState<SwiperType | null>(null);
-
-  const cards = dict.serviceCards;
+  const cards = dict.serviceCards.slice(0, 4);
 
   return (
-    <section
-      id="home"
-      className="relative min-h-[100svh] flex flex-col lg:min-h-[90vh]"
-    >
+    <section id="home" className="relative flex min-h-[100svh] flex-col">
       <div className="absolute inset-0">
         <Image
-          src="/new-images/GEDUNG HOME.jpg"
+          src="/new-images/GEDUNG HOME copy.jpg"
           alt="Healthcare professionals"
           fill
           className="object-cover object-bottom md:object-right"
@@ -102,7 +41,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
       </div>
 
-      <div className="relative z-10 flex-1 flex flex-col justify-center pt-24 pb-6 px-4 sm:px-6 lg:px-8 lg:justify-start lg:pt-[clamp(8rem,18vh,12rem)] max-w-7xl mx-auto w-full">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 pt-24 pb-8 sm:px-6 lg:px-8">
         <div className="max-w-xl">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
@@ -132,7 +71,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
               ease: "easeOut" as const,
               delay: 0.45
             }}
-            className="mt-5 flex justify-center md:mt-6 md:justify-start"
+            className="mt-5 flex justify-start md:mt-6"
           >
             <a
               href="#about"
@@ -144,72 +83,28 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
         </div>
       </div>
 
-      {/* Mobile & tablet swiper */}
+      {/* Mobile & tablet service cards */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4 }}
-        className="relative z-10 px-4 pb-6 sm:px-6 sm:pb-8 lg:hidden"
+        className="relative z-10 grid grid-cols-2 gap-2 px-4 pb-6 sm:gap-3 sm:px-6 sm:pb-8 lg:hidden"
       >
-        <Swiper
-          onSwiper={setMobileSwiper}
-          slidesPerView={2}
-          spaceBetween={8}
-          breakpoints={{
-            480: { slidesPerView: 2, spaceBetween: 8 },
-            640: { slidesPerView: 3, spaceBetween: 10 }
-          }}
-        >
-          {cards.map((card, index) => (
-            <SwiperSlide key={index} style={{ height: "auto" }}>
-              <ServiceCardItem card={card} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        <div className="flex items-center justify-center gap-4 mt-4">
-          <NavButton onClick={() => mobileSwiper?.slidePrev()}>
-            <ArrowLeft />
-          </NavButton>
-          <NavButton onClick={() => mobileSwiper?.slideNext()}>
-            <ArrowRight />
-          </NavButton>
-        </div>
+        {cards.map((card, index) => (
+          <ServiceCardItem key={index} card={card} />
+        ))}
       </motion.div>
 
-      {/* Desktop swiper — absolute overlay */}
+      {/* Desktop service cards */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4 }}
-        className="relative z-10 w-full max-w-7xl mx-auto px-4 pb-6 sm:px-6 lg:px-8 hidden lg:block"
+        className="relative z-10 mx-auto hidden w-full max-w-7xl grid-cols-4 gap-4 px-4 pb-6 sm:px-6 lg:grid lg:px-8"
       >
-        <div className="flex items-center gap-3">
-          <NavButton onClick={() => desktopSwiper?.slidePrev()}>
-            <ArrowLeft />
-          </NavButton>
-
-          <div className="flex-1 min-w-0">
-            <Swiper
-              onSwiper={setDesktopSwiper}
-              slidesPerView={4}
-              spaceBetween={16}
-              breakpoints={{
-                1280: { slidesPerView: 4, spaceBetween: 18 }
-              }}
-            >
-              {cards.map((card, index) => (
-                <SwiperSlide key={index} style={{ height: "auto" }}>
-                  <ServiceCardItem card={card} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          <NavButton onClick={() => desktopSwiper?.slideNext()}>
-            <ArrowRight />
-          </NavButton>
-        </div>
+        {cards.map((card, index) => (
+          <ServiceCardItem key={index} card={card} />
+        ))}
       </motion.div>
     </section>
   );
