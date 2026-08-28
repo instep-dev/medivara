@@ -43,7 +43,7 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
             alt=""
             width={220}
             height={30}
-            className="mt-1 h-2.5 w-44 object-fill md:h-3 md:w-56"
+            className="mt-1 h-1 w-32 object-fill md:h-2 md:w-56"
           />
         </div>
 
