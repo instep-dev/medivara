@@ -36,14 +36,14 @@ function BulletContent({
   return (
     <>
       {intro && (
-        <p className="mb-6 text-lg leading-relaxed text-gray-700">{intro}</p>
+        <p className="mb-6 text-base leading-relaxed text-gray-700">{intro}</p>
       )}
       {bulletPoints && (
         <ul className="mb-6 space-y-1">
           {bulletPoints.map((point, i) => (
             <li
               key={i}
-              className="flex gap-2 text-lg leading-relaxed text-gray-700"
+              className="flex gap-2 text-base leading-relaxed text-gray-700"
             >
               <span className="mt-0.5 text-gray-500">•</span>
               <span>{point}</span>
@@ -52,7 +52,7 @@ function BulletContent({
         </ul>
       )}
       {outro && (
-        <p className="text-lg font-semibold leading-relaxed text-gray-700">
+        <p className="text-base font-semibold leading-relaxed text-gray-700">
           {outro}
         </p>
       )}
@@ -63,11 +63,11 @@ function BulletContent({
 function SubsectionBlock({ sub }: { sub: Subsection }) {
   return (
     <div className="mb-8">
-      <h3 className="text-3xl md:text-[2.5rem] font-bold mb-3 text-graphite">
+      <h3 className="text-2xl md:text-3xl font-bold mb-3 text-graphite">
         {sub.title}
       </h3>
       {sub.content && (
-        <p className="text-gray-700 text-lg leading-relaxed">{sub.content}</p>
+        <p className="text-gray-700 text-base leading-relaxed">{sub.content}</p>
       )}
       {!sub.content && (
         <BulletContent
@@ -101,9 +101,9 @@ const fadeRight = {
 export default function AboutSection({ dict }: { dict: AboutDict }) {
   return (
     <section id="about" className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 lg:mt-42">
-        <div className="">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-graphite">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 lg:mt-24">
+        <div className="mb-6 lg:mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-graphite">
             {dict.title}
           </h1>
           <Image
@@ -111,7 +111,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             alt=""
             width={120}
             height={16}
-            className="h-2 w-20 object-fill md:w-40"
+            className="h-1.5 w-24 object-fill md:w-36 md:h-2"
           />
         </div>
       </div>
@@ -143,13 +143,11 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             }
           >
             <div
-              className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[8fr_7fr] gap-6 lg:gap-8 items-start ${
-                index === 0 ? "py-4 lg:py-8" : "py-8 lg:py-24"
-              }`}
+              className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[8fr_7fr] gap-6 lg:gap-8 items-start ${index === 0 ? "pt-0 pb-8 lg:pt-4 lg:pb-16" : "py-8 lg:py-16"}`}
             >
               <motion.div
                 variants={isEven ? fadeLeft : fadeRight}
-                className="relative mx-auto flex aspect-9/10 w-full justify-end md:order-last"
+                className="relative mx-auto flex aspect-[4/5] w-full max-w-[20rem] justify-end items-center md:order-last lg:max-w-[24rem]"
               >
                 <FramedImage src={meta.image} alt={meta.imageAlt} />
               </motion.div>
@@ -157,13 +155,13 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
               <motion.div variants={isEven ? fadeRight : fadeLeft}>
                 {meta.type === "paragraphs" && section.title && (
                   <>
-                    <h2 className="text-3xl md:text-[2.5rem] font-bold mb-5 text-graphite">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4 text-graphite">
                       {section.title}
                     </h2>
                     {section.content?.map((para, i) => (
                       <p
                         key={i}
-                        className="text-gray-700 text-lg font-medium leading-relaxed mb-4 last:mb-0"
+                        className="text-gray-700 text-base font-medium leading-relaxed mb-4 last:mb-0"
                       >
                         {para}
                       </p>
@@ -173,7 +171,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
 
                 {meta.type === "bullets" && section.title && (
                   <>
-                    <h2 className="mb-5 text-3xl font-bold text-graphite md:text-[2.5rem]">
+                    <h2 className="mb-4 text-2xl font-bold text-graphite md:text-3xl">
                       {section.title}
                     </h2>
                     <BulletContent

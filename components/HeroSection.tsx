@@ -102,13 +102,13 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
       </div>
 
-      <div className="relative z-10 flex-1 flex flex-col justify-center pt-24 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 flex-1 flex flex-col justify-center pt-24 pb-6 px-4 sm:px-6 lg:px-8 lg:justify-start lg:pt-[clamp(8rem,18vh,12rem)] max-w-7xl mx-auto w-full">
         <div className="max-w-xl">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" as const }}
-            className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight mb-4"
           >
             {dict.heading}
           </motion.h1>
@@ -182,7 +182,7 @@ export default function HeroSection({ dict }: { dict: HeroDict }) {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.4 }}
-        className="absolute -bottom-20 left-1/2 -translate-x-1/2 z-10 w-full max-w-7xl px-8 hidden lg:block"
+        className="relative z-10 w-full max-w-7xl mx-auto px-4 pb-6 sm:px-6 lg:px-8 hidden lg:block"
       >
         <div className="flex items-center gap-3">
           <NavButton onClick={() => desktopSwiper?.slidePrev()}>
