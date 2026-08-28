@@ -86,7 +86,7 @@ export default function TeamsSection({ dict }: { dict: TeamsDict }) {
             alt=""
             width={220}
             height={30}
-            className="mt-1 h-2 w-20 object-fill md:h-3 md:w-28"
+            className="h-1 w-18 object-fill md:h-2 md:w-28"
           />
         </div>
 
