@@ -439,7 +439,7 @@ export const contactInfo = {
   phone: "+62 21 7179-XXXX",
   linkedin: "https://www.linkedin.com/company/medivarahealthcareconsulting/",
   address: [
-    "Forest Building 4th Floor",
+    "Forme Building 4th Floor",
     "Jl. Kemang Raya no.17 Jakarta Selatan 12730",
     "INDONESIA"
   ]
