@@ -111,7 +111,7 @@ export default function AboutSection({ dict }: { dict: AboutDict }) {
             alt=""
             width={120}
             height={16}
-            className="h-2 w-40 object-fill sm:h-2.5"
+            className="h-2 w-20 object-fill md:w-40"
           />
         </div>
       </div>
