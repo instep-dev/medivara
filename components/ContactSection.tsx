@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { contactInfo } from "@/data/data";
 import { motion } from "framer-motion";
 import {
@@ -22,6 +23,9 @@ type ContactDict = {
     privacyText: string;
     privacyLink: string;
     sendButton: string;
+    sendingLabel: string;
+    successMessage: string;
+    errorMessage: string;
   };
   info: {
     heading: string;
@@ -45,6 +49,28 @@ const fadeUp = {
 
 export default function ContactSection({ dict }: { dict: ContactDict }) {
   const f = dict.form;
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setStatus("sending");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: new FormData(form)
+      });
+
+      if (!response.ok) throw new Error("Contact request failed");
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <section
@@ -106,15 +132,19 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
               <p className="text-lg font-bold sm:text-xl">{f.subtitle}</p>
             </div>
 
-            <form className="space-y-3">
+            <form className="space-y-3" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                 <input
                   type="text"
+                  name="name"
+                  required
                   placeholder={f.namePlaceholder}
                   className="border border-teal bg-transparent px-3 py-2.5 text-xs text-white outline-none placeholder:text-white focus:ring-1 focus:ring-teal"
                 />
                 <input
                   type="email"
+                  name="email"
+                  required
                   placeholder={f.emailPlaceholder}
                   className="border border-teal bg-transparent px-3 py-2.5 text-xs text-white outline-none placeholder:text-white focus:ring-1 focus:ring-teal"
                 />
@@ -122,12 +152,16 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
 
               <input
                 type="text"
+                name="subject"
+                required
                 placeholder={f.titlePlaceholder}
                 className="w-full border border-teal bg-transparent px-3 py-2.5 text-xs text-white outline-none placeholder:text-white focus:ring-1 focus:ring-teal"
               />
 
               <textarea
                 placeholder={f.messagePlaceholder}
+                name="message"
+                required
                 rows={5}
                 className="w-full resize-none border border-teal bg-transparent px-3 py-2.5 text-xs text-white outline-none placeholder:text-white focus:ring-1 focus:ring-teal"
               />
@@ -136,6 +170,7 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
                 <p className="mb-1 text-xs text-white">{f.uploadLabel}</p>
                 <input
                   type="file"
+                  name="file"
                   className="text-xs text-white file:mr-3 file:rounded file:border-0 file:bg-teal file:px-2 file:py-1 file:text-xs file:font-medium file:text-black file:transition-colors hover:file:bg-teal/80"
                 />
               </div>
@@ -157,11 +192,18 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
               <div className="pt-2 text-right">
                 <button
                   type="submit"
+                  disabled={status === "sending"}
                   className="text-xs font-medium tracking-wide text-teal transition-colors hover:text-white"
                 >
-                  {f.sendButton} →
+                  {status === "sending" ? f.sendingLabel : f.sendButton} →
                 </button>
               </div>
+              {status === "success" && (
+                <p className="text-xs text-teal">{f.successMessage}</p>
+              )}
+              {status === "error" && (
+                <p className="text-xs text-coral">{f.errorMessage}</p>
+              )}
             </form>
           </motion.div>
         </div>

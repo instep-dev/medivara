@@ -215,7 +215,10 @@
       "uploadLabel": "Upload file",
       "privacyText": "I agree to the",
       "privacyLink": "Privacy Policy",
-      "sendButton": "send"
+      "sendButton": "send",
+      "sendingLabel": "sending",
+      "successMessage": "Your message has been sent.",
+      "errorMessage": "Unable to send your message. Please try again."
     },
     "info": {
       "heading": "CONTACT US",

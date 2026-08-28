@@ -215,7 +215,10 @@
       "uploadLabel": "Unggah Berkas",
       "privacyText": "Saya setuju dengan",
       "privacyLink": "Kebijakan Privasi",
-      "sendButton": "kirim"
+      "sendButton": "kirim",
+      "sendingLabel": "mengirim",
+      "successMessage": "Pesan Anda telah terkirim.",
+      "errorMessage": "Pesan tidak dapat dikirim. Silakan coba lagi."
     },
     "info": {
       "heading": "HUBUNGI KAMI",
