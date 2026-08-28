@@ -86,7 +86,7 @@ export default function Navbar({ lang, navLabels }: NavbarProps) {
             <Image
               src={
                 overHero
-                  ? "/LOGO MEDIVARA PUTIH WEBSITE.png"
+                  ? "/LOGO MEDIVARA_FONT PUTIH.png"
                   : "/LOGO MEDIVARA WEBSITE.png"
               }
               alt="Medivara"
