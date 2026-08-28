@@ -1,19 +1,11 @@
 {
   "nav": {
-    "links": [
-      "HOME",
-      "ABOUT US",
-      "SERVICES",
-      "TEAM",
-      "CLIENTS",
-      "CONTACT",
-      "NEWS"
-    ]
+    "links": ["HOME", "ABOUT US", "SOLUTIONS", "TEAM", "NEWS", "CONTACT"]
   },
   "hero": {
     "heading": "Shaping the Future of Healthcare Institutions",
-    "description": "MEDIVARA partners with healthcare leaders, investors, and institutions to build stronger, sustainable, and trusted systems—from strategy to sustainable operational excellence.",
-    "learnMore": "Learn More",
+    "description": "MEDIVARA partners with healthcare leaders, investors, and institutions to build stronger, sustainable, and trusted healthcare organizations from strategy and system design to sustainable operational excellence.",
+    "learnMore": "Explore More",
     "serviceCards": [
       {
         "label": "New Hospital Development",
@@ -53,7 +45,7 @@
     "title": "About Us",
     "sections": [
       {
-        "title": "The Beginning of MEDIVARA",
+        "title": "The Beginning of Medivara",
         "content": [
           "Indonesia requires more healthcare institutions that are both accessible and deeply trusted. The country needs more than just new hospital buildings; it needs healthcare institutions that are professionally managed, sustainable, and capable of delivering quality care that meets international standards.",
           "However, operating and establishing a hospital is inherently complex. Many hospitals begin with noble intentions—driven by family visions, community needs, or a desire to serve society. But without the essential strategy, systems, and leadership, the process of running a hospital can become extremely difficult.",
@@ -91,25 +83,25 @@
             "outro": "MEDIVARA does not replace the vision of hospital owners - we help strengthen and realize it."
           }
         ]
-      },
-      {
-        "title": "Medivara, Your Trusted Business Partner",
-        "intro": "We are not merely advisors. We work alongside hospital owners, investors, and healthcare institutions to build strong and sustainable systems, from strategy to operations. Our expertise includes:",
-        "bulletPoints": [
-          "Defining clear healthcare business strategies",
-          "Building professional hospital operating systems",
-          "Developing efficient infrastructure and processes",
-          "Driving sustainable and profitable growth"
-        ],
-        "outro": "Our purpose is simple: to help healthcare institutions become stronger, sustainable, and trusted by the communities they serve."
       }
     ]
   },
+  "partner": {
+    "title": "Medivara, Your Trusted Business Partner",
+    "intro": "We are not merely advisors. We work alongside hospital owners, investors, and healthcare institutions to build strong and sustainable systems, from strategy to operations. Our expertise includes:",
+    "bulletPoints": [
+      "Defining clear healthcare business strategies",
+      "Building professional hospital operating systems",
+      "Developing efficient infrastructure and processes",
+      "Driving sustainable and profitable growth"
+    ],
+    "outro": "Our purpose is simple: to help healthcare institutions become stronger, sustainable, and trusted by the communities they serve."
+  },
   "solutions": {
-    "title": "Our Services",
+    "title": "Solutions",
     "items": [
       {
-        "title": "A New Hospital\nDevelopment",
+        "title": "New Hospital\nDevelopment",
         "description": "We partner with healthcare leaders to build new hospitals from the ground up — from strategy to operational readiness.",
         "bulletPoints": [
           "Feasibility & market validation",
@@ -173,26 +165,6 @@
           "IoT & Medical Equipment Integration"
         ],
         "goal": "Goal: Operational efficiency and long-term infrastructure sustainability."
-      },
-      {
-        "title": "Quality &\nAccreditation Service",
-        "bulletPoints": [
-          "KARS & JCI Accreditation Advisory",
-          "Patient Safety & Quality Programs",
-          "Workforce Development & Clinical Training"
-        ],
-        "goal": "Goal: hospitals achieve higher standards of healthcare quality, governance and compliance"
-      },
-      {
-        "title": "Strategic &\nbusiness development",
-        "bulletPoints": [
-          "Feasibility study",
-          "Land banking & hospital planning",
-          "Business plan & financial modelling",
-          "Strategic marketing planning",
-          "Investment structuring & capital funding"
-        ],
-        "goal": "Goal: Your hospital is built on clear numbers and realistic expectations."
       }
     ]
   },
@@ -200,7 +172,7 @@
     "title": "Our Clients"
   },
   "teams": {
-    "title": "Our Team",
+    "title": "Team",
     "members": [
       {
         "name": "M. Firas",
@@ -223,7 +195,7 @@
         "role": "Strategic Finance"
       },
       {
-        "name": "Jojo S. Nugroho, M.Sos, CCM, CPR",
+        "name": "Jojo S. Nugroho",
         "role": "PR & Comms Strategist"
       },
       {
@@ -246,11 +218,21 @@
       "sendButton": "send"
     },
     "info": {
-      "heading": "CONTACT US"
+      "heading": "CONTACT US",
+      "companyName": "PT. MAHARDHIKA VARIA MEDIKA",
+      "website": "www.medivara.id",
+      "phone": "+62 21 7179 1780",
+      "email": "info@medivara.co.id",
+      "linkedinLabel": "LinkedIn",
+      "copyright": "Medivara | Site developed and maintained by InStep"
     }
   },
   "news": {
     "pageTitle": "News & Insights",
+    "moreLabel": "More",
+    "backLabel": "Back",
+    "byLabel": "By",
+    "sourceLabel": "Source",
     "items": [
       {
         "id": 1,

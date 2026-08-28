@@ -1,121 +1,113 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import { usePathname } from 'next/navigation'
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { List, X } from "@phosphor-icons/react";
 
 type NewsNavbarProps = {
-  lang: string
-  homeLabel: string
-  newsLabel: string
-}
+  lang: string;
+  homeLabel: string;
+  newsLabel: string;
+};
 
-export default function NewsNavbar({ lang, homeLabel, newsLabel }: NewsNavbarProps) {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const otherLang = lang === 'en' ? 'id' : 'en'
-  const pathname = usePathname()
+export default function NewsNavbar({
+  lang,
+  homeLabel,
+  newsLabel
+}: NewsNavbarProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const otherLang = lang === "en" ? "id" : "en";
+  const pathname = usePathname();
 
   // pathname: /{lang}/news  OR  /{lang}/news/{slug}
-  const segments = pathname.split('/').filter(Boolean)
-  const slug = segments.length > 2 ? segments[2] : null
-  const switchHref = slug ? `/${otherLang}/news/${slug}` : `/${otherLang}/news`
+  const segments = pathname.split("/").filter(Boolean);
+  const slug = segments.length > 2 ? segments[2] : null;
+  const switchHref = slug ? `/${otherLang}/news/${slug}` : `/${otherLang}/news`;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-coral to-teal">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 p-4 flex items-center justify-between">
-        <Link href={`/${lang}`}>
-          <Image
-            src="/LOGO MEDIVARA PUTIH WEBSITE.png"
-            alt="Medivara"
-            width={130}
-            height={46}
-            className="object-contain"
-            priority
-          />
-        </Link>
-
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-6 lg:gap-8">
-          {/* BERANDA */}
-          <Link
-            href={`/${lang}`}
-            className="relative text-sm tracking-wide pb-2 flex flex-col items-center text-white font-medium transition-colors duration-300 hover:font-bold"
-          >
-            {homeLabel}
+    <header className="fixed inset-x-0 top-0 z-50 w-full">
+      <div className="absolute inset-0 border-b border-gray-200 bg-white shadow-sm" />
+      <div className="relative px-4 py-3 sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4">
+          <Link href={`/${lang}`}>
+            <Image
+              src="/LOGO MEDIVARA WEBSITE.png"
+              alt="Medivara"
+              width={143}
+              height={48}
+              className="h-10 w-auto sm:h-12"
+              style={{ width: "auto", height: "auto" }}
+              priority
+            />
           </Link>
 
-          {/* NEWS — active with underline */}
-          <Link
-            href={`/${lang}/news`}
-            className="relative text-sm tracking-wide pb-2 flex flex-col items-center text-white font-bold transition-colors duration-300"
-          >
-            {newsLabel}
-            <span className="absolute bottom-0 left-0 right-0 flex justify-center">
-              <Image
-                src="/underline.png"
-                alt=""
-                width={60}
-                height={6}
-                className="object-contain"
-              />
-            </span>
-          </Link>
+          {/* Desktop nav */}
+          <nav className="hidden items-center gap-6 text-base font-bold text-navy lg:flex">
+            <Link href={`/${lang}`} className="hover:text-teal">
+              {homeLabel}
+            </Link>
 
-          {/* Language switcher */}
-          <div className="relative group flex items-center pb-2">
-            <button className="text-sm font-medium flex items-center gap-1 text-white">
-              {lang.toUpperCase()} <span className="text-xs">▼</span>
-            </button>
-            <div className="absolute right-0 top-full pt-2 hidden group-hover:block z-50">
-              <div className="bg-white rounded shadow-lg py-1 min-w-[60px]">
-                <Link
-                  href={switchHref}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-center"
-                >
-                  {otherLang.toUpperCase()}
-                </Link>
+            <Link
+              href={`/${lang}/news`}
+              className="text-teal underline decoration-2 underline-offset-8"
+            >
+              {newsLabel}
+            </Link>
+
+            <div className="relative group flex items-center">
+              <button className="flex items-center gap-1 text-base font-bold text-navy">
+                {lang.toUpperCase()} <span className="text-xs">▼</span>
+              </button>
+              <div className="absolute right-0 top-full z-50 hidden pt-3 group-hover:block">
+                <div className="min-w-15 rounded-lg bg-white py-1 shadow-lg">
+                  <Link
+                    href={switchHref}
+                    className="block px-4 py-2 text-center text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    {otherLang.toUpperCase()}
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+          </nav>
 
-        {/* Mobile right side */}
-        <div className="flex md:hidden items-center gap-4">
-          <Link href={switchHref} className="text-sm font-medium text-white">
-            {otherLang.toUpperCase()}
-          </Link>
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="flex flex-col justify-center gap-1.5 p-1"
-            aria-label="Toggle menu"
-          >
-            <span className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block w-5 h-0.5 bg-white transition-all duration-300 origin-center ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-          </button>
+          {/* Mobile right side */}
+          <div className="flex items-center gap-4 text-navy lg:hidden">
+            <Link href={switchHref} className="text-sm font-bold">
+              {otherLang.toUpperCase()}
+            </Link>
+            <button
+              onClick={() => setMenuOpen((value) => !value)}
+              className="p-2"
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? <X size={24} /> : <List size={24} />}
+            </button>
+          </div>
+
+          {/* Mobile dropdown */}
+          {menuOpen && (
+            <div className="mt-3 rounded-lg bg-navy/90 px-4 py-3 text-lg font-bold text-white backdrop-blur-sm sm:mt-4 sm:px-10 sm:py-4 lg:hidden">
+              <Link
+                href={`/${lang}`}
+                onClick={() => setMenuOpen(false)}
+                className="block py-2"
+              >
+                {homeLabel}
+              </Link>
+              <Link
+                href={`/${lang}/news`}
+                onClick={() => setMenuOpen(false)}
+                className="block py-2 text-coral underline decoration-2 underline-offset-8"
+              >
+                {newsLabel}
+              </Link>
+            </div>
+          )}
         </div>
       </div>
-
-      {/* Mobile dropdown */}
-      {menuOpen && (
-        <div className="md:hidden px-4 pb-4 bg-gradient-to-b from-coral to-teal">
-          <Link
-            href={`/${lang}`}
-            onClick={() => setMenuOpen(false)}
-            className="block text-sm font-medium py-3 border-b border-white/20 text-white"
-          >
-            {homeLabel}
-          </Link>
-          <Link
-            href={`/${lang}/news`}
-            onClick={() => setMenuOpen(false)}
-            className="block text-sm font-bold py-3 text-white"
-          >
-            {newsLabel}
-          </Link>
-        </div>
-      )}
-    </nav>
-  )
+    </header>
+  );
 }

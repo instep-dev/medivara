@@ -1,23 +1,23 @@
-import { getDictionary, hasLocale } from '@/lib/getDictionary'
-import { notFound } from 'next/navigation'
-import Navbar from '@/components/Navbar'
-import HeroSection from '@/components/HeroSection'
-import AboutSection from '@/components/AboutSection'
-import SolutionSection from '@/components/SolutionSection'
-import NewsPreviewSection from '@/components/NewsPreviewSection'
-import TeamsSection from '@/components/TeamsSection'
-import ClientsSection from '@/components/ClientsSection'
-import ContactSection from '@/components/ContactSection'
+import { getDictionary, hasLocale } from "@/lib/getDictionary";
+import { notFound } from "next/navigation";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import SolutionSection from "@/components/SolutionSection";
+import NewsPreviewSection from "@/components/NewsPreviewSection";
+import TeamsSection from "@/components/TeamsSection";
+import ContactSection from "@/components/ContactSection";
+import PartnerSection from "@/components/PartnerSection";
 
 export default async function Page({
-  params,
+  params
 }: {
-  params: Promise<{ lang: string }>
+  params: Promise<{ lang: string }>;
 }) {
-  const { lang } = await params
-  if (!hasLocale(lang)) notFound()
+  const { lang } = await params;
+  if (!hasLocale(lang)) notFound();
 
-  const dict = await getDictionary(lang)
+  const dict = await getDictionary(lang);
 
   return (
     <>
@@ -26,13 +26,14 @@ export default async function Page({
         <HeroSection dict={dict.hero} />
         <AboutSection dict={dict.about} />
         <SolutionSection dict={dict.solutions} />
-        <NewsPreviewSection dict={dict.news} lang={lang} />
         <TeamsSection dict={dict.teams} />
-        <ClientsSection title={dict.clients.title} />
+        <NewsPreviewSection dict={dict.news} lang={lang} />
+        {/* <ClientsSection title={dict.clients.title} /> */}
+        <PartnerSection section={dict.partner} />
         <ContactSection dict={dict.contact} />
       </main>
     </>
-  )
+  );
 }
 
 // Sekarang saya lihat gambaran lengkapnya. Ini situasinya:
@@ -40,7 +41,7 @@ export default async function Page({
 //   - Nameserver → Cloudflare milik vendor (kamu tidak punya akses)
 //   - Rumahweb DNS → sudah ada MX + TXT Google Workspace, tapi tidak aktif karena nameserver
 //   mengarah ke Cloudflare  - Vercel → minta DNS diubah di Cloudflare, tapi kamu tidak bisa akses
-//   Solusinya: Switch nameserver ke Rumahweb — dan ini AMAN karena MX + TXT Google sudah ada di 
+//   Solusinya: Switch nameserver ke Rumahweb — dan ini AMAN karena MX + TXT Google sudah ada di
 //   sana.
 
 //   ---

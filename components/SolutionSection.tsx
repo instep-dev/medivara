@@ -1,43 +1,56 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { solutionMeta } from '@/data/data'
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { solutionMeta } from "@/data/data";
 
 type SolutionItem = {
-  title: string
-  content?: string
-  description?: string
-  bulletPoints?: string[]
-  goal?: string
-}
+  title: string;
+  content?: string;
+  description?: string;
+  bulletPoints?: string[];
+  goal?: string;
+};
 
 type SolutionDict = {
-  title: string
-  items: SolutionItem[]
-}
+  title: string;
+  items: SolutionItem[];
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: 'easeOut' as const, delay: i * 0.08 },
-  }),
-}
+    transition: { duration: 0.65, ease: "easeOut" as const, delay: i * 0.08 }
+  })
+};
 
 export default function SolutionSection({ dict }: { dict: SolutionDict }) {
   return (
     <section
-      id="services"
-      className="bg-white py-20 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/BACKGROUND LOGO panjang.png')" }}
+      id="solutions"
+      className="bg-slate-700 py-12 sm:py-16 md:py-20 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/new-images/BACKGROUND BIRU.jpg')" }}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-6 sm:mb-8 md:mb-10">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white">
+            {dict.title}
+          </h2>
+          <Image
+            src="/underline.png"
+            alt=""
+            width={220}
+            height={30}
+            className="mt-1 h-2.5 w-44 object-fill md:h-3 md:w-56"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-40 gap-y-10 md:gap-y-14">
           {solutionMeta.map((meta, index) => {
-            const text = dict.items[index]
-            if (!text) return null
+            const text = dict.items[index];
+            if (!text) return null;
 
             return (
               <motion.div
@@ -47,44 +60,103 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, margin: '-60px' }}
-                className="flex gap-5 items-start rounded-2xl border-3 border-gray-200 p-6 md:p-8"
+                viewport={{ once: true, margin: "-60px" }}
+                className="min-w-0"
               >
-                <div className="relative w-14 h-14 md:w-32 md:h-32 flex-shrink-0">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[1.5rem] bg-gray-200">
                   <Image
                     src={meta.image}
-                    alt={text.title.replace('\n', ' ')}
+                    alt={text.title.replace("\n", " ")}
                     fill
-                    className="object-contain"
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
 
-                <div className="flex-1">
-                  <h3 className="text-gray-700 font-bold text-lg leading-tight mb-2">
-                    {text.title.replace('\n', ' ')}
+                <div className="pt-4 sm:pt-5">
+                  <h3 className="text-teal font-bold text-2xl sm:text-3xl leading-tight mb-3">
+                    {text.title.replace("\n", " ")}
                   </h3>
                   {text.description && (
-                    <p className="text-gray-600 text-sm leading-relaxed mb-2">{text.description}</p>
+                    <p className="text-white text-base sm:text-lg leading-relaxed mb-2">
+                      {text.description}
+                    </p>
                   )}
                   {text.bulletPoints && (
                     <ul className="space-y-1 mb-2">
                       {text.bulletPoints.map((point, i) => (
-                        <li key={i} className="text-gray-600 text-sm leading-relaxed flex gap-2">
-                          <span className="text-gray-500">•</span>
+                        <li
+                          key={i}
+                          className="text-white text-base leading-relaxed flex gap-2"
+                        >
+                          <span className="text-white">•</span>
                           <span>{point}</span>
                         </li>
                       ))}
                     </ul>
                   )}
                   {text.goal && (
-                    <p className="text-gray-600 text-sm leading-relaxed">{text.goal}</p>
+                    <p className="text-white text-base leading-relaxed mt-2">
+                      {text.goal}
+                    </p>
                   )}
                 </div>
               </motion.div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }
+
+/*
+UNUSED JSON DATA
+
+EN: 
+
+{
+  "title": "Quality &\nAccreditation Service",
+  "bulletPoints": [
+    "KARS & JCI Accreditation Advisory",
+    "Patient Safety & Quality Programs",
+    "Workforce Development & Clinical Training"
+  ],
+  "goal": "Goal: hospitals achieve higher standards of healthcare quality, governance and compliance"
+},
+{
+  "title": "Strategic &\nbusiness development",
+  "bulletPoints": [
+    "Feasibility study",
+    "Land banking & hospital planning",
+    "Business plan & financial modelling",
+    "Strategic marketing planning",
+    "Investment structuring & capital funding"
+  ],
+  "goal": "Goal: Your hospital is built on clear numbers and realistic expectations."
+}
+
+ID:
+
+{
+  "title": "Layanan Kualitas &\nAkreditasi",
+  "bulletPoints": [
+    "Konsultasi Akreditasi KARS & JCI",
+    "Program Keselamatan Pasien & Kualitas",
+    "Pengembangan Tenaga Kerja & Pelatihan Klinis"
+  ],
+  "goal": "Tujuan: Rumah sakit mencapai standar yang lebih tinggi dalam kualitas layanan kesehatan, tata kelola, dan kepatuhan."
+},
+{
+  "title": "Strategi &\nPengembangan Bisnis",
+  "bulletPoints": [
+    "Studi kelayakan",
+    "Perbankan lahan & perencanaan rumah sakit",
+    "Rencana bisnis & pemodelan keuangan",
+    "Perencanaan pemasaran strategis",
+    "Strukturisasi investasi & pendanaan modal"
+  ],
+  "goal": "Tujuan: Rumah sakit Anda dibangun di atas angka yang jelas dan ekspektasi yang realistis."
+}
+
+*/

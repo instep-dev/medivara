@@ -1,40 +1,33 @@
-import { getDictionary, hasLocale } from '@/lib/getDictionary'
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import Image from 'next/image'
-import NewsNavbar from '@/components/NewsNavbar'
-import { newsArticleImages } from '@/data/data'
+import { getDictionary, hasLocale } from "@/lib/getDictionary";
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import NewsNavbar from "@/components/NewsNavbar";
+import ArticleBackLink from "@/components/ArticleBackLink";
+import { newsArticleImages } from "@/data/data";
 
 export default async function NewsDetailPage({
-  params,
+  params
 }: {
-  params: Promise<{ lang: string; slug: string }>
+  params: Promise<{ lang: string; slug: string }>;
 }) {
-  const { lang, slug } = await params
-  if (!hasLocale(lang)) notFound()
+  const { lang, slug } = await params;
+  if (!hasLocale(lang)) notFound();
 
-  const dict = await getDictionary(lang)
-  const article = dict.news.items.find((item) => item.slug === slug)
-  if (!article) notFound()
+  const dict = await getDictionary(lang);
+  const article = dict.news.items.find((item) => item.slug === slug);
+  if (!article) notFound();
 
-  const links = dict.nav.links
-  const paragraphs = article.content.split('\n\n').filter(Boolean)
-  const imgSrc = newsArticleImages[article.slug]
+  const links = dict.nav.links;
+  const paragraphs = article.content.split("\n\n").filter(Boolean);
+  const imgSrc = newsArticleImages[article.slug];
 
   return (
     <>
-      <NewsNavbar lang={lang} homeLabel={links[0]} newsLabel={links[6]} />
+      <NewsNavbar lang={lang} homeLabel={links[0]} newsLabel={links[4]} />
 
       <main className="min-h-screen bg-white pt-24 pb-20">
-        <div className="max-w-3xl mx-auto px-4 md:px-8">
-
-          {/* Back link */}
-          <Link
-            href={`/${lang}/news`}
-            className="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-teal transition-colors mb-6"
-          >
-            ← {lang === 'id' ? 'Kembali' : 'Back'}
-          </Link>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ArticleBackLink label={dict.news.backLabel} />
 
           {/* Title */}
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-4">
@@ -43,11 +36,13 @@ export default async function NewsDetailPage({
 
           {/* Author · Date */}
           <p className="text-sm text-gray-400 mb-6">
-            {article.slug !== 'transforming-hospitals-from-the-inside-out' && (
+            {article.slug !== "transforming-hospitals-from-the-inside-out" && (
               <>
-                {lang === 'id' ? 'Oleh' : 'By'}:{' '}
-                <span className="text-gray-600 font-medium">{article.author}</span>
-                {' · '}
+                {dict.news.byLabel}:{" "}
+                <span className="text-gray-600 font-medium">
+                  {article.author}
+                </span>
+                {" · "}
               </>
             )}
             {article.date}
@@ -78,7 +73,7 @@ export default async function NewsDetailPage({
 
           {/* Source */}
           <div className="mt-10 pt-6 border-t border-gray-200 text-sm text-gray-500">
-            {lang === 'id' ? 'Sumber' : 'Source'}:{' '}
+            {dict.news.sourceLabel}:{" "}
             <a
               href={article.sourceUrl}
               target="_blank"
@@ -91,5 +86,5 @@ export default async function NewsDetailPage({
         </div>
       </main>
     </>
-  )
+  );
 }
