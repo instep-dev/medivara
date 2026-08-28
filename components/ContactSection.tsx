@@ -110,11 +110,11 @@ export default function ContactSection({ dict }: { dict: ContactDict }) {
               <div className="flex items-start gap-3 transition-colors sm:gap-4">
                 <MapPin size={28} weight="bold" className="shrink-0" />
                 <address className="not-italic">
-                  {/* {contactInfo.address.map((line) => (
+                {contactInfo.address.map((line) => (
                   <span key={line} className="block">
                     {line}
                   </span>
-                ))} */}
+                ))} 
                 </address>
               </div>
             </div>
