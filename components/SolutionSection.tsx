@@ -30,12 +30,12 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
   return (
     <section
       id="solutions"
-      className="bg-slate-700 py-12 sm:py-16 md:py-20 bg-cover bg-center bg-no-repeat"
+      className="bg-slate-700 py-10 sm:py-12 md:py-14 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/new-images/BACKGROUND BIRU.jpg')" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-6 sm:mb-8 md:mb-10">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white">
+        <div className="mb-6 sm:mb-7 md:mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
             {dict.title}
           </h2>
           <Image
@@ -43,11 +43,11 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
             alt=""
             width={220}
             height={30}
-            className="mt-1 h-1 w-32 object-fill md:h-2 md:w-56"
+            className="mt-1 h-1 w-24 object-fill md:h-1.5 md:w-36"
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-40 gap-y-10 md:gap-y-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-20 gap-y-8 md:gap-y-10">
           {solutionMeta.map((meta, index) => {
             const text = dict.items[index];
             if (!text) return null;
@@ -61,9 +61,9 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-60px" }}
-                className="min-w-0"
+                className="min-w-0 flex flex-col justify-start items-start"
               >
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[1.5rem] bg-gray-200">
+                <div className="relative aspect-[16/9] w-full max-w-[32rem] overflow-hidden rounded-[1.5rem] bg-gray-200">
                   <Image
                     src={meta.image}
                     alt={text.title.replace("\n", " ")}
@@ -74,11 +74,11 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
                 </div>
 
                 <div className="pt-4 sm:pt-5">
-                  <h3 className="text-teal font-bold text-2xl sm:text-3xl leading-tight mb-3">
+                  <h3 className="text-teal font-bold text-xl sm:text-2xl leading-tight mb-2">
                     {text.title.replace("\n", " ")}
                   </h3>
                   {text.description && (
-                    <p className="text-white text-base sm:text-lg leading-relaxed mb-2">
+                    <p className="text-white text-sm sm:text-base leading-relaxed mb-2">
                       {text.description}
                     </p>
                   )}
@@ -87,7 +87,7 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
                       {text.bulletPoints.map((point, i) => (
                         <li
                           key={i}
-                          className="text-white text-base leading-relaxed flex gap-2"
+                          className="text-white text-sm leading-relaxed flex gap-2"
                         >
                           <span className="text-white">•</span>
                           <span>{point}</span>
@@ -96,7 +96,7 @@ export default function SolutionSection({ dict }: { dict: SolutionDict }) {
                     </ul>
                   )}
                   {text.goal && (
-                    <p className="text-white text-base leading-relaxed mt-2">
+                    <p className="text-white text-sm leading-relaxed mt-2">
                       {text.goal}
                     </p>
                   )}
