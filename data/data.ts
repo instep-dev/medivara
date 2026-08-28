@@ -438,9 +438,12 @@ export const contactInfo = {
   email: "info@medivara.co.id",
   phone: "+62 21 7179-XXXX",
   linkedin: "https://www.linkedin.com/company/medivarahealthcareconsulting/",
+  // address: [
+  //   "Forme Building 4th Floor",
+  //   "Jl. Kemang Raya no.17 Jakarta Selatan 12730",
+  //   "INDONESIA"
+  // ]
   address: [
-    "Forme Building 4th Floor",
-    "Jl. Kemang Raya no.17 Jakarta Selatan 12730",
-    "INDONESIA"
+    "Jakarta Selatan"
   ]
 };
