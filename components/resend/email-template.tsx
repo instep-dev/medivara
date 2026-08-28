@@ -16,7 +16,6 @@ export interface EmailTemplateProps {
   subject: string;
   message: string;
   fileName?: string;
-  logoUrl: string;
 }
 
 export function EmailTemplate({
@@ -24,8 +23,7 @@ export function EmailTemplate({
   email,
   subject,
   message,
-  fileName,
-  logoUrl
+  fileName
 }: EmailTemplateProps) {
   return (
     <Html>
@@ -34,8 +32,8 @@ export function EmailTemplate({
         <Container style={styles.container}>
           <Section style={styles.header}>
             <Img
-            src={logoUrl}
-            alt="Medivara"
+              src="cid:medivara-logo"
+              alt="Medivara"
               width="280"
               style={styles.logo}
             />
@@ -58,11 +56,11 @@ export function EmailTemplate({
               <Text style={styles.messageText}>{message}</Text>
             </Section>
 
-            {fileName && (
+            {/* {fileName && (
               <Text style={styles.attachment}>
                 Attachment: <strong>{fileName}</strong>
               </Text>
-            )}
+            )} */}
           </Section>
 
           <Hr style={styles.rule} />
